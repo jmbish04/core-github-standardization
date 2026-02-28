@@ -11,6 +11,14 @@
       "tools": [
         "search_cloudflare_documentation"
       ]
+    },
+    "stitch": {
+      "type": "http",
+      "url": "https://stitch.googleapis.com/mcp",
+      "headers": {
+        "Accept": "application/json",
+        "X-Goog-Api-Key": "$COPILOT_MCP_STITCH_API_KEY"
+      }
     }
   }
 }
