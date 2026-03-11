@@ -21,6 +21,7 @@
       "@agents/*": ["backend/src/ai/agents/*"],
       "@utils/*": ["backend/src/utils/*"],
       "@services/*": ["backend/src/services/*"],
+      "@custom-types": ["backend/src/types/index.ts"],
       "@custom-types/*": ["backend/src/types/*"],
       "@logging": ["backend/src/lib/logger.ts"],
       "@agent-sdk": ["backend/src/ai/agent-sdk.ts"],
@@ -31,6 +32,13 @@
       "@ai-config": ["backend/src/ai/ai-config.ts"],
       "@agent-utils": ["backend/src/ai/agent-utils.ts"],
       "@health-check": ["backend/src/health/health-check.ts"],
+      "@github-utils": ["backend/src/utils/github/configs.ts"],
+      "@research-logger": ["backend/src/lib/research-logger.ts"],
+      "@lib/*": ["backend/src/lib/*"],
+      "@/config-settings": ["backend/src/lib/config.ts"],
+      "@ai-agents/*": ["backend/src/ai/agents/*"],
+      "@alerts": ["backend/src/alerts/index.ts"],
+      "@alerts/*": ["backend/src/alerts/*"]
     },
     "types": [
       "node",
@@ -40,10 +48,12 @@
   },
   "include": [
     "backend/src/**/*.ts",
+    "backend/src/**/*.d.ts",
     "worker-configuration.d.ts",
     "tests",
     "scripts/github/extract_pr_code_comments.ts",
-    "landing-generator"
+    "landing-generator",
+    "backend/drizzle.config.webhooks.ts"
   ],
   "exclude": [
     "node_modules",
