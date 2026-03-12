@@ -19,22 +19,17 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          python-version: '3.11'
+          node-version: '20'
 
-      - name: Install Jules SDK
-        # Adjust the exact PyPI package name if different
-        run: pip install google-jules-sdk==0.0.6
-
-      - name: Install Jules MCP
-        # Adjust the exact PyPI package name if different
-        run: pip install google-jules-mcp==0.0.6
+      - name: Install Dependencies
+        run: npm install @google/jules-sdk@0.0.6 @google/jules-mcp@0.0.6 @actions/core @actions/github
 
       - name: Run Jules generator
         env:
           JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REF: ${{ github.ref }}
-        run: python .github/scripts/jules-generate-agent-skills.py
+        run: node .github/scripts/jules-generate-agent-skills.mjs
