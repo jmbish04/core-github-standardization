@@ -28,6 +28,9 @@ const repo = context.repo.repo || process.env.GITHUB_REPOSITORY?.split("/")[1] |
 const ref = context.ref || process.env.GITHUB_REF || "refs/heads/main";
 
 let baseBranch = "main";
+
+jules.configure({ apiKey: process.env.JULES_API_KEY });
+
 if (ref.startsWith("refs/heads/")) baseBranch = ref.replace("refs/heads/", "");
 
 core.info(`Starting Jules session for ${owner}/${repo} on branch ${baseBranch}`);
@@ -43,6 +46,7 @@ Tasks:
 4. Provide a brief explanation of what each skill does and why it is useful for this repository.`;
 
 const session = await jules.session({
+  apiKey: process.env.JULES_API_KEY,
   prompt,
   source: { github: `${owner}/${repo}`, baseBranch },
   autoPr: true,
