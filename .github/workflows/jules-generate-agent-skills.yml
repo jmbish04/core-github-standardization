@@ -32,4 +32,4 @@ jobs:
           JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
           GITHUB_REPOSITORY: ${{ github.repository }}
           GITHUB_REF: ${{ github.ref }}
-        run: python .github/scripts/jules-generate-agent-skills-new.py
+        run: python .github/scripts/jules-generate-agent-skills-python.py
