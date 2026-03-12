@@ -26,11 +26,11 @@ jobs:
 
       - name: Install Jules SDK
         # Appended @latest to pull the version with potential exports fixes
-        run: npm install @google/jules-sdk@latest
+        run: npm install @google/jules-sdk@0.0.6
 
       - name: Install Jules MCP
         # Appended @latest to pull the version with potential exports fixes
-        run: npm install @google/jules-mcp@latest
+        run: npm install @google/jules-mcp@0.0.6
 
       - name: Run Jules generator
         env:
