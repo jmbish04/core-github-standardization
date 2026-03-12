@@ -1,0 +1,156 @@
+import os
+import sys
+import asyncio
+import requests
+
+try:
+    from google_jules import jules
+except ImportError as e:
+    print(f"::error::Failed to dynamically import google_jules: {e}")
+    sys.exit(1)
+
+async def run():
+    api_token = os.environ.get("CLOUDFLARE_API_TOKEN")
+    account_id = os.environ.get("CLOUDFLARE_ACCOUNT_ID")
+    jules_api_key = os.environ.get("JULES_API_KEY")
+    github_repository = os.environ.get("GITHUB_REPOSITORY", "")
+    
+    # GITHUB_HEAD_REF holds the actual branch name (e.g., 'feature-branch') during a PR event
+    github_ref = os.environ.get("GITHUB_HEAD_REF") or os.environ.get("GITHUB_REF_NAME", "")
+
+    if not all([api_token, account_id, jules_api_key, github_repository]):
+        print("::error::Missing required environment variables (CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID, JULES_API_KEY, GITHUB_REPOSITORY).")
+        sys.exit(1)
+
+    repo_name = github_repository.split("/")[-1]
+    
+    headers = {
+        "Authorization": f"Bearer {api_token}",
+        "Content-Type": "application/json"
+    }
+
+    print(f"Searching for Cloudflare project linked to GitHub repo: {repo_name}...")
+    
+    # 1. Fetch Cloudflare projects to find the matching repository
+    projects_url = f"https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/projects"
+    resp = requests.get(projects_url, headers=headers)
+    
+    if resp.status_code != 200:
+        print(f"::error::Failed to fetch Cloudflare projects: {resp.text}")
+        sys.exit(1)
+        
+    projects = resp.json().get("result", [])
+    target_project = None
+    
+    for proj in projects:
+        source = proj.get("source", {})
+        if source.get("type") == "github" and source.get("config", {}).get("repo_name") == repo_name:
+            target_project = proj["name"]
+            break
+
+    if not target_project:
+        print(f"::warning::Could not find a Cloudflare project linked to GitHub repo '{repo_name}'. Exiting gracefully.")
+        sys.exit(0)
+
+    print(f"Found Cloudflare project: {target_project}. Fetching latest deployment for branch: {github_ref}...")
+
+    # 2. Get deployments for the specific project
+    deployments_url = f"https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/projects/{target_project}/deployments"
+    dep_resp = requests.get(deployments_url, headers=headers)
+    
+    if dep_resp.status_code != 200:
+        print(f"::error::Failed to fetch deployments: {dep_resp.text}")
+        sys.exit(1)
+        
+    deployments = dep_resp.json().get("result", [])
+    target_deployment = None
+    build_status = None
+    
+    for dep in deployments:
+        # Match the deployment to the active PR branch
+        if dep.get("deployment_trigger", {}).get("metadata", {}).get("branch") == github_ref:
+            target_deployment = dep["id"]
+            build_status = dep.get("latest_stage", {}).get("status")
+            break
+            
+    if not target_deployment:
+        print("::warning::Could not find a deployment for the specific PR branch. Skipping Jules log analysis.")
+        sys.exit(0)
+
+    # Only invoke Jules if the Cloudflare build actually failed
+    if build_status in ["success", "active"]:
+        print(f"Build status is '{build_status}'. No remediation required.")
+        sys.exit(0)
+
+    print(f"Build failed. Fetching logs for deployment: {target_deployment}...")
+
+    # 3. Get the deployment logs
+    logs_url = f"https://api.cloudflare.com/client/v4/accounts/{account_id}/pages/projects/{target_project}/deployments/{target_deployment}/history/logs"
+    logs_resp = requests.get(logs_url, headers=headers)
+    
+    if logs_resp.status_code != 200:
+        print(f"::error::Failed to fetch deployment logs: {logs_resp.text}")
+        sys.exit(1)
+        
+    logs_data = logs_resp.json().get("result", {}).get("data", [])
+    
+    # Combine logs into a single string. Keep the tail end if it exceeds reasonable context limits.
+    full_logs = "\n".join([line.get("line", "") for line in logs_data])
+    if len(full_logs) > 15000:
+        full_logs = "... [TRUNCATED] ...\n" + full_logs[-15000:]
+
+    if not full_logs.strip():
+        print("::warning::No logs found for the failed build.")
+        sys.exit(0)
+
+    print("Logs retrieved. Invoking Jules to analyze and push a fix...")
+
+    prompt = f"""
+    The Cloudflare CI/CD build recently failed for this repository. 
+    Analyze the following build logs and implement the necessary codebase fix to resolve the error.
+
+    Pay close attention to these common failure modes:
+    1. **Entrypoint Mismatch:** The `main` or `entrypoint` defined in `wrangler.jsonc` (or `wrangler.toml`) does not match the actual application entry file (e.g., pointing to src/index.ts instead of src/main.ts).
+    2. **Missing Assets:** The `ASSETS` binding is pointing to a static output directory (like `dist`, `build`, or `public`) that does not exist or was not generated by the build step.
+    3. **Frozen Lockfiles:** The CI environment uses a frozen lockfile by default. If `pnpm-lock.yaml`, `bun.lockb`, or `package-lock.json` is out of sync with `package.json`, the dependency installation will fail. You must sync the dependencies or adjust the package configurations.
+
+    Build Logs:
+    ```
+    {full_logs}
+    ```
+
+    Identify the root cause from the logs, make the necessary file modifications, and apply the fix.
+    """
+
+    owner, repo = github_repository.split("/")
+    
+    # 4. Create the Jules Session
+    session = await jules.session(
+        prompt=prompt,
+        source={
+            "github": f"{owner}/{repo}",
+            "baseBranch": github_ref
+        },
+        autoPr=False # Since we triggered from a PR, commit directly to the current branch
+    )
+
+    print(f"Session created successfully. ID: {session.id}")
+
+    async for activity in session.stream():
+        if activity.type == "planGenerated":
+            print(f"[Plan Generated] {len(activity.plan.steps)} steps.")
+        elif activity.type == "progressUpdated":
+            print(f"[Progress Updated] {activity.title}")
+        elif activity.type == "sessionCompleted":
+            print("[Session Completed]")
+
+    outcome = await session.result()
+
+    if outcome.state == "failed":
+        print("::error::Jules session failed to resolve the issue.")
+        sys.exit(1)
+
+    print("Jules successfully analyzed the logs and applied the fix to the branch.")
+
+if __name__ == "__main__":
+    asyncio.run(run())
