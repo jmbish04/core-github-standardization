@@ -4,8 +4,6 @@ on:
   schedule:
     # Run every Monday at 8 AM UTC
     - cron: '0 8 * * 1'
-  pull_request:
-    types: [opened, reopened, synchronize]
   workflow_dispatch: # Allow manual triggers
 
 jobs:
@@ -27,7 +25,8 @@ jobs:
           node-version: '20'
 
       - name: Install Jules SDK
-        run: npm install @google/jules-sdk
+        # Appended @latest to pull the version with potential exports fixes
+        run: npm install @google/jules-sdk@latest
 
       - name: Execute Jules Script Inline
         uses: actions/github-script@v7
@@ -35,7 +34,22 @@ jobs:
           JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
         with:
           script: |
-            const { jules } = require('@google/jules-sdk');
+            // Use dynamic import to safely resolve ESM packages and bypass strict CommonJS require() limits
+            let julesModule;
+            try {
+              julesModule = await import('@google/jules-sdk');
+            } catch (err) {
+              core.setFailed(`Failed to dynamically import @google/jules-sdk: ${err.message}`);
+              return;
+            }
+            
+            // Extract the target object depending on how the package structures its ESM exports
+            const jules = julesModule.jules || julesModule.default?.jules || julesModule.default;
+
+            if (!jules) {
+              core.setFailed('Could not extract the jules object from the SDK exports.');
+              return;
+            }
 
             if (!process.env.JULES_API_KEY) {
               core.setFailed('JULES_API_KEY environment variable is missing.');
@@ -43,7 +57,6 @@ jobs:
             }
 
             // 1. Get context about the current repository from the GitHub Action payload
-            // Note: `context` and `core` are automatically provided by actions/github-script
             const owner = context.repo.owner || process.env.GITHUB_REPOSITORY?.split('/')[0] || 'unknown';
             const repo = context.repo.repo || process.env.GITHUB_REPOSITORY?.split('/')[1] || 'unknown';
             const ref = context.ref || process.env.GITHUB_REF || 'refs/heads/main';
