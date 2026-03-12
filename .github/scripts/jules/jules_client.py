@@ -41,6 +41,13 @@ DEDUP_SCAN_PAGES = 3
 class AutomationMode(str, Enum):
     UNSPECIFIED = "AUTOMATION_MODE_UNSPECIFIED"
     AUTO_CREATE_PR = "AUTO_CREATE_PR"
+"""
+SessionState — TODO: describe purpose.
+
+Args:
+    str: TODO: describe str
+    Enum: TODO: describe Enum
+"""
 class SessionState(str, Enum):
     UNSPECIFIED = "STATE_UNSPECIFIED"
     QUEUED = "QUEUED"
@@ -52,11 +59,24 @@ class SessionState(str, Enum):
     FAILED = "FAILED"
     COMPLETED = "COMPLETED"
 @dataclass
+"""
+PullRequest — TODO: describe purpose.
+"""
 class PullRequest:
     url: str
     title: str = ""
     description: str = ""
     @classmethod
+    """
+    from_dict — TODO: describe purpose.
+    
+    Args:
+        cls: TODO: describe cls
+        d: TODO: describe d
+    
+    Returns:
+        TODO: describe return value
+    """
     def from_dict(cls, d: dict) -> "PullRequest":
         return cls(
             url=d.get("url", ""),
@@ -64,12 +84,25 @@ class PullRequest:
             description=d.get("description", ""),
         )
 @dataclass
+"""
+PlanStep — TODO: describe purpose.
+"""
 class PlanStep:
     id: str
     title: str
     description: str
     index: int
     @classmethod
+    """
+    from_dict — TODO: describe purpose.
+    
+    Args:
+        cls: TODO: describe cls
+        d: TODO: describe d
+    
+    Returns:
+        TODO: describe return value
+    """
     def from_dict(cls, d: dict) -> "PlanStep":
         return cls(
             id=d.get("id", ""),
@@ -78,11 +111,24 @@ class PlanStep:
             index=d.get("index", 0),
         )
 @dataclass
+"""
+Plan — TODO: describe purpose.
+"""
 class Plan:
     id: str
     steps: list[PlanStep] = field(default_factory=list)
     create_time: str = ""
     @classmethod
+    """
+    from_dict — TODO: describe purpose.
+    
+    Args:
+        cls: TODO: describe cls
+        d: TODO: describe d
+    
+    Returns:
+        TODO: describe return value
+    """
     def from_dict(cls, d: dict) -> "Plan":
         return cls(
             id=d.get("id", ""),
@@ -90,6 +136,9 @@ class Plan:
             create_time=d.get("createTime", ""),
         )
 @dataclass
+"""
+Activity — TODO: describe purpose.
+"""
 class Activity:
     name: str
     id: str
@@ -100,6 +149,16 @@ class Activity:
     payload: dict
     artifacts: list = field(default_factory=list)
     @classmethod
+    """
+    from_dict — TODO: describe purpose.
+    
+    Args:
+        cls: TODO: describe cls
+        d: TODO: describe d
+    
+    Returns:
+        TODO: describe return value
+    """
     def from_dict(cls, d: dict) -> "Activity":
         activity_type = ""
         payload: dict = {}
@@ -127,6 +186,9 @@ class Activity:
             artifacts=d.get("artifacts", []),
         )
 @dataclass
+"""
+Session — TODO: describe purpose.
+"""
 class Session:
     name: str
     id: str
@@ -138,6 +200,16 @@ class Session:
     update_time: str = ""
     outputs: list = field(default_factory=list)
     @classmethod
+    """
+    from_dict — TODO: describe purpose.
+    
+    Args:
+        cls: TODO: describe cls
+        d: TODO: describe d
+    
+    Returns:
+        TODO: describe return value
+    """
     def from_dict(cls, d: dict) -> "Session":
         return cls(
             name=d.get("name", ""),
@@ -151,6 +223,15 @@ class Session:
             outputs=d.get("outputs", []),
         )
     @property
+    """
+    pull_requests — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def pull_requests(self) -> list[PullRequest]:
         return [
             PullRequest.from_dict(o["pullRequest"])
@@ -158,21 +239,60 @@ class Session:
             if "pullRequest" in o
         ]
     @property
+    """
+    is_active — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def is_active(self) -> bool:
         return self.state in ACTIVE_STATES
     @property
+    """
+    is_terminal — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def is_terminal(self) -> bool:
         return self.state in TERMINAL_STATES
     @property
+    """
+    succeeded — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def succeeded(self) -> bool:
         return self.state == SessionState.COMPLETED
     @property
+    """
+    failed — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def failed(self) -> bool:
         return self.state == SessionState.FAILED
 # ---------------------------------------------------------------------------
 # Deduplication result
 # ---------------------------------------------------------------------------
 @dataclass
+"""
+DedupResult — TODO: describe purpose.
+"""
 class DedupResult:
     """Returned by the duplicate-check logic so callers get full context."""
     is_duplicate: bool
@@ -210,17 +330,49 @@ class JulesClient:
     # ------------------------------------------------------------------
     def _url(self, path: str) -> str:
         return f"{BASE_URL}/{path.lstrip('/')}"
+    """
+    _params — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        extra: TODO: describe extra
+    
+    Returns:
+        TODO: describe return value
+    """
     def _params(self, extra: Optional[dict] = None) -> dict:
         p = {"key": self.api_key}
         if extra:
             p.update(extra)
         return p
+    """
+    _get — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        path: TODO: describe path
+        params: TODO: describe params
+    
+    Returns:
+        TODO: describe return value
+    """
     def _get(self, path: str, params: Optional[dict] = None) -> dict:
         resp = self._session.get(
             self._url(path), params=self._params(params), timeout=self.timeout
         )
         resp.raise_for_status()
         return resp.json()
+    """
+    _post — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        path: TODO: describe path
+        body: TODO: describe body
+    
+    Returns:
+        TODO: describe return value
+    """
     def _post(self, path: str, body: Optional[dict] = None) -> dict:
         resp = self._session.post(
             self._url(path), params=self._params(), json=body or {}, timeout=self.timeout
@@ -236,9 +388,30 @@ class JulesClient:
     def list_sources(self) -> list[dict]:
         """Lists all sources (GitHub repos) connected to Jules."""
         return self._get("sources").get("sources", [])
+    """
+    get_source — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        source_name: TODO: describe source_name
+    
+    Returns:
+        TODO: describe return value
+    """
     def get_source(self, source_name: str) -> dict:
         """Gets a single source by resource name, e.g. ``sources/github--owner--repo``."""
         return self._get(source_name)
+    """
+    find_source_for_repo — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        owner: TODO: describe owner
+        repo: TODO: describe repo
+    
+    Returns:
+        TODO: describe return value
+    """
     def find_source_for_repo(self, owner: str, repo: str) -> Optional[dict]:
         """
         Scans all sources and returns the one matching ``owner/repo``.
@@ -277,6 +450,16 @@ class JulesClient:
         if title:
             body["title"] = title
         return Session.from_dict(self._post("sessions", body))
+    """
+    get_session — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+    
+    Returns:
+        TODO: describe return value
+    """
     def get_session(self, session_id: str) -> Session:
         """Gets a session by bare ID or full resource name."""
         name = (
@@ -285,6 +468,12 @@ class JulesClient:
             else f"sessions/{session_id}"
         )
         return Session.from_dict(self._get(name))
+    """
+    list_sessions — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_sessions(
         self, page_size: int = 30, page_token: Optional[str] = None
     ) -> dict:
@@ -301,6 +490,16 @@ class JulesClient:
             "sessions": [Session.from_dict(s) for s in raw.get("sessions", [])],
             "nextPageToken": raw.get("nextPageToken", ""),
         }
+    """
+    list_all_sessions — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        max_pages: TODO: describe max_pages
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_all_sessions(self, max_pages: int = DEDUP_SCAN_PAGES) -> list[Session]:
         """
         Fetches up to ``max_pages`` pages of sessions and returns them as a
@@ -315,6 +514,16 @@ class JulesClient:
             if not page_token:
                 break
         return sessions
+    """
+    approve_plan — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+    
+    Returns:
+        TODO: describe return value
+    """
     def approve_plan(self, session_id: str) -> None:
         """Approves the pending plan in a session."""
         name = (
@@ -323,6 +532,17 @@ class JulesClient:
             else f"sessions/{session_id}"
         )
         self._post(f"{name}:approvePlan")
+    """
+    send_message — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+        prompt: TODO: describe prompt
+    
+    Returns:
+        TODO: describe return value
+    """
     def send_message(self, session_id: str, prompt: str) -> None:
         """Sends a follow-up message to an active session."""
         name = (
@@ -341,6 +561,12 @@ class JulesClient:
             else f"sessions/{session_id}"
         )
         return Activity.from_dict(self._get(f"{name}/activities/{activity_id}"))
+    """
+    list_activities — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_activities(
         self,
         session_id: str,
@@ -360,6 +586,12 @@ class JulesClient:
             "activities": [Activity.from_dict(a) for a in raw.get("activities", [])],
             "nextPageToken": raw.get("nextPageToken", ""),
         }
+    """
+    stream_activities — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def stream_activities(
         self,
         session_id: str,
@@ -392,6 +624,15 @@ class JulesClient:
     # Deduplication logic
     # ------------------------------------------------------------------
     @staticmethod
+    """
+    _prompt_fingerprint — TODO: describe purpose.
+    
+    Args:
+        prompt: TODO: describe prompt
+    
+    Returns:
+        TODO: describe return value
+    """
     def _prompt_fingerprint(prompt: str) -> str:
         """
         Returns a short SHA-256 hex digest of the normalised prompt text.
@@ -400,6 +641,12 @@ class JulesClient:
         """
         normalised = " ".join(prompt.split()).lower()
         return hashlib.sha256(normalised.encode()).hexdigest()[:16]
+    """
+    check_for_duplicate — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def check_for_duplicate(
         self,
         source_name: str,
@@ -457,6 +704,12 @@ class JulesClient:
             is_duplicate=False,
             reason=f"No active duplicate found for fingerprint '{target_fingerprint}'.",
         )
+    """
+    create_session_safe — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def create_session_safe(
         self,
         prompt: str,

@@ -1,3 +1,7 @@
+# ------------------------------------------------------------
+# Module providing functionality for jules-generate-agent-skills.yml
+# ------------------------------------------------------------
+
 name: Generate Agent Skills
 
 on:

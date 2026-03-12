@@ -1,3 +1,7 @@
+# ------------------------------------------------------------
+# Module providing functionality for jules-generate-agent-instructions.yml
+# ------------------------------------------------------------
+
 name: Generate Agent Instructions
 
 on:

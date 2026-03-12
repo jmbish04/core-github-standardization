@@ -1,3 +1,8 @@
+"""
+Script: jules-cloudflare-fix.py
+
+"""
+
 #!/usr/bin/env python3
 """
 jules-cloudflare-fix.py
@@ -33,6 +38,12 @@ from jules import JulesClient, AutomationMode
 from jules.jules_helpers import get_repo_context, get_jules_source_name
 
 
+"""
+main — TODO: describe purpose.
+
+Returns:
+    TODO: describe return value
+"""
 def main():
     """
     Main entry point for Cloudflare build error remediation.
