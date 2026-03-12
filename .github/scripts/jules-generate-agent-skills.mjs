@@ -1,8 +1,9 @@
 import * as core from "@actions/core";
-import { context } from "@actions/github";
+import * as github from "@actions/github";
 
 let julesModule;
 try {
+  // Use dynamic import to safely resolve ESM packages and bypass strict CommonJS require() limits
   julesModule = await import("@google/jules-sdk");
 } catch (err) {
   core.setFailed(`Failed to dynamically import @google/jules-sdk: ${err.message}`);
@@ -21,10 +22,9 @@ if (!process.env.JULES_API_KEY) {
   process.exit(1);
 }
 
-const owner =
-  context.repo.owner || process.env.GITHUB_REPOSITORY?.split("/")[0] || "unknown";
-const repo =
-  context.repo.repo || process.env.GITHUB_REPOSITORY?.split("/")[1] || "unknown";
+const context = github.context;
+const owner = context.repo.owner || process.env.GITHUB_REPOSITORY?.split("/")[0] || "unknown";
+const repo = context.repo.repo || process.env.GITHUB_REPOSITORY?.split("/")[1] || "unknown";
 const ref = context.ref || process.env.GITHUB_REF || "refs/heads/main";
 
 let baseBranch = "main";
@@ -63,4 +63,6 @@ if (outcome.state === "failed") {
 }
 
 core.info("Session finished successfully.");
-if (outcome.pullRequest) core.info(`Pull Request created: ${outcome.pullRequest.url}`);
+if (outcome.pullRequest) {
+  core.info(`Pull Request created: ${outcome.pullRequest.url}`);
+}
