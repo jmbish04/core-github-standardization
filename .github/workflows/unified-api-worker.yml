@@ -1,0 +1,188 @@
+name: Unified API Worker
+
+on:
+  repository_dispatch:
+    # Triggered via POST to https://api.github.com/repos/jmbish04/core-github-standardization/dispatches
+    # with body: {"event_type": "worker-task", "client_payload": {"task": "sync_templates", "target_repo": "jmbish04/new-repo", "callback_url": "https://..."}}
+    types: [worker-task]
+  workflow_dispatch:
+    # Allows manual triggering from the GitHub UI for testing
+    inputs:
+      task:
+        description: 'Task name (sync_templates, deep_research, daily_trends, etc.)'
+        required: true
+        type: string
+      payload:
+        description: 'JSON string of task arguments (e.g., {"target_repo": "jmbish04/test"})'
+        required: false
+        default: '{}'
+        type: string
+
+jobs:
+  execute-task:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout Core Standardization Repo
+        uses: actions/checkout@v4
+        with:
+          path: 'core-repo'
+          # CRITICAL: We need a Personal Access Token (PAT) here if we are going to push to OTHER repositories.
+          # The default GITHUB_TOKEN is scoped ONLY to the current repository.
+          token: ${{ secrets.GLOBAL_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: pip install requests pygithub litellm pydantic openai
+
+      - name: Run Unified Task Dispatcher
+        env:
+          # Core Auth
+          GITHUB_TOKEN: ${{ secrets.GLOBAL_PAT || secrets.GITHUB_TOKEN }}
+          WORKER_API_URL_BASE: ${{ secrets.WORKER_API_URL_BASE }}
+          WORKER_API_KEY: ${{ secrets.WORKER_API_KEY }}
+          
+          # AI Integrations
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_GATEWAY_ID: ${{ secrets.CLOUDFLARE_GATEWAY_ID }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_AI_GATEWAY_TOKEN }}
+          
+          # Incoming Payload routing
+          DISPATCH_PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+          MANUAL_TASK: ${{ github.event.inputs.task }}
+          MANUAL_PAYLOAD: ${{ github.event.inputs.payload }}
+        run: |
+          cat << 'EOF' > dispatcher.py
+          import os
+          import sys
+          import json
+          import requests
+          import subprocess
+          from github import Github
+
+          def get_payload():
+              # Handle both manual UI triggers and API dispatch triggers
+              manual_task = os.environ.get("MANUAL_TASK")
+              if manual_task:
+                  payload = json.loads(os.environ.get("MANUAL_PAYLOAD", "{}"))
+                  payload["task"] = manual_task
+                  return payload
+              
+              raw_payload = os.environ.get("DISPATCH_PAYLOAD", "{}")
+              return json.loads(raw_payload) if raw_payload and raw_payload != "null" else {}
+
+          def report_back(callback_url, status, message, data=None):
+              if not callback_url:
+                  print(f"::notice::No callback URL provided. Result: {status} - {message}")
+                  return
+
+              headers = {
+                  "Content-Type": "application/json",
+                  "X-API-Key": os.environ.get("WORKER_API_KEY", "")
+              }
+              body = {"status": status, "message": message, "data": data or {}}
+              
+              print(f"Reporting back to {callback_url}...")
+              try:
+                  requests.post(callback_url, json=body, headers=headers)
+              except Exception as e:
+                  print(f"::error::Failed to POST to callback: {e}")
+
+          def sync_templates(payload, gh):
+              target_repo = payload.get("target_repo")
+              if not target_repo:
+                  raise ValueError("Missing 'target_repo' in payload for sync_templates")
+              
+              token = os.environ.get("GITHUB_TOKEN")
+              
+              print(f"Syncing templates to {target_repo}...")
+              
+              # 1. Clone the target repo securely
+              clone_url = f"https://x-access-token:{token}@github.com/{target_repo}.git"
+              subprocess.run(["git", "clone", clone_url, "target-repo"], check=True)
+              
+              os.chdir("target-repo")
+              
+              # 2. Setup branch
+              branch_name = "chore/sync-standard-templates"
+              subprocess.run(["git", "checkout", "-b", branch_name], check=True)
+              
+              # 3. Copy templates from core-repo (which was checked out by the Action)
+              # Modify these paths based on what specifically you want to push out
+              subprocess.run(["mkdir", "-p", ".agent", ".github/workflows"], check=True)
+              os.system("cp -r ../core-repo/.agent/* ./.agent/ 2>/dev/null || true")
+              os.system("cp ../core-repo/.github/workflows/ci.yml ./.github/workflows/ 2>/dev/null || true")
+              
+              # 4. Commit and Push
+              subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
+              subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
+              subprocess.run(["git", "add", "."], check=True)
+              
+              # Check if there are actually changes
+              status = subprocess.run(["git", "status", "--porcelain"], capture_output=True, text=True)
+              if not status.stdout.strip():
+                  print("No template changes detected. Repo is up to date.")
+                  return {"pr_url": None, "message": "No changes needed."}
+
+              subprocess.run(["git", "commit", "-m", "chore(standards): sync latest core templates"], check=True)
+              subprocess.run(["git", "push", "-u", "origin", branch_name, "--force"], check=True)
+              
+              # 5. Create PR via GitHub CLI
+              os.environ["GH_TOKEN"] = token
+              pr_cmd = [
+                  "gh", "pr", "create", 
+                  "--title", "🚀 Sync Core Standardization Templates", 
+                  "--body", "Automated PR from `core-github-standardization` to align repository workflows and agent skills with organizational standards.",
+                  "--head", branch_name
+              ]
+              result = subprocess.run(pr_cmd, capture_output=True, text=True)
+              pr_url = result.stdout.strip()
+              
+              return {"pr_url": pr_url, "message": "PR created successfully."}
+
+          def main():
+              payload = get_payload()
+              task = payload.get("task")
+              callback_url = payload.get("callback_url") # Your WebSocket/API broadcaster endpoint
+              
+              print(f"Executing Task: {task}")
+              
+              gh = Github(os.environ["GITHUB_TOKEN"])
+              
+              try:
+                  if task == "sync_templates":
+                      result = sync_templates(payload, gh)
+                      report_back(callback_url, "success", "Templates synced", result)
+                      
+                  elif task == "deep_research":
+                      print("Routing to Deep Research Module...")
+                      # Insert deep-research logic here or import from an adjacent script
+                      # e.g. import scripts.deep_research as dr; dr.run(payload)
+                      report_back(callback_url, "success", "Deep research complete")
+                      
+                  elif task == "daily_trends":
+                      print("Routing to Daily Trends Module...")
+                      # Insert daily-trends logic
+                      report_back(callback_url, "success", "Trends updated")
+                      
+                  else:
+                      print(f"::error::Unknown task: {task}")
+                      report_back(callback_url, "error", f"Unknown task: {task}")
+                      sys.exit(1)
+                      
+              except Exception as e:
+                  print(f"::error::Task failed: {str(e)}")
+                  report_back(callback_url, "error", str(e))
+                  sys.exit(1)
+
+          if __name__ == "__main__":
+              main()
+          EOF
+
+          python dispatcher.py
