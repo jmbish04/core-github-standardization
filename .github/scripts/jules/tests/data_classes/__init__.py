@@ -1,0 +1,1 @@
+"""Data classes tests package."""
