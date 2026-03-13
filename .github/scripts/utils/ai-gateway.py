@@ -12,9 +12,9 @@ class AIGateway:
         self.gateway_id = gateway_id or 'github-actions'
         self.ai_gateway_token = ai_gateway_token
         # Base URL for the gateway
-        self.base_url = f"https://gateway.ai.cloudflare.com/v1/{account_id}/{gateway_id}"
+        self.base_url = f"https://gateway.ai.cloudflare.com/v1/{account_id}/{self.gateway_id}"
 
-    def _format_model_id(model_id: str) -> str:
+    def _format_model_id(self, model_id: str) -> str:
         """
         Safely normalizes AI model IDs to ensure canonical provider prefixes.
         Handles complex paths like '@cf/openai/gpt-oss-120b' safely without
@@ -22,7 +22,7 @@ class AIGateway:
         """
         if not model_id:
             return model_id
-    
+
         model_id_lower = model_id.lower()
         
         # Step 1: Evaluate explicit provider prefixes.
@@ -35,7 +35,10 @@ class AIGateway:
             remainder = parts[1]
             
             # Cloudflare Workers AI
-            if prefix in ['workers-ai', '@cf']:
+            # We explicitly prepend '@cf/' back onto the remainder to preserve the full Cloudflare model path
+            if prefix == '@cf':
+                return f"workers-ai/@cf/{remainder}"
+            elif prefix == 'workers-ai':
                 return f"workers-ai/{remainder}"
                 
             # Google AI Studio
@@ -49,47 +52,36 @@ class AIGateway:
             # Anthropic
             elif prefix in ['claude', 'anthropic']:
                 return f"anthropic/{remainder}"
-            
-    # Step 2: Fallback keyword matching for unprefixed models.
-    # (e.g., "gpt-4o" -> "openai/gpt-4o")
-    # Because we evaluate the explicit prefixes in Step 1, a Cloudflare model
-    # like "@cf/openai/gpt-oss" will never erroneously hit these checks.
-    if "gpt" in model_id_lower or "o1" in model_id_lower or "o3" in model_id_lower:
-        return f"openai/{model_id}"
-    elif "claude" in model_id_lower:
-        return f"anthropic/{model_id}"
-    elif "gemini" in model_id_lower:
-        return f"google-ai-studio/{model_id}"
         
-    # Fallback: return as-is if no matching routing rules apply
-    return model_id  
+        # Step 2: Fallback keyword matching for unprefixed models.
+        # (e.g., "gpt-4o" -> "openai/gpt-4o")
+        # Because we evaluate the explicit prefixes in Step 1, a Cloudflare model
+        # like "@cf/openai/gpt-oss" will never erroneously hit these checks.
+        if "gpt" in model_id_lower or "o1" in model_id_lower or "o3" in model_id_lower:
+            return f"openai/{model_id}"
+        elif "claude" in model_id_lower:
+            return f"anthropic/{model_id}"
+        elif "gemini" in model_id_lower:
+            return f"google-ai-studio/{model_id}"
+            
+        # Fallback: return as-is if no matching routing rules apply
+        return model_id  
 
     def _format_model_name(self, model_id: str) -> str:
         """
         Automatically prepends the correct provider prefix for AI Gateway Universal Routing
         if it is not already present.
         """
-        model_id_lower = self.format_model_id(model_id.lower())
-        
-        # Check if a provider prefix is already applied.
-        # We explicitly ignore "@cf" here because Workers AI models naturally contain slashes (e.g., @cf/meta/...)
-        if "/" in model_id and not model_id_lower.startswith("@cf"):
-            known_prefixes = ["workers-ai/", "google-ai-studio/", "openai/", "anthropic/"]
-            if any(model_id_lower.startswith(prefix) for prefix in known_prefixes):
-                return model_id
+        # _format_model_id now safely handles all mapping and prefixing logic.
+        return self._format_model_id(model_id)
 
-        # Auto-detect and prepend the correct provider routing prefix
-        if "@cf" in model_id_lower:
-            return f"workers-ai/{model_id}"
-        elif "gemini" in model_id_lower:
-            return f"google-ai-studio/{model_id}"
-        elif "gpt" in model_id_lower or "o1" in model_id_lower or "o3" in model_id_lower:
-            return f"openai/{model_id}"
-        elif "claude" in model_id_lower:
-            return f"anthropic/{model_id}"
-        
-        # Fallback to the provided string if no known patterns match
-        return model_id
+    def get_ai_gateway_base_url(self, model_id: str) -> str:
+        """
+        Returns the full provider-specific gateway URL for a model.
+        Example: https://gateway.ai.cloudflare.com/v1/{account_id}/{gateway_id}/openai/gpt-4o-mini
+        """
+        formatted_model = self._format_model_name(model_id)
+        return f"{self.base_url}/{formatted_model}"
 
     def run_compat_chat_completions(self, model_id: str, messages: List[Dict[str, str]], **kwargs: Any) -> Dict[str, Any]:
         """
@@ -99,7 +91,7 @@ class AIGateway:
         url = f"{self.base_url}/compat/chat/completions"
         
         headers = {
-            "Authorization": f"Bearer {self.api_token}",
+            "Authorization": f"Bearer {self.ai_gateway_token}",
             "Content-Type": "application/json"
         }
         
@@ -120,7 +112,7 @@ class AIGateway:
         url = f"{self.base_url}/compat/embeddings"
         
         headers = {
-            "Authorization": f"Bearer {self.api_token}",
+            "Authorization": f"Bearer {self.ai_gateway_token}",
             "Content-Type": "application/json"
         }
         
@@ -192,8 +184,14 @@ if __name__ == "__main__":
     
     aig = AIGateway(account_id, gateway_id, api_token)
     
+    # URL formatting test
+    print("--- URL Routing Tests ---")
+    print(aig.get_ai_gateway_base_url("gpt-4o-mini"))
+    print(aig.get_ai_gateway_base_url("@cf/meta/llama-3.3-70b-instruct-fp8-fast"))
+    print(aig.get_ai_gateway_base_url("claude-3-opus"))
+    
     # 1. Text Generation (Workers AI)
-    print("--- 1. Text Generation ---")
+    print("\n--- 1. Text Generation ---")
     try:
         text_resp = aig.generate_text(
             model_id="@cf/meta/llama-3.3-70b-instruct-fp8-fast",
