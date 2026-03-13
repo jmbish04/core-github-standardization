@@ -4,7 +4,7 @@ import asyncio
 import sys
 import requests
 from typing import List, Literal, Optional, Any, Callable, Type
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from pydantic import BaseModel, Field
 from openai import AsyncOpenAI
 from github import Github
@@ -13,11 +13,11 @@ from github import Github
 ACCOUNT_ID = os.environ.get("CF_ACCOUNT_ID")
 GATEWAY_ID = os.environ.get("CF_GATEWAY_ID")
 API_TOKEN = os.environ.get("CF_API_TOKEN")
-MODEL_NAME = "@cf/meta/llama-3.3-70b-instruct-fp8-fast" # Standardized to CF native Llama 3.3, adjust as needed
+MODEL_NAME = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
 
 if not all([ACCOUNT_ID, GATEWAY_ID, API_TOKEN]):
-  print("::error::Missing Cloudflare Credentials")
-  sys.exit(1)
+    print("::error::Missing Cloudflare Credentials")
+    sys.exit(1)
 
 # Route through AI Gateway to Workers AI OpenAI-compatible endpoint
 BASE_URL = f"https://gateway.ai.cloudflare.com/v1/{ACCOUNT_ID}/{GATEWAY_ID}/workers-ai/v1"
@@ -25,227 +25,226 @@ BASE_URL = f"https://gateway.ai.cloudflare.com/v1/{ACCOUNT_ID}/{GATEWAY_ID}/work
 # --- 1. AGENTS MICRO-FRAMEWORK ---
 @dataclass
 class RunConfig:
-  model_provider: Optional['ModelProvider'] = None
+    model_provider: Optional['ModelProvider'] = None
 
 class Model:
-  pass
+    pass
 
 class OpenAIChatCompletionsModel(Model):
-  def __init__(self, model: str, openai_client: AsyncOpenAI):
-      self.model = model
-      self.client = openai_client
+    def __init__(self, model: str, openai_client: AsyncOpenAI):
+        self.model = model
+        self.client = openai_client
 
 class ModelProvider:
-  def get_model(self, model_name: str | None) -> Model:
-      raise NotImplementedError
+    def get_model(self, model_name: str | None) -> Model:
+        raise NotImplementedError
 
 class Agent:
-  def __init__(self, name: str, instructions: str, tools: List[Callable] = None, response_model: Type[BaseModel] = None):
-      self.name = name
-      self.instructions = instructions
-      self.tools = tools or []
-      self.response_model = response_model
+    def __init__(self, name: str, instructions: str, tools: List[Callable] = None, response_model: Type[BaseModel] = None):
+        self.name = name
+        self.instructions = instructions
+        self.tools = tools or []
+        self.response_model = response_model
 
 @dataclass
 class RunResult:
-  final_output: Any
+    final_output: Any
 
 class Runner:
-  @staticmethod
-  async def run(agent: Agent, task: str, run_config: RunConfig = None) -> RunResult:
-      print(f"[{agent.name}] Running task: {task[:50]}...")
-      
-      provider = run_config.model_provider if run_config else None
-      if not provider:
-          raise ValueError("No model provider specified")
-      
-      model_wrapper = provider.get_model(None)
-      client = model_wrapper.client
-      model_id = model_wrapper.model
+    @staticmethod
+    async def run(agent: Agent, task: str, run_config: RunConfig = None) -> RunResult:
+        print(f"[{agent.name}] Running task: {task[:50]}...")
+        
+        provider = run_config.model_provider if run_config else None
+        if not provider:
+            raise ValueError("No model provider specified")
+        
+        model_wrapper = provider.get_model(None)
+        client = model_wrapper.client
+        model_id = model_wrapper.model
 
-      messages = [
-          {"role": "system", "content": agent.instructions},
-          {"role": "user", "content": task}
-      ]
+        messages = [
+            {"role": "system", "content": agent.instructions},
+            {"role": "user", "content": task}
+        ]
 
-      try:
-          kwargs = {}
-          # Use LiteLLM/OpenAI standard JSON parsing 
-          if agent.response_model:
-              kwargs["response_format"] = {"type": "json_object"}
-          
-          response = await client.chat.completions.create(
-              model=model_id,
-              messages=messages,
-              **kwargs
-          )
-          content = response.choices[0].message.content
-          
-          if agent.response_model:
-              try:
-                  parsed = agent.response_model.model_validate_json(content)
-                  return RunResult(final_output=parsed)
-              except Exception as e:
-                  print(f"[{agent.name}] JSON Parse Error: {e}")
-                  print(f"[{agent.name}] Raw Output: {content}")
-                  return RunResult(final_output=None)
-          
-          return RunResult(final_output=content)
-      except Exception as e:
-          print(f"[{agent.name}] Execution Error: {e}")
-          return RunResult(final_output=None)
+        try:
+            kwargs = {}
+            if agent.response_model:
+                kwargs["response_format"] = {"type": "json_object"}
+            
+            response = await client.chat.completions.create(
+                model=model_id,
+                messages=messages,
+                **kwargs
+            )
+            content = response.choices[0].message.content
+            
+            if agent.response_model:
+                try:
+                    parsed = agent.response_model.model_validate_json(content)
+                    return RunResult(final_output=parsed)
+                except Exception as e:
+                    print(f"[{agent.name}] JSON Parse Error: {e}")
+                    print(f"[{agent.name}] Raw Output: {content}")
+                    return RunResult(final_output=None)
+            
+            return RunResult(final_output=content)
+        except Exception as e:
+            print(f"[{agent.name}] Execution Error: {e}")
+            return RunResult(final_output=None)
 
 # --- 2. CUSTOM PROVIDER SETUP ---
 client = AsyncOpenAI(base_url=BASE_URL, api_key=API_TOKEN)
 
 class CustomModelProvider(ModelProvider):
-  def get_model(self, model_name: str | None) -> Model:
-      return OpenAIChatCompletionsModel(model=model_name or MODEL_NAME, openai_client=client)
+    def get_model(self, model_name: str | None) -> Model:
+        return OpenAIChatCompletionsModel(model=model_name or MODEL_NAME, openai_client=client)
 
 CUSTOM_MODEL_PROVIDER = CustomModelProvider()
 
 # --- 3. DATA MODELS ---
 class SearchPlan(BaseModel):
-  rationale: str = Field(..., description="Reasoning for the search strategy")
-  queries: List[str] = Field(..., description="List of 3 distinct GitHub search queries")
+    rationale: str = Field(..., description="Reasoning for the search strategy")
+    queries: List[str] = Field(..., description="List of 3 distinct GitHub search queries")
 
 class RepoFinding(BaseModel):
-  name: str
-  url: str
-  stars: int
-  description: Optional[str] = "No description"
-  relevance_score: int = Field(..., description="1-10 score of relevance to user prompt")
+    name: str
+    url: str
+    stars: int
+    description: Optional[str] = "No description"
+    relevance_score: int = Field(..., description="1-10 score of relevance to user prompt")
 
 class JudgeFeedback(BaseModel):
-  status: Literal["pass", "needs_more_data", "fail"]
-  critique: str = Field(..., description="Critique of the findings")
-  approved_urls: List[str] = Field(default_factory=list, description="List of URLs that are good")
-  missing_topics: List[str] = Field(default_factory=list, description="List of topics that need more coverage")
-  
+    status: Literal["pass", "needs_more_data", "fail"]
+    critique: str = Field(..., description="Critique of the findings")
+    approved_urls: List[str] = Field(default_factory=list, description="List of URLs that are good")
+    missing_topics: List[str] = Field(default_factory=list, description="List of topics that need more coverage")
+    
 class ResearchReport(BaseModel):
-  findings: List[RepoFinding]
+    findings: List[RepoFinding]
 
 # --- 4. TOOLS ---
 def search_github(query: str) -> List[dict]:
-  if not os.environ.get("GITHUB_TOKEN"):
-      print("[Tool] No GITHUB_TOKEN, skipping search")
-      return []
-      
-  g = Github(os.environ["GITHUB_TOKEN"])
-  print(f"[Tool] Searching GitHub: {query}")
-  try:
-      repos = g.search_repositories(query, sort="stars", order="desc")
-      results = []
-      for i, repo in enumerate(repos):
-          if i >= 4: break 
-          try:
-              readme = repo.get_readme().decoded_content.decode("utf-8")[:1000]
-          except:
-              readme = "No README"
-          
-          results.append({
-              "name": repo.full_name,
-              "url": repo.html_url,
-              "stars": repo.stargazers_count,
-              "description": repo.description,
-              "readme_snippet": readme
-          })
-      return results
-  except Exception as e:
-      print(f"[Tool] Search failed: {e}")
-      return []
+    if not os.environ.get("GITHUB_TOKEN"):
+        print("[Tool] No GITHUB_TOKEN, skipping search")
+        return []
+        
+    g = Github(os.environ["GITHUB_TOKEN"])
+    print(f"[Tool] Searching GitHub: {query}")
+    try:
+        repos = g.search_repositories(query, sort="stars", order="desc")
+        results = []
+        for i, repo in enumerate(repos):
+            if i >= 4: break 
+            try:
+                readme = repo.get_readme().decoded_content.decode("utf-8")[:1000]
+            except:
+                readme = "No README"
+            
+            results.append({
+                "name": repo.full_name,
+                "url": repo.html_url,
+                "stars": repo.stargazers_count,
+                "description": repo.description,
+                "readme_snippet": readme
+            })
+        return results
+    except Exception as e:
+        print(f"[Tool] Search failed: {e}")
+        return []
 
 # --- 5. MAIN WORKFLOW ---
 async def main():
-  prompt = os.environ.get("USER_PROMPT")
-  if not prompt:
-      print("::error::Missing USER_PROMPT")
-      sys.exit(1)
-      
-  print(f"--- STARTING RESEARCH (Agents Pattern): {prompt} ---")
+    prompt = os.environ.get("USER_PROMPT")
+    if not prompt:
+        print("::error::Missing USER_PROMPT")
+        sys.exit(1)
+        
+    print(f"--- STARTING RESEARCH (Agents Pattern): {prompt} ---")
 
-  # A. Plan
-  orchestrator = Agent(
-      name="Orchestrator",
-      instructions="You are a Search Planner. Break the user request into 3 specific, non-overlapping GitHub search queries. Return JSON.",
-      response_model=SearchPlan
-  )
-  
-  print(">>> Planning Phase")
-  plan_result = await Runner.run(orchestrator, prompt, run_config=RunConfig(model_provider=CUSTOM_MODEL_PROVIDER))
-  
-  if not plan_result.final_output:
-      print("::error::Planning failed")
-      sys.exit(1)
-      
-  plan = plan_result.final_output
-  print(f"Plan: {plan.queries}")
+    # A. Plan
+    orchestrator = Agent(
+        name="Orchestrator",
+        instructions="You are a Search Planner. Break the user request into 3 specific, non-overlapping GitHub search queries. Return JSON.",
+        response_model=SearchPlan
+    )
+    
+    print(">>> Planning Phase")
+    plan_result = await Runner.run(orchestrator, prompt, run_config=RunConfig(model_provider=CUSTOM_MODEL_PROVIDER))
+    
+    if not plan_result.final_output:
+        print("::error::Planning failed")
+        sys.exit(1)
+        
+    plan = plan_result.final_output
+    print(f"Plan: {plan.queries}")
 
-  # B. Search & Summarize
-  raw_data = []
-  for q in plan.queries:
-      results = search_github(q)
-      raw_data.extend(results)
-  
-  print(f"Found {len(raw_data)} raw repos. Analyzing...")
-  analysis_input = json.dumps([{"name": r["name"], "desc": r["description"], "readme": r["readme_snippet"]} for r in raw_data])
-  
-  researcher = Agent(
-      name="Researcher", 
-      instructions="Filter these raw GitHub findings for relevance to the user prompt. Ensure your output exactly matches the JSON schema for a list of RepoFinding.",
-      response_model=ResearchReport
-  )
-  
-  print(">>> Analysis Phase")
-  report_result = await Runner.run(researcher, f"User Prompt: {prompt}\n\nData: {analysis_input}", run_config=RunConfig(model_provider=CUSTOM_MODEL_PROVIDER))
-  
-  report = report_result.final_output
-  if not report:
-      print("::error::Analysis failed")
-      sys.exit(1)
-      
-  print(f"Researcher found {len(report.findings)} relevant repos.")
+    # B. Search & Summarize
+    raw_data = []
+    for q in plan.queries:
+        results = search_github(q)
+        raw_data.extend(results)
+    
+    print(f"Found {len(raw_data)} raw repos. Analyzing...")
+    analysis_input = json.dumps([{"name": r["name"], "desc": r["description"], "readme": r["readme_snippet"]} for r in raw_data])
+    
+    researcher = Agent(
+        name="Researcher", 
+        instructions="Filter these raw GitHub findings for relevance to the user prompt. Ensure your output exactly matches the JSON schema for a list of RepoFinding.",
+        response_model=ResearchReport
+    )
+    
+    print(">>> Analysis Phase")
+    report_result = await Runner.run(researcher, f"User Prompt: {prompt}\n\nData: {analysis_input}", run_config=RunConfig(model_provider=CUSTOM_MODEL_PROVIDER))
+    
+    report = report_result.final_output
+    if not report:
+        print("::error::Analysis failed")
+        sys.exit(1)
+        
+    print(f"Researcher found {len(report.findings)} relevant repos.")
 
-  # C. Judge
-  judge = Agent(
-      name="Judge",
-      instructions="Review findings against prompt. Check for duplicates. Decide status (pass/fail). Return JSON.",
-      response_model=JudgeFeedback
-  )
-  
-  judge_input = json.dumps([r.model_dump() for r in report.findings])
-  print(">>> Judging Phase")
-  verdict_result = await Runner.run(judge, f"Original Prompt: {prompt}\n\nFindings: {judge_input}", run_config=RunConfig(model_provider=CUSTOM_MODEL_PROVIDER))
-  
-  verdict = verdict_result.final_output
-  if not verdict:
-      print("::error::Judging failed")
-      sys.exit(1)
+    # C. Judge
+    judge = Agent(
+        name="Judge",
+        instructions="Review findings against prompt. Check for duplicates. Decide status (pass/fail). Return JSON.",
+        response_model=JudgeFeedback
+    )
+    
+    judge_input = json.dumps([r.model_dump() for r in report.findings])
+    print(">>> Judging Phase")
+    verdict_result = await Runner.run(judge, f"Original Prompt: {prompt}\n\nFindings: {judge_input}", run_config=RunConfig(model_provider=CUSTOM_MODEL_PROVIDER))
+    
+    verdict = verdict_result.final_output
+    if not verdict:
+        print("::error::Judging failed")
+        sys.exit(1)
 
-  print(f"Judge Verdict: {verdict.status.upper()}")
-  print(f"Critique: {verdict.critique}")
+    print(f"Judge Verdict: {verdict.status.upper()}")
+    print(f"Critique: {verdict.critique}")
 
-  # D. Sync
-  final_payload = {
-      "prompt": prompt,
-      "status": verdict.status,
-      "judge_notes": verdict.critique,
-      "findings": [r.model_dump() for r in report.findings if r.url in verdict.approved_urls or verdict.status == 'pass']
-  }
+    # D. Sync
+    final_payload = {
+        "prompt": prompt,
+        "status": verdict.status,
+        "judge_notes": verdict.critique,
+        "findings": [r.model_dump() for r in report.findings if r.url in verdict.approved_urls or verdict.status == 'pass']
+    }
 
-  callback_url = os.environ.get("CALLBACK_URL")
-  worker_key = os.environ.get("WORKER_API_KEY")
-  
-  if callback_url and worker_key:
-      print(f"Posting {len(final_payload['findings'])} repos to {callback_url}...")
-      try:
-          resp = requests.post(callback_url, json=final_payload, headers={"X-API-Key": worker_key})
-          resp.raise_for_status()
-          print("::notice::Successfully synced to Worker.")
-      except Exception as e:
-          print(f"::error::Failed to post to worker: {e}")
-  else:
-      print("::warning::Skipping sync (CALLBACK_URL or WORKER_SECRET missing)")
+    callback_url = os.environ.get("CALLBACK_URL")
+    worker_key = os.environ.get("WORKER_API_KEY")
+    
+    if callback_url and worker_key:
+        print(f"Posting {len(final_payload['findings'])} repos to {callback_url}...")
+        try:
+            resp = requests.post(callback_url, json=final_payload, headers={"X-API-Key": worker_key})
+            resp.raise_for_status()
+            print("::notice::Successfully synced to Worker.")
+        except Exception as e:
+            print(f"::error::Failed to post to worker: {e}")
+    else:
+        print("::warning::Skipping sync (CALLBACK_URL or WORKER_SECRET missing)")
 
 if __name__ == "__main__":
-  asyncio.run(main())
+    asyncio.run(main())
