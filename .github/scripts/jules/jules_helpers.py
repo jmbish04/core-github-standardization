@@ -203,15 +203,6 @@ def get_jules_source_name(owner: str, repo: str) -> str:
     return f"sources/github--{owner}--{repo}"
 
 
-"""
-parse_jules_source_name — TODO: describe purpose.
-
-Args:
-    source_name: TODO: describe source_name
-
-Returns:
-    TODO: describe return value
-"""
 def parse_jules_source_name(source_name: str) -> tuple[str, str]:
     """
     Parse a Jules source name into owner and repo.

@@ -1,8 +1,3 @@
-"""
-Script: jules-generate-agent-skills-python.py
-
-"""
-
 #!/usr/bin/env python3
 """
 jules-generate-agent-skills.py
@@ -37,12 +32,6 @@ from jules import JulesClient
 from jules.jules_helpers import get_repo_context, get_jules_source_name
 
 
-"""
-main — TODO: describe purpose.
-
-Returns:
-    TODO: describe return value
-"""
 def main():
     """
     Main entry point for the agent skills generation workflow.
