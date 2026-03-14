@@ -1,4 +1,4 @@
-# Inspired by @google/jules-fleet conflict detection pattern
+# Jules PR Conflict Detection & Resolution (Python Native)
 name: PR Conflict Detection
 
 on:
@@ -6,48 +6,109 @@ on:
     types: [opened, reopened, synchronize]
     branches: [main]
   workflow_dispatch:
+    inputs:
+      pr_number:
+        description: 'Pull Request Number (optional - defaults to open PR for current branch)'
+        required: false
+        type: string
+  issue_comment:
+    types: [created]
 
 permissions:
-  contents: read
-  pull-requests: read
+  contents: write
+  pull-requests: write
+  issues: write
 
 jobs:
   check-conflicts:
+    if: >
+      github.event_name == 'pull_request' || 
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'issue_comment' && github.event.issue.pull_request && contains(github.event.comment.body, '/actions clear-conflicts'))
     runs-on: ubuntu-latest
     steps:
+      - name: Acknowledge Command (Eyeballs)
+        if: github.event_name == 'issue_comment'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            /repos/${{ github.repository }}/issues/comments/${{ github.event.comment.id }}/reactions \
+            -f content='eyes'
+
+      - name: Determine PR Context
+        id: ctx
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+            echo "BASE_REF=${{ github.event.pull_request.base.ref }}" >> $GITHUB_ENV
+            echo "HEAD_REF=${{ github.event.pull_request.head.ref }}" >> $GITHUB_ENV
+          elif [[ "${{ github.event_name }}" == "issue_comment" ]]; then
+            PR_INFO=$(gh pr view ${{ github.event.issue.number }} -R ${{ github.repository }} --json baseRefName,headRefName)
+            echo "PR_NUMBER=${{ github.event.issue.number }}" >> $GITHUB_ENV
+            echo "BASE_REF=$(echo $PR_INFO | jq -r .baseRefName)" >> $GITHUB_ENV
+            echo "HEAD_REF=$(echo $PR_INFO | jq -r .headRefName)" >> $GITHUB_ENV
+          else
+            if [[ -n "${{ inputs.pr_number }}" ]]; then
+              PR_INFO=$(gh pr view ${{ inputs.pr_number }} -R ${{ github.repository }} --json number,baseRefName,headRefName)
+            else
+              PR_INFO=$(gh pr list -R ${{ github.repository }} -H ${{ github.ref_name }} --state open --json number,baseRefName,headRefName | jq -c '.[0]')
+              if [[ "$PR_INFO" == "null" ]]; then
+                echo "::error::No open PR found for branch ${{ github.ref_name }}."
+                exit 1
+              fi
+            fi
+            echo "PR_NUMBER=$(echo $PR_INFO | jq -r .number)" >> $GITHUB_ENV
+            echo "BASE_REF=$(echo $PR_INFO | jq -r .baseRefName)" >> $GITHUB_ENV
+            echo "HEAD_REF=$(echo $PR_INFO | jq -r .headRefName)" >> $GITHUB_ENV
+          fi
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ env.HEAD_REF }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Python Dependencies
+        run: pip install requests
 
       - name: Configure git
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-      - name: Attempt merge
+      - name: Detect Merge Conflicts
         id: merge
         continue-on-error: true
         run: |
-          git fetch origin ${{ github.event.pull_request.base.ref }}
-          git merge origin/${{ github.event.pull_request.base.ref }} --no-commit --no-ff
+          git fetch origin ${{ env.BASE_REF }}
+          git merge origin/${{ env.BASE_REF }} --no-commit --no-ff
 
-      - name: Check for conflicts
+      - name: Resolve Conflicts with Jules API
+        if: steps.merge.outcome == 'failure'
+        env:
+          JULES_API_KEY: ${{ secrets.JULES_API_KEY }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          # Abort the local dry-run merge so the tree is clean for Jules tracking
+          git merge --abort
+          python .github/scripts/jules-merge-conflicts.py
+
+      - name: Report Status
         if: steps.merge.outcome == 'failure'
         run: |
-          npx -y --package=@google/jules-merge jules-merge check-conflicts --repo ${{ github.repository }} --pr ${{ github.event.pull_request.number }} --sha ${{ github.event.pull_request.head.sha }}
-          
-
-      - name: Report conflicts
-        if: steps.merge.outcome == 'failure'
-        run: |
-          echo "::error::⚠️ Merge conflicts detected in PR #${{ github.event.pull_request.number }}"
-          echo ""
-          echo "Conflicted files:"
-          git diff --name-only --diff-filter=U
-          echo ""
-          echo "Please resolve these conflicts manually or rebase your branch."
-          exit 1
+          echo "::notice::Jules session finished. Check PR #${{ env.PR_NUMBER }} for resolved commits."
+          exit 1 # Fail the job so the check goes red, prompting user review of Jules's fixes
 
       - name: No conflicts
         if: steps.merge.outcome == 'success'
