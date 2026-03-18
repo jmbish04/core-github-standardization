@@ -1,8 +1,8 @@
 name: PR Docstring Generator
 
 on:
-  pull_request:
-    types: [opened, reopened, synchronize]
+  pull_request_review:
+    types: [submitted]
   workflow_dispatch:
 
 jobs:
