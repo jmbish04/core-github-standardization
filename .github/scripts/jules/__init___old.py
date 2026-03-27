@@ -5,7 +5,6 @@ Modular Python client and utilities for interacting with the Jules REST API.
 
 This package provides:
 - JulesClient: Full-featured REST API client with deduplication logic
-- Data classes for all Jules API entities
 - Helper utilities for common Jules operations in GitHub Actions
 
 Environment Variables:
@@ -22,17 +21,17 @@ Usage:
     )
 """
 
-from .data_classes import (
+from .jules_client import (
+    JulesClient,
+    Session,
     Activity,
-    AutomationMode,
-    DedupResult,
     Plan,
     PlanStep,
     PullRequest,
-    Session,
+    DedupResult,
+    AutomationMode,
     SessionState,
 )
-from .jules_client import JulesClient
 
 __all__ = [
     "JulesClient",
@@ -46,4 +45,4 @@ __all__ = [
     "SessionState",
 ]
 
-__version__ = "2.0.0"
+__version__ = "1.0.0"
