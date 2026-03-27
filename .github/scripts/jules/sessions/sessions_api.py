@@ -20,6 +20,9 @@ from ..data_classes.models.session import Session
 from ..utils.deduplication import check_for_duplicate
 
 
+"""
+SessionsAPI — TODO: describe purpose.
+"""
 class SessionsAPI:
     """
     Client for interacting with Jules sessions.
@@ -48,6 +51,12 @@ class SessionsAPI:
         self._post = post_func
         self._activities_api = activities_api
 
+    """
+    create_session — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def create_session(
         self,
         prompt: str,
@@ -84,6 +93,16 @@ class SessionsAPI:
             body["title"] = title
         return Session.from_dict(self._post("sessions", body))
 
+    """
+    get_session — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+    
+    Returns:
+        TODO: describe return value
+    """
     def get_session(self, session_id: str) -> Session:
         """
         Get a session by bare ID or full resource name.
@@ -101,6 +120,12 @@ class SessionsAPI:
         )
         return Session.from_dict(self._get(name, None))
 
+    """
+    list_sessions — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_sessions(
         self, page_size: int = 30, page_token: Optional[str] = None
     ) -> Dict:
@@ -123,6 +148,16 @@ class SessionsAPI:
             "nextPageToken": raw.get("nextPageToken", ""),
         }
 
+    """
+    list_all_sessions — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        max_pages: TODO: describe max_pages
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_all_sessions(self, max_pages: int = DEDUP_SCAN_PAGES) -> List[Session]:
         """
         Fetch up to max_pages pages of sessions and return them as a flat list.
@@ -145,6 +180,16 @@ class SessionsAPI:
                 break
         return sessions
 
+    """
+    approve_plan — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+    
+    Returns:
+        TODO: describe return value
+    """
     def approve_plan(self, session_id: str) -> None:
         """
         Approve the pending plan in a session.
@@ -159,6 +204,17 @@ class SessionsAPI:
         )
         self._post(f"{name}:approvePlan", None)
 
+    """
+    send_message — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+        prompt: TODO: describe prompt
+    
+    Returns:
+        TODO: describe return value
+    """
     def send_message(self, session_id: str, prompt: str) -> None:
         """
         Send a follow-up message to an active session.
@@ -174,6 +230,12 @@ class SessionsAPI:
         )
         self._post(f"{name}:sendMessage", {"prompt": prompt})
 
+    """
+    check_for_duplicate — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def check_for_duplicate(
         self,
         source_name: str,
@@ -203,6 +265,12 @@ class SessionsAPI:
             block_active_only=block_active_only,
         )
 
+    """
+    create_session_safe — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def create_session_safe(
         self,
         prompt: str,
@@ -258,6 +326,12 @@ class SessionsAPI:
         )
         return session, False
 
+    """
+    run_agent_skills_session — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def run_agent_skills_session(
         self,
         source_name: str,

@@ -7,6 +7,13 @@ Defines the SessionState enum for Jules session lifecycle states.
 from enum import Enum
 
 
+"""
+SessionState — TODO: describe purpose.
+
+Args:
+    str: TODO: describe str
+    Enum: TODO: describe Enum
+"""
 class SessionState(str, Enum):
     """
     Possible states of a Jules session.

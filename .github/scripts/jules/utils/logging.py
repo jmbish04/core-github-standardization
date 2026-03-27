@@ -10,6 +10,17 @@ from ..data_classes.models.activity import Activity
 from ..data_classes.models.plan import Plan
 
 
+"""
+log_activity — TODO: describe purpose.
+
+Args:
+    activity: TODO: describe activity
+    log: TODO: describe log
+    None]: TODO: describe None]
+
+Returns:
+    TODO: describe return value
+"""
 def log_activity(activity: Activity, log: Callable[[str], None]) -> None:
     """
     Log a Jules activity in a human-readable format.

@@ -9,6 +9,9 @@ from typing import Dict, List
 
 
 @dataclass
+"""
+PlanStep — TODO: describe purpose.
+"""
 class PlanStep:
     """
     Represents a single step in a Jules execution plan.
@@ -26,6 +29,16 @@ class PlanStep:
     index: int
 
     @classmethod
+    """
+    from_dict — TODO: describe purpose.
+    
+    Args:
+        cls: TODO: describe cls
+        d: TODO: describe d
+    
+    Returns:
+        TODO: describe return value
+    """
     def from_dict(cls, d: Dict) -> "PlanStep":
         """
         Create a PlanStep instance from a dictionary.
@@ -45,6 +58,9 @@ class PlanStep:
 
 
 @dataclass
+"""
+Plan — TODO: describe purpose.
+"""
 class Plan:
     """
     Represents a complete execution plan for a Jules session.
@@ -60,6 +76,16 @@ class Plan:
     create_time: str = ""
 
     @classmethod
+    """
+    from_dict — TODO: describe purpose.
+    
+    Args:
+        cls: TODO: describe cls
+        d: TODO: describe d
+    
+    Returns:
+        TODO: describe return value
+    """
     def from_dict(cls, d: Dict) -> "Plan":
         """
         Create a Plan instance from a dictionary.

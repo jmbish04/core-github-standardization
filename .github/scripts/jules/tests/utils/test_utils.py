@@ -1,3 +1,8 @@
+"""
+Utility module: test_utils.py
+
+"""
+
 """Tests for utility functions."""
 
 import pytest
@@ -6,6 +11,9 @@ from jules.data_classes import Activity, DedupResult, Plan, Session
 from jules.utils import check_for_duplicate, log_activity, prompt_fingerprint
 
 
+"""
+TestPromptFingerprint — TODO: describe purpose.
+"""
 class TestPromptFingerprint:
     """Tests for prompt_fingerprint function."""
 
@@ -15,30 +23,69 @@ class TestPromptFingerprint:
         prompt2 = "Test prompt"
         assert prompt_fingerprint(prompt1) == prompt_fingerprint(prompt2)
 
+    """
+    test_whitespace_normalized — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_whitespace_normalized(self):
         """Test that whitespace differences are normalized."""
         prompt1 = "Test   prompt"
         prompt2 = "Test prompt"
         assert prompt_fingerprint(prompt1) == prompt_fingerprint(prompt2)
 
+    """
+    test_case_insensitive — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_case_insensitive(self):
         """Test that fingerprinting is case-insensitive."""
         prompt1 = "Test Prompt"
         prompt2 = "test prompt"
         assert prompt_fingerprint(prompt1) == prompt_fingerprint(prompt2)
 
+    """
+    test_different_prompts_different_fingerprints — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_different_prompts_different_fingerprints(self):
         """Test that different prompts produce different fingerprints."""
         prompt1 = "Test prompt 1"
         prompt2 = "Test prompt 2"
         assert prompt_fingerprint(prompt1) != prompt_fingerprint(prompt2)
 
+    """
+    test_fingerprint_length — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_fingerprint_length(self):
         """Test that fingerprint has correct length."""
         fp = prompt_fingerprint("Test prompt")
         assert len(fp) == 16
 
 
+"""
+TestCheckForDuplicate — TODO: describe purpose.
+"""
 class TestCheckForDuplicate:
     """Tests for check_for_duplicate function."""
 
@@ -53,6 +100,15 @@ class TestCheckForDuplicate:
         assert result.is_duplicate is False
         assert result.existing_session is None
 
+    """
+    test_duplicate_found_active_session — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_duplicate_found_active_session(self):
         """Test finding a duplicate active session."""
         session = Session(
@@ -72,6 +128,15 @@ class TestCheckForDuplicate:
         assert result.is_duplicate is True
         assert result.existing_session.id == "test123"
 
+    """
+    test_no_duplicate_terminal_session_with_block_active_only — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_no_duplicate_terminal_session_with_block_active_only(self):
         """Test that terminal sessions are not considered duplicates when block_active_only=True."""
         session = Session(
@@ -90,6 +155,15 @@ class TestCheckForDuplicate:
         )
         assert result.is_duplicate is False
 
+    """
+    test_duplicate_terminal_session_without_block_active_only — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_duplicate_terminal_session_without_block_active_only(self):
         """Test that terminal sessions are considered duplicates when block_active_only=False."""
         session = Session(
@@ -108,6 +182,15 @@ class TestCheckForDuplicate:
         )
         assert result.is_duplicate is True
 
+    """
+    test_different_prompts_no_duplicate — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_different_prompts_no_duplicate(self):
         """Test that different prompts don't match."""
         session = Session(
@@ -126,6 +209,9 @@ class TestCheckForDuplicate:
         assert result.is_duplicate is False
 
 
+"""
+TestLogActivity — TODO: describe purpose.
+"""
 class TestLogActivity:
     """Tests for log_activity function."""
 
@@ -151,6 +237,15 @@ class TestLogActivity:
         assert "Step 1" in logs[1]
         assert "Step 2" in logs[2]
 
+    """
+    test_log_plan_approved — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_log_plan_approved(self):
         """Test logging a planApproved activity."""
         activity = Activity(
@@ -171,6 +266,15 @@ class TestLogActivity:
         assert "Plan approved" in logs[0]
         assert "plan123" in logs[0]
 
+    """
+    test_log_progress_updated — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_log_progress_updated(self):
         """Test logging a progressUpdated activity."""
         activity = Activity(
@@ -191,6 +295,15 @@ class TestLogActivity:
         assert "Creating files" in logs[0]
         assert "Added config.py" in logs[0]
 
+    """
+    test_log_agent_messaged — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_log_agent_messaged(self):
         """Test logging an agentMessaged activity."""
         activity = Activity(
@@ -210,6 +323,15 @@ class TestLogActivity:
         assert len(logs) == 1
         assert "Agent: Starting work" in logs[0]
 
+    """
+    test_log_session_completed — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_log_session_completed(self):
         """Test logging a sessionCompleted activity."""
         activity = Activity(
@@ -229,6 +351,15 @@ class TestLogActivity:
         assert len(logs) == 1
         assert "Session completed" in logs[0]
 
+    """
+    test_log_session_failed_raises_error — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def test_log_session_failed_raises_error(self):
         """Test that sessionFailed raises RuntimeError."""
         activity = Activity(

@@ -24,6 +24,9 @@ from .sources.sources_api import SourcesAPI
 logger = logging.getLogger(__name__)
 
 
+"""
+JulesClient — TODO: describe purpose.
+"""
 class JulesClient:
     """
     Full-coverage Python client for the Jules REST API (v1alpha).
@@ -91,6 +94,16 @@ class JulesClient:
         """
         return f"{BASE_URL}/{path.lstrip('/')}"
 
+    """
+    _params — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        extra: TODO: describe extra
+    
+    Returns:
+        TODO: describe return value
+    """
     def _params(self, extra: Optional[dict] = None) -> dict:
         """
         Build query parameters with API key.
@@ -106,6 +119,17 @@ class JulesClient:
             p.update(extra)
         return p
 
+    """
+    _get — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        path: TODO: describe path
+        params: TODO: describe params
+    
+    Returns:
+        TODO: describe return value
+    """
     def _get(self, path: str, params: Optional[dict] = None) -> dict:
         """
         Make a GET request to the Jules API.
@@ -126,6 +150,17 @@ class JulesClient:
         resp.raise_for_status()
         return resp.json()
 
+    """
+    _post — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        path: TODO: describe path
+        body: TODO: describe body
+    
+    Returns:
+        TODO: describe return value
+    """
     def _post(self, path: str, body: Optional[dict] = None) -> dict:
         """
         Make a POST request to the Jules API.
@@ -157,58 +192,209 @@ class JulesClient:
         """List all sources (GitHub repos) connected to Jules."""
         return self.sources.list_sources()
 
+    """
+    get_source — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        source_name: TODO: describe source_name
+    
+    Returns:
+        TODO: describe return value
+    """
     def get_source(self, source_name: str):
         """Get a single source by resource name."""
         return self.sources.get_source(source_name)
 
+    """
+    find_source_for_repo — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        owner: TODO: describe owner
+        repo: TODO: describe repo
+    
+    Returns:
+        TODO: describe return value
+    """
     def find_source_for_repo(self, owner: str, repo: str):
         """Scan all sources and return the one matching owner/repo."""
         return self.sources.find_source_for_repo(owner, repo)
 
+    """
+    create_session — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        *args: TODO: describe *args
+        **kwargs: TODO: describe **kwargs
+    
+    Returns:
+        TODO: describe return value
+    """
     def create_session(self, *args, **kwargs):
         """Create a new Jules session (raw, no dedup check)."""
         return self.sessions.create_session(*args, **kwargs)
 
+    """
+    get_session — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+    
+    Returns:
+        TODO: describe return value
+    """
     def get_session(self, session_id: str):
         """Get a session by bare ID or full resource name."""
         return self.sessions.get_session(session_id)
 
+    """
+    list_sessions — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        *args: TODO: describe *args
+        **kwargs: TODO: describe **kwargs
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_sessions(self, *args, **kwargs):
         """List sessions with pagination."""
         return self.sessions.list_sessions(*args, **kwargs)
 
+    """
+    list_all_sessions — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        *args: TODO: describe *args
+        **kwargs: TODO: describe **kwargs
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_all_sessions(self, *args, **kwargs):
         """Fetch up to max_pages pages of sessions."""
         return self.sessions.list_all_sessions(*args, **kwargs)
 
+    """
+    approve_plan — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+    
+    Returns:
+        TODO: describe return value
+    """
     def approve_plan(self, session_id: str):
         """Approve the pending plan in a session."""
         return self.sessions.approve_plan(session_id)
 
+    """
+    send_message — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+        prompt: TODO: describe prompt
+    
+    Returns:
+        TODO: describe return value
+    """
     def send_message(self, session_id: str, prompt: str):
         """Send a follow-up message to an active session."""
         return self.sessions.send_message(session_id, prompt)
 
+    """
+    check_for_duplicate — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        *args: TODO: describe *args
+        **kwargs: TODO: describe **kwargs
+    
+    Returns:
+        TODO: describe return value
+    """
     def check_for_duplicate(self, *args, **kwargs):
         """Scan existing sessions to determine if an equivalent exists."""
         return self.sessions.check_for_duplicate(*args, **kwargs)
 
+    """
+    create_session_safe — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        *args: TODO: describe *args
+        **kwargs: TODO: describe **kwargs
+    
+    Returns:
+        TODO: describe return value
+    """
     def create_session_safe(self, *args, **kwargs):
         """Dedup-aware wrapper around create_session."""
         return self.sessions.create_session_safe(*args, **kwargs)
 
+    """
+    run_agent_skills_session — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        *args: TODO: describe *args
+        **kwargs: TODO: describe **kwargs
+    
+    Returns:
+        TODO: describe return value
+    """
     def run_agent_skills_session(self, *args, **kwargs):
         """End-to-end helper for the Jules GitHub Action."""
         return self.sessions.run_agent_skills_session(*args, **kwargs)
 
+    """
+    get_activity — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+        activity_id: TODO: describe activity_id
+    
+    Returns:
+        TODO: describe return value
+    """
     def get_activity(self, session_id: str, activity_id: str):
         """Get a specific activity from a session."""
         return self.activities.get_activity(session_id, activity_id)
 
+    """
+    list_activities — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        *args: TODO: describe *args
+        **kwargs: TODO: describe **kwargs
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_activities(self, *args, **kwargs):
         """List activities for a session with pagination."""
         return self.activities.list_activities(*args, **kwargs)
 
+    """
+    stream_activities — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        *args: TODO: describe *args
+        **kwargs: TODO: describe **kwargs
+    
+    Returns:
+        TODO: describe return value
+    """
     def stream_activities(self, *args, **kwargs):
         """Poll activities list, yielding each new Activity."""
         return self.activities.stream_activities(*args, **kwargs)

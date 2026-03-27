@@ -7,6 +7,13 @@ Defines the AutomationMode enum for Jules session automation settings.
 from enum import Enum
 
 
+"""
+AutomationMode — TODO: describe purpose.
+
+Args:
+    str: TODO: describe str
+    Enum: TODO: describe Enum
+"""
 class AutomationMode(str, Enum):
     """
     Automation mode for Jules sessions.

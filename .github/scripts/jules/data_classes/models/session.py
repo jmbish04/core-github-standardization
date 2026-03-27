@@ -13,6 +13,9 @@ from .pull_request import PullRequest
 
 
 @dataclass
+"""
+Session — TODO: describe purpose.
+"""
 class Session:
     """
     Represents a Jules coding session.
@@ -43,6 +46,16 @@ class Session:
     outputs: List = field(default_factory=list)
 
     @classmethod
+    """
+    from_dict — TODO: describe purpose.
+    
+    Args:
+        cls: TODO: describe cls
+        d: TODO: describe d
+    
+    Returns:
+        TODO: describe return value
+    """
     def from_dict(cls, d: Dict) -> "Session":
         """
         Create a Session instance from a dictionary.
@@ -66,6 +79,15 @@ class Session:
         )
 
     @property
+    """
+    pull_requests — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def pull_requests(self) -> List[PullRequest]:
         """
         Extract pull requests from session outputs.
@@ -80,6 +102,15 @@ class Session:
         ]
 
     @property
+    """
+    is_active — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def is_active(self) -> bool:
         """
         Check if the session is in an active state.
@@ -90,6 +121,15 @@ class Session:
         return self.state in ACTIVE_STATES
 
     @property
+    """
+    is_terminal — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def is_terminal(self) -> bool:
         """
         Check if the session has reached a terminal state.
@@ -100,6 +140,15 @@ class Session:
         return self.state in TERMINAL_STATES
 
     @property
+    """
+    succeeded — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def succeeded(self) -> bool:
         """
         Check if the session completed successfully.
@@ -110,6 +159,15 @@ class Session:
         return self.state == SessionState.COMPLETED.value
 
     @property
+    """
+    failed — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def failed(self) -> bool:
         """
         Check if the session failed.

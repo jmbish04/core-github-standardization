@@ -12,6 +12,15 @@ from ..data_classes.models.dedup_result import DedupResult
 from ..data_classes.models.session import Session
 
 
+"""
+prompt_fingerprint — TODO: describe purpose.
+
+Args:
+    prompt: TODO: describe prompt
+
+Returns:
+    TODO: describe return value
+"""
 def prompt_fingerprint(prompt: str) -> str:
     """
     Generate a short SHA-256 hex digest of the normalized prompt text.
@@ -29,6 +38,12 @@ def prompt_fingerprint(prompt: str) -> str:
     return hashlib.sha256(normalized.encode()).hexdigest()[:DEDUP_FINGERPRINT_LENGTH]
 
 
+"""
+check_for_duplicate — TODO: describe purpose.
+
+Returns:
+    TODO: describe return value
+"""
 def check_for_duplicate(
     existing_sessions: List[Session],
     source_name: str,

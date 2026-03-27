@@ -12,6 +12,9 @@ from ..data_classes.enums.session_state import SessionState
 from ..data_classes.models.activity import Activity
 
 
+"""
+ActivitiesAPI — TODO: describe purpose.
+"""
 class ActivitiesAPI:
     """
     Client for interacting with Jules activities.
@@ -38,6 +41,17 @@ class ActivitiesAPI:
         self._post = post_func
         self._get_session_func: Optional[Callable[[str], "Session"]] = None
 
+    """
+    set_get_session_func — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        func: TODO: describe func
+        "Session"]: TODO: describe "Session"]
+    
+    Returns:
+        TODO: describe return value
+    """
     def set_get_session_func(self, func: Callable[[str], "Session"]) -> None:
         """
         Set the function to get a session.
@@ -49,6 +63,17 @@ class ActivitiesAPI:
         """
         self._get_session_func = func
 
+    """
+    get_activity — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        session_id: TODO: describe session_id
+        activity_id: TODO: describe activity_id
+    
+    Returns:
+        TODO: describe return value
+    """
     def get_activity(self, session_id: str, activity_id: str) -> Activity:
         """
         Get a specific activity from a session.
@@ -67,6 +92,12 @@ class ActivitiesAPI:
         )
         return Activity.from_dict(self._get(f"{name}/activities/{activity_id}", None))
 
+    """
+    list_activities — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_activities(
         self,
         session_id: str,
@@ -98,6 +129,12 @@ class ActivitiesAPI:
             "nextPageToken": raw.get("nextPageToken", ""),
         }
 
+    """
+    stream_activities — TODO: describe purpose.
+    
+    Returns:
+        TODO: describe return value
+    """
     def stream_activities(
         self,
         session_id: str,

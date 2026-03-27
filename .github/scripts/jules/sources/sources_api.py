@@ -7,6 +7,9 @@ API client for Jules sources endpoints.
 from typing import Callable, Dict, List, Optional
 
 
+"""
+SourcesAPI — TODO: describe purpose.
+"""
 class SourcesAPI:
     """
     Client for interacting with Jules sources (GitHub repositories).
@@ -24,6 +27,15 @@ class SourcesAPI:
         """
         self._get = get_func
 
+    """
+    list_sources — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+    
+    Returns:
+        TODO: describe return value
+    """
     def list_sources(self) -> List[Dict]:
         """
         List all sources (GitHub repos) connected to Jules.
@@ -33,6 +45,16 @@ class SourcesAPI:
         """
         return self._get("sources", None).get("sources", [])
 
+    """
+    get_source — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        source_name: TODO: describe source_name
+    
+    Returns:
+        TODO: describe return value
+    """
     def get_source(self, source_name: str) -> Dict:
         """
         Get a single source by resource name.
@@ -45,6 +67,17 @@ class SourcesAPI:
         """
         return self._get(source_name, None)
 
+    """
+    find_source_for_repo — TODO: describe purpose.
+    
+    Args:
+        self: TODO: describe self
+        owner: TODO: describe owner
+        repo: TODO: describe repo
+    
+    Returns:
+        TODO: describe return value
+    """
     def find_source_for_repo(self, owner: str, repo: str) -> Optional[Dict]:
         """
         Scan all sources and return the one matching owner/repo.

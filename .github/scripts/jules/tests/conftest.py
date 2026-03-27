@@ -1,9 +1,20 @@
+"""
+Test suite: conftest.py
+
+"""
+
 """Test configuration and shared fixtures."""
 
 import pytest
 
 
 @pytest.fixture
+"""
+sample_session_dict — TODO: describe purpose.
+
+Returns:
+    TODO: describe return value
+"""
 def sample_session_dict():
     """Sample session dictionary from Jules API."""
     return {
@@ -20,6 +31,12 @@ def sample_session_dict():
 
 
 @pytest.fixture
+"""
+sample_activity_dict — TODO: describe purpose.
+
+Returns:
+    TODO: describe return value
+"""
 def sample_activity_dict():
     """Sample activity dictionary from Jules API."""
     return {
@@ -34,6 +51,12 @@ def sample_activity_dict():
 
 
 @pytest.fixture
+"""
+sample_pull_request_dict — TODO: describe purpose.
+
+Returns:
+    TODO: describe return value
+"""
 def sample_pull_request_dict():
     """Sample pull request dictionary from Jules API."""
     return {
@@ -44,6 +67,12 @@ def sample_pull_request_dict():
 
 
 @pytest.fixture
+"""
+sample_plan_dict — TODO: describe purpose.
+
+Returns:
+    TODO: describe return value
+"""
 def sample_plan_dict():
     """Sample plan dictionary from Jules API."""
     return {

@@ -11,6 +11,9 @@ from ...config import ACTIVITY_TYPES
 
 
 @dataclass
+"""
+Activity — TODO: describe purpose.
+"""
 class Activity:
     """
     Represents an activity/event in a Jules session.
@@ -39,6 +42,16 @@ class Activity:
     artifacts: List = field(default_factory=list)
 
     @classmethod
+    """
+    from_dict — TODO: describe purpose.
+    
+    Args:
+        cls: TODO: describe cls
+        d: TODO: describe d
+    
+    Returns:
+        TODO: describe return value
+    """
     def from_dict(cls, d: Dict) -> "Activity":
         """
         Create an Activity instance from a dictionary.

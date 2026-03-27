@@ -12,6 +12,9 @@ if TYPE_CHECKING:
 
 
 @dataclass
+"""
+DedupResult — TODO: describe purpose.
+"""
 class DedupResult:
     """
     Result of a session deduplication check.
