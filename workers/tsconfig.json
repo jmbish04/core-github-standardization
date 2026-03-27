@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": [
+      "esnext",
+      "dom",
+      "WebWorker"
+    ],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/backend/src/*"],
+      "@db": ["src/backend/src/db/index.ts"],
+      "@db/*": ["src/backend/src/db/*"],
+      "@agents/*": ["src/backend/src/ai/agents/*"],
+      "@utils/*": ["src/backend/src/utils/*"],
+      "@services/*": ["src/backend/src/services/*"],
+      "@custom-types": ["src/backend/src/types/index.ts"],
+      "@custom-types/*": ["src/backend/src/types/*"],
+      "@logging": ["src/backend/src/lib/logger.ts"],
+      "@agent-sdk": ["src/backend/src/ai/agent-sdk.ts"],
+      "@budget": ["src/backend/src/ai/utils/budget-tracker.ts"],
+      "@model-config": ["src/backend/src/ai/utils/model-config.ts"],
+      "@sandbox-sdk-tools": ["src/backend/src/ai/mcp/tools/sandbox-sdk/index.ts"],
+      "@sandbox-sdk-tools/*": ["src/backend/src/ai/mcp/tools/sandbox-sdk/*"],
+      "@ai-config": ["src/backend/src/ai/ai-config.ts"],
+      "@agent-utils": ["src/backend/src/ai/agent-utils.ts"],
+      "@health-check": ["src/backend/src/health/health-check.ts"],
+      "@github-utils": ["src/backend/src/utils/github/configs.ts"],
+      "@research-logger": ["src/backend/src/lib/research-logger.ts"],
+      "@lib/*": ["src/backend/src/lib/*"],
+      "@/config-settings": ["src/backend/src/lib/config.ts"],
+      "@ai-agents/*": ["src/backend/src/ai/agents/*"],
+      "@alerts": ["src/backend/src/alerts/index.ts"],
+      "@alerts/*": ["src/backend/src/alerts/*"]
+    },
+    "types": [
+      "node",
+      "@cloudflare/workers-types",
+      "./worker-configuration.d.ts"
+    ]
+  },
+  "include": [
+    "src/backend/src/**/*.ts",
+    "src/backend/src/**/*.d.ts",
+    "worker-configuration.d.ts",
+    "tests",
+    "scripts/github/extract_pr_code_comments.ts",
+    "landing-generator",
+    "src/backend/drizzle.config.webhooks.ts",
+    "src/backend/drizzle.config.core.ts",
+    "drizzle.do.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/backend/src/examples"
+  ]
+}

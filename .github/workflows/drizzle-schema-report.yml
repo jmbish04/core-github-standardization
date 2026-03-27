@@ -1,0 +1,46 @@
+name: Drizzle Schema Analysis Report
+
+on:
+  pull_request:
+    paths:
+      - '**/*.ts'
+      - '**/*.tsx'
+  workflow_dispatch:
+
+jobs:
+  analyze-schema:
+    runs-on: ubuntu-latest
+    name: Generate Schema Report
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          
+      - name: Ensure Script is Executable
+        run: chmod +x scripts/analyze_drizzle_schema.py
+          
+      - name: Run Schema Analysis
+        # The python script now natively handles the timestamp and directory creation
+        # It defaults to outputting at scripts/reports/hygeine/drizzle-schema-report-[timestamp].md
+        run: python scripts/analyze_drizzle_schema.py
+        
+      - name: Upload Report Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: drizzle-hygiene-reports
+          # Target the dynamically generated timestamped file
+          path: scripts/reports/hygeine/drizzle-schema-report-*.md
+          retention-days: 14
+
+      - name: Check for AI Slop
+        run: |
+          # Search the newly generated report for the orphaned tables warning
+          if grep -q "### Unmapped / Orphaned Schema Tables" scripts/reports/hygeine/drizzle-schema-report-*.md; then
+            echo "::error::Orphaned Drizzle tables detected! Please review the schema for AI slop."
+            exit 1
+          fi

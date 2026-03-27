@@ -1,0 +1,59 @@
+{
+  "name": "INSERT__WORKER_NAME",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/backend/src/index.ts",
+  "packageManager": "",
+  "engines": {
+    "pnpm": "latest"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@openai/agents"
+      ]
+    },
+    "overrides": {
+      "hono": "latest",
+    }
+  },
+  "scripts": {
+    "dev": "pnpm run build:frontend && wrangler dev",
+    "dev:watch": "concurrently \"pnpm --filter frontend dev\" \"wrangler dev\"",
+    "start": "wrangler dev",
+    "test": "vitest --run",
+    "test:e2e": "uv run tests/e2e/test_runner.py",
+    "install:all": "pnpm install",
+    "frontend:add": "pnpm --filter frontend add",
+    "frontend:dev": "pnpm --filter frontend dev",
+    "db:generate": "drizzle-kit generate",
+    "db:push": "pnpm --filter frontend drizzle-kit push",
+    "tail": "rm -f .wrangler/wrangler.log && wrangler tail --format pretty | tee .wrangler/wrangler.log",
+    "check": "tsc --noEmit",
+    "sandbox-check": "node scripts/verify-sandbox-version.mjs",
+    "build:frontend": "rm -rf src/frontend/.astro && pnpm --filter frontend build",
+    "deploy": "pnpm run sandbox-check && pnpm run build:frontend && pnpm run db:generate:all && pnpm run migrate:remote:all && pnpm run deploy:only",
+    "deploy:only": "node scripts/deploy.mjs",
+    "deploy:tail": "rm -f .wrangler/wrangler.log && pnpm run deploy && wrangler tail --format pretty | tee .wrangler/wrangler.log",
+    "dry-run": "WRANGLER_LOG_PATH=.wrangler/wrangler.log pnpm exec wrangler deploy --dry-run",
+    "dry-run:tail": "WRANGLER_LOG_PATH=.wrangler/wrangler.log pnpm exec wrangler deploy --dry-run || (echo '\\n--- Wrangler log tail ---' && tail -n 200 .wrangler/wrangler.log && exit 1)",
+    "db:generate": "drizzle-kit generate",
+    "migrate:local": "yes | wrangler d1 migrations apply DB --local",
+    "migrate:remote": "yes | wrangler d1 migrations apply DB --remote"
+  },
+  "dependencies": {
+    "zod": "latest",
+    "zod-to-json-schema": "latest"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "latest",
+    "@eslint/js": "latest",
+    "@types/node": "latest",
+    "drizzle-kit": "latest",
+    "eslint": "latest",
+    "typescript": "latest",
+    "typescript-eslint": "latest",
+    "vitest": "latest",
+    "wrangler": "latest"
+  }
+}
