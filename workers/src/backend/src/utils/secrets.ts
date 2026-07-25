@@ -1,6 +1,6 @@
-import { ConfigManager } from "@/lib/config";
-import { isUuid } from "@/utils/common";
-import { Logger } from "@/lib/logger";
+// import { ConfigManager } from "@/lib/config";
+// import { isUuid } from "@/utils/common";
+// import { Logger } from "@/lib/logger";
 
 
 /**
@@ -85,47 +85,6 @@ export async function getWorkerApiKey(env: Env): Promise<string | undefined> {
     return getSecret(env, "WORKER_API_KEY");
 }
 
-/**
- * Helper to fetch the AGENTIC_WORKER_API_KEY from the Secrets Store.
- * This key is exclusively for agent/automation access to the frontend.
- * It supports the ?AGENT_AUTH= URL query param auth path, which is NOT
- * available to the regular WORKER_API_KEY.
- */
-export async function getAgenticWorkerApiKey(env: Env): Promise<string | undefined> {
-    if (env.AGENTIC_WORKER_API_KEY) {
-        return typeof env.AGENTIC_WORKER_API_KEY === 'string'
-            ? env.AGENTIC_WORKER_API_KEY
-            : await env.AGENTIC_WORKER_API_KEY.get();
-    }
-    return getSecret(env, "AGENTIC_WORKER_API_KEY");
-}
-
-export async function getGithubToken(env: Env): Promise<string | undefined> {
-    if (env.GITHUB_TOKEN) {
-        return typeof env.GITHUB_TOKEN === 'string'
-            ? env.GITHUB_TOKEN
-            : await (env.GITHUB_TOKEN as any).get();
-    }
-    return getSecret(env, "GITHUB_TOKEN");
-}
-
-export async function getOpenaiApiKey(env: Env): Promise<string | undefined> {
-    if (env.OPENAI_API_KEY) {
-        return typeof env.OPENAI_API_KEY === 'string'
-            ? env.OPENAI_API_KEY
-            : await (env.OPENAI_API_KEY as any).get();
-    }
-    return getSecret(env, "OPENAI_API_KEY");
-}
-
-export async function getAnthropicApiKey(env: Env): Promise<string | undefined> {
-    if (env.ANTHROPIC_API_KEY) {
-        return typeof env.ANTHROPIC_API_KEY === 'string'
-            ? env.ANTHROPIC_API_KEY
-            : await (env.ANTHROPIC_API_KEY as any).get();
-    }
-    return getSecret(env, "ANTHROPIC_API_KEY");
-}
 
 export async function getGeminiApiKey(env: Env): Promise<string | undefined> {
     if (env.GEMINI_API_KEY) {
@@ -154,71 +113,3 @@ export async function getCloudflareAccountId(env: Env): Promise<string | undefin
     return getSecret(env, "CLOUDFLARE_ACCOUNT_ID");
 }
 
-export async function getGithubClientId(env: Env): Promise<string | undefined> {
-    if (env.GITHUB_CLIENT_ID) {
-        return typeof env.GITHUB_CLIENT_ID === 'string'
-            ? env.GITHUB_CLIENT_ID
-            : await (env.GITHUB_CLIENT_ID as any).get();
-    }
-    return getSecret(env, "GITHUB_CLIENT_ID");
-}
-
-export async function getGithubClientSecret(env: Env): Promise<string | undefined> {
-    if (env.GITHUB_CLIENT_SECRET) {
-        return typeof env.GITHUB_CLIENT_SECRET === 'string'
-            ? env.GITHUB_CLIENT_SECRET
-            : await (env.GITHUB_CLIENT_SECRET as any).get();
-    }
-    return getSecret(env, "GITHUB_CLIENT_SECRET");
-}
-
-/**
- * Helper to fetch the full GitHub App Private Key.
- * @param env The worker environment bindings
- * @returns The PEM private key string
- */
-export async function getGitHubPrivateKey(env: Env): Promise<string> {
-    if (env.GITHUB_APP_PRIVATE_KEY) {
-        return env.GITHUB_APP_PRIVATE_KEY;
-    }
-
-    throw new Error("Missing GITHUB_APP_PRIVATE_KEY in Environment/Secrets Store");
-}
-
-/**
- * Helper to fetch the GitHub App ID from secrets store.
- * @param env The worker environment bindings
- */
-export async function getGitHubAppId(env: Env): Promise<string> {
-    if (env.GITHUB_APP_ID) {
-        return typeof env.GITHUB_APP_ID === 'string'
-            ? env.GITHUB_APP_ID
-            : await (env.GITHUB_APP_ID as any).get();
-    }
-    
-    const appId = await getSecret(env, "GITHUB_APP_ID");
-    if (!appId) {
-        throw new Error("Missing GITHUB_APP_ID in Secrets Store");
-    }
-    return appId;
-}
-
-/**
- * Helper to fetch the GitHub Webhook Secret.
- * Assuming this is also a Secrets Store binding.
- */
-export async function getGitHubWebhookSecret(env: Env): Promise<string> {
-    // This often maps to WORKER_API_KEY in this project
-    if (env.WORKER_API_KEY) {
-        const secret = typeof env.WORKER_API_KEY === 'string' 
-            ? env.WORKER_API_KEY 
-            : await (env.WORKER_API_KEY as any).get();
-        if (secret) return secret;
-    }
-
-    const secret = await getSecret(env, "WORKER_API_KEY");
-    if (!secret) {
-        throw new Error("Missing WORKER_API_KEY in Secrets Store");
-    }
-    return secret;
-}
