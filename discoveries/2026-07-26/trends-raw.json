@@ -1,0 +1,398 @@
+{
+  "date": "2026-07-26T08:46:57.131363+00:00",
+  "count": 49,
+  "repos": [
+    {
+      "name": "elder-plinius/T3MP3ST",
+      "description": "autonomous red teaming platform; multi-agent offensive-security meta-harness",
+      "url": "https://github.com/elder-plinius/T3MP3ST",
+      "stars": 5200,
+      "created_at": "2026-07-02T17:53:55+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "oomol-lab/open-connector",
+      "description": "Open-source auth gateway connecting 1000+ SaaS providers to AI agents through SDK, CLI, MCP, HTTP, and OpenAPI.",
+      "url": "https://github.com/oomol-lab/open-connector",
+      "stars": 3324,
+      "created_at": "2026-06-29T10:49:36+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "synthetic-sciences/openscience",
+      "description": "The open-source AI workbench for scientific research",
+      "url": "https://github.com/synthetic-sciences/openscience",
+      "stars": 2797,
+      "created_at": "2026-07-03T15:06:45+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "DavidHDev/canvas-ui",
+      "description": "A library of creative canvas components. Real HTML with WebGL effects running over it. React, Vue, Svelte, vanilla.",
+      "url": "https://github.com/DavidHDev/canvas-ui",
+      "stars": 2020,
+      "created_at": "2026-07-16T13:38:20+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "nyblnet/bento",
+      "description": "Bento, the office suite that fits in a file",
+      "url": "https://github.com/nyblnet/bento",
+      "stars": 1918,
+      "created_at": "2026-07-17T16:55:09+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "Vincentwei1021/video-shotcraft",
+      "description": "AI video skill for Claude Code & Codex \u2014 cinematic product videos with Remotion: 106 shot recipe cards, 161 motion previews, a production-ready template",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "stars": 1806,
+      "created_at": "2026-07-19T11:44:41+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "pixel-point/aval",
+      "description": "A new open-source format for interactive video on the web, with a built-in state machine, frame-accurate transitions, and packed-alpha transparency.",
+      "url": "https://github.com/pixel-point/aval",
+      "stars": 1302,
+      "created_at": "2026-07-13T07:42:51+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "deer-flow/llm-space",
+      "description": "A desktop app to prototype agent ideas, inspect every harness step, replay failures, and evaluate performance, all in one place. Local-first, cloud-ready for managed agents.",
+      "url": "https://github.com/deer-flow/llm-space",
+      "stars": 1250,
+      "created_at": "2026-06-28T03:39:34+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "pablostanley/yoinks",
+      "description": "yoink any video from your terminal. no shady ads.",
+      "url": "https://github.com/pablostanley/yoinks",
+      "stars": 1129,
+      "created_at": "2026-07-16T07:06:09+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "Jakubantalik/thinking-orbs",
+      "description": "Dotted thought-orb loading indicators for AI & agent UIs \u2014 six tuned states, two sizes, auto dark/light",
+      "url": "https://github.com/Jakubantalik/thinking-orbs",
+      "stars": 1048,
+      "created_at": "2026-07-21T07:01:53+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "x4gKing/X4G",
+      "description": "No description",
+      "url": "https://github.com/x4gKing/X4G",
+      "stars": 6732,
+      "created_at": "2026-07-04T06:43:51+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "andrewyng/openworker",
+      "description": "No description",
+      "url": "https://github.com/andrewyng/openworker",
+      "stars": 5613,
+      "created_at": "2026-07-20T01:52:32+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "img2threejs/img2threejs",
+      "description": "Rebuild the object in a reference image as a code-only, procedural, quality-gated, animation-ready Three.js model. Token-efficient image-to-3D.",
+      "url": "https://github.com/img2threejs/img2threejs",
+      "stars": 5054,
+      "created_at": "2026-07-15T02:58:39+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "MDX-Tom/gpt-5.6-instruct",
+      "description": "A Codex CLI jailbreak prompt and test pack for gpt-5.6-sol. \u9488\u5bf9 gpt-5.6 \u7cfb\u5217\u7684 Codex CLI \u7834\u7532\u63d0\u793a\u8bcd\u4e0e\u6d4b\u8bd5\u5305\u3002",
+      "url": "https://github.com/MDX-Tom/gpt-5.6-instruct",
+      "stars": 3017,
+      "created_at": "2026-07-11T09:44:24+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "lopopolo/harness-engineering",
+      "description": "\ud83d\udc0e Ryan Lopopolo\u2019s anthology, field guide, and agent context bundle for harness engineering",
+      "url": "https://github.com/lopopolo/harness-engineering",
+      "stars": 2356,
+      "created_at": "2026-07-18T21:42:28+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "yynxxxxx/Codex-5.5-codex-instruct-5.5",
+      "description": "No description",
+      "url": "https://github.com/yynxxxxx/Codex-5.5-codex-instruct-5.5",
+      "stars": 2021,
+      "created_at": "2026-06-28T10:24:42+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "Sahir619/fable-method",
+      "description": "The Fable Workflow: how Claude Fable 5 worked, distilled into skills any model can run, with the eval that keeps it honest. Think / act / prove.",
+      "url": "https://github.com/Sahir619/fable-method",
+      "stars": 1918,
+      "created_at": "2026-07-06T22:35:18+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "HUANGCHIHHUNGLeo/claude-real-video",
+      "description": "Let Claude (or any LLM) actually watch a video \u2014 scene-aware, deduplicated frames + transcript, from a URL or local file. Runs locally, MIT.",
+      "url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
+      "stars": 1859,
+      "created_at": "2026-06-30T10:55:02+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "Jia-Ethan/codex-keysmith",
+      "description": "Version-independent Codex instruction deployment with dry-run, backups, hook isolation, and recovery.",
+      "url": "https://github.com/Jia-Ethan/codex-keysmith",
+      "stars": 1743,
+      "created_at": "2026-06-28T04:38:07+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "anthropics/jacobian-lens",
+      "description": " Companion code for the global workspace interpretability paper",
+      "url": "https://github.com/anthropics/jacobian-lens",
+      "stars": 1576,
+      "created_at": "2026-07-02T20:30:04+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "andikaputradev/wedding-invitation",
+      "description": "Elegant digital wedding invitation website for Arga & Nimas using Next.js 15, Framer Motion, Tailwind CSS, Google Apps Script, and Google Spreadsheet.",
+      "url": "https://github.com/andikaputradev/wedding-invitation",
+      "stars": 7,
+      "created_at": "2026-07-13T14:19:44+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "tusharmali/murmur",
+      "description": "A private, local-first, Slack-like notes & messages vault \u2014 client-side PBKDF2+AES-GCM encryption, autosaved to your own Google Sheet. Zero server secrets.",
+      "url": "https://github.com/tusharmali/murmur",
+      "stars": 2,
+      "created_at": "2026-07-04T12:14:08+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "genius-harry/auto-email-sender",
+      "description": "Email-sending capability for AI agents (ships as a Claude Code skill) and humans. Gmail sending runs server-side via Apps Script: idempotent submits, validation that catches agent mistakes, attachments, recontact guard.",
+      "url": "https://github.com/genius-harry/auto-email-sender",
+      "stars": 2,
+      "created_at": "2026-07-02T05:08:23+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Atik-Shahriar007/deepseek-to-docs-extension",
+      "description": "Chrome extension that saves AI chat replies from DeepSeek and ChatGPT straight to your personal Google Doc, one click at a time.",
+      "url": "https://github.com/Atik-Shahriar007/deepseek-to-docs-extension",
+      "stars": 1,
+      "created_at": "2026-07-14T04:10:20+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "marktaal00/MOSDEO-ICT-Inventory-System",
+      "description": "DPWH Misamis Oriental 2nd DEO ICT Inventory Management System",
+      "url": "https://github.com/marktaal00/MOSDEO-ICT-Inventory-System",
+      "stars": 1,
+      "created_at": "2026-07-15T01:41:17+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "mihozip/gas-school-lunch-management-system",
+      "description": "Google Apps Script school lunch meal suspension, meal statistics, subsidy allocation, reconciliation, and reporting system.",
+      "url": "https://github.com/mihozip/gas-school-lunch-management-system",
+      "stars": 1,
+      "created_at": "2026-07-18T07:46:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "bazhinapolly/ai-gmail-classifier-apps-script",
+      "description": "Google Apps Script Gmail automation that classifies emails with OpenAI and applies Gmail labels.",
+      "url": "https://github.com/bazhinapolly/ai-gmail-classifier-apps-script",
+      "stars": 1,
+      "created_at": "2026-07-05T11:07:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "risewithvj/zoho-salesiq-report-automation",
+      "description": "Free Zoho SalesIQ report automation for Website & WhatsApp chatbots - auto-reads your exports from Google Drive, classifies leads by source, and emails branded Weekly/Monthly reports via Google Sheets + Apps Script. No servers, no cost.",
+      "url": "https://github.com/risewithvj/zoho-salesiq-report-automation",
+      "stars": 1,
+      "created_at": "2026-07-18T20:31:08+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "ShreyasThakur11/StudySync",
+      "description": "Study group portal for a 15-member MBA cohort: daily news duty rotation, live five-domain news compiler with one-click formatted posts, and a Google Apps Script backend for the spreadsheet system and reminders.",
+      "url": "https://github.com/ShreyasThakur11/StudySync",
+      "stars": 1,
+      "created_at": "2026-07-07T05:45:15+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "nicola-empower/words-of-the-wild",
+      "description": "Words of the Wild is an operational platform developed for the Scottish Wildlife Trust to replace manual spreadsheet-driven competition management with a secure, automated workflow.",
+      "url": "https://github.com/nicola-empower/words-of-the-wild",
+      "stars": 1,
+      "created_at": "2026-07-05T21:01:12+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "zeus-panel/ZEUS-PANEL",
+      "description": "A high-performance, serverless VLESS network proxy management panel deployed natively on Cloudflare Workers & D1 SQL Database.",
+      "url": "https://github.com/zeus-panel/ZEUS-PANEL",
+      "stars": 553,
+      "created_at": "2026-07-20T11:37:49+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "realchendahuang/FlareMo",
+      "description": "Cloudflare \u539f\u751f\u7684\u4e2a\u4eba\u77e5\u8bc6\u7ba1\u7406\u7cfb\u7edf\uff0c\u63d0\u4f9b Memos \u517c\u5bb9 API\u3002",
+      "url": "https://github.com/realchendahuang/FlareMo",
+      "stars": 157,
+      "created_at": "2026-06-27T08:51:19+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "Vegaleonele/github-polls-voter-auth",
+      "description": "GitHub Polls Worker 2026: CSV-Based Voting App with GitHub Auth Integration",
+      "url": "https://github.com/Vegaleonele/github-polls-voter-auth",
+      "stars": 151,
+      "created_at": "2026-06-28T19:58:46+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "ahwanulm/AMRouter",
+      "description": "Self-hosted AI gateway \u2014 one endpoint, many providers, auto-fallback. OpenAI-compatible REST API with Cloudflare Workers AI automation.",
+      "url": "https://github.com/ahwanulm/AMRouter",
+      "stars": 130,
+      "created_at": "2026-07-03T09:15:38+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "xsser/cliproxyapi-cloudflare-stack",
+      "description": "\u611f\u8c22\u9a6c\u65af\u514b \u8ba9\u6211grok\u81ea\u7531\uff0c\u514d\u8d39\u6ce8\u518cgrok \u65e0\u6570\u4e2a\u53f7\u3002\u7136\u540ecpa\u81ea\u7531\u4f7f\u7528",
+      "url": "https://github.com/xsser/cliproxyapi-cloudflare-stack",
+      "stars": 119,
+      "created_at": "2026-07-12T00:46:03+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "ddyy/minshop",
+      "description": "Full-stack ecommerce on Cloudflare Workers, D1, and R2 - with admin, Stripe, OpenNode, Lightning payments, and agent-ready APIs.",
+      "url": "https://github.com/ddyy/minshop",
+      "stars": 82,
+      "created_at": "2026-07-20T23:58:28+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "rimzzlabs/lanjut",
+      "description": "Lanjut is a local-first r\u00e9sum\u00e9 builder that stays entirely in your browser. No account, nothing uploaded.",
+      "url": "https://github.com/rimzzlabs/lanjut",
+      "stars": 52,
+      "created_at": "2026-06-30T14:41:55+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "pinebasedev/svelteflare",
+      "description": "A SvelteKit, Hono and Cloudflare SaaS boilerplate to launch your next MVP.",
+      "url": "https://github.com/pinebasedev/svelteflare",
+      "stars": 42,
+      "created_at": "2026-07-07T14:16:04+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "fordes123/easytier-edge",
+      "description": "A secure EasyTier WebSocket relay running at the Cloudflare edge. | \u8fd0\u884c\u5728 Cloudflare \u8fb9\u7f18\u7f51\u7edc\u4e0a\u7684\u5b89\u5168 EasyTier WebSocket \u4e2d\u7ee7\u3002",
+      "url": "https://github.com/fordes123/easytier-edge",
+      "stars": 40,
+      "created_at": "2026-07-21T08:36:42+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cloudflare/community",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/community",
+      "stars": 1,
+      "created_at": "2026-07-17T11:44:00+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/nimbus",
+      "description": "Docs for humans and agents, built on Astro",
+      "url": "https://github.com/cloudflare/nimbus",
+      "stars": 532,
+      "created_at": "2026-07-09T09:10:53+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/redcard",
+      "description": "Eject yourself from work with a little help from Codex.",
+      "url": "https://github.com/openai/redcard",
+      "stars": 35,
+      "created_at": "2026-07-14T17:43:34+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/git",
+      "description": "\"the information manager from hell\" - linus torvalds [e83c516, 7 Apr 2005]",
+      "url": "https://github.com/openai/git",
+      "stars": 157,
+      "created_at": "2026-07-10T00:55:53+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/terraform-provider-openai",
+      "description": "The official Terraform provider for OpenAI.",
+      "url": "https://github.com/openai/terraform-provider-openai",
+      "stars": 15,
+      "created_at": "2026-06-25T15:09:17+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "google-gemini/gemini-android-computer-use-quickstart",
+      "description": "No description",
+      "url": "https://github.com/google-gemini/gemini-android-computer-use-quickstart",
+      "stars": 65,
+      "created_at": "2026-06-25T11:12:45+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/lca-engine",
+      "description": "LangChain Academy Course on LangSmith Engine",
+      "url": "https://github.com/langchain-ai/lca-engine",
+      "stars": 0,
+      "created_at": "2026-07-23T17:24:30+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/juicefs",
+      "description": "JuiceFS is a distributed POSIX file system built on top of Redis and S3.",
+      "url": "https://github.com/langchain-ai/juicefs",
+      "stars": 0,
+      "created_at": "2026-07-21T13:43:22+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/langchain-plugins",
+      "description": "Cross-tool plugin marketplace for deepagents-code (dcode), Claude Code, and OpenAI Codex \u2014 LangChain & LangSmith skills and MCP servers",
+      "url": "https://github.com/langchain-ai/langchain-plugins",
+      "stars": 2,
+      "created_at": "2026-07-19T18:53:51+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/google-adk-realtime-deepagents-example",
+      "description": "Example realtime voice agent built with Google ADK and deepagents",
+      "url": "https://github.com/langchain-ai/google-adk-realtime-deepagents-example",
+      "stars": 25,
+      "created_at": "2026-06-29T16:21:37+00:00",
+      "category": "org_watch"
+    }
+  ]
+}
