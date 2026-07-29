@@ -1,0 +1,398 @@
+{
+  "date": "2026-07-29T08:56:08.911922+00:00",
+  "count": 49,
+  "repos": [
+    {
+      "name": "elder-plinius/T3MP3ST",
+      "description": "autonomous red teaming platform; multi-agent offensive-security meta-harness",
+      "url": "https://github.com/elder-plinius/T3MP3ST",
+      "stars": 5283,
+      "created_at": "2026-07-02T17:53:55+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "openai/codex-security",
+      "description": "SDKs and CLI for Codex Security",
+      "url": "https://github.com/openai/codex-security",
+      "stars": 3240,
+      "created_at": "2026-07-13T22:00:13+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "synthetic-sciences/openscience",
+      "description": "The open-source AI workbench for scientific research",
+      "url": "https://github.com/synthetic-sciences/openscience",
+      "stars": 2920,
+      "created_at": "2026-07-03T15:06:45+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "nyblnet/bento",
+      "description": "Bento, the office suite that fits in a file",
+      "url": "https://github.com/nyblnet/bento",
+      "stars": 2917,
+      "created_at": "2026-07-17T16:55:09+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "Vincentwei1021/video-shotcraft",
+      "description": "AI video skill for Claude Code & Codex \u2014 cinematic product videos with Remotion: 106 shot recipe cards, 161 motion previews, a production-ready template",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "stars": 2595,
+      "created_at": "2026-07-19T11:44:41+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "DavidHDev/canvas-ui",
+      "description": "A library of creative canvas components. Real HTML with WebGL effects running over it. React, Vue, Svelte, vanilla.",
+      "url": "https://github.com/DavidHDev/canvas-ui",
+      "stars": 2530,
+      "created_at": "2026-07-16T13:38:20+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "vercel-labs/scriptc",
+      "description": "TypeScript-to-Native Compiler",
+      "url": "https://github.com/vercel-labs/scriptc",
+      "stars": 2220,
+      "created_at": "2026-07-22T23:04:54+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "pixel-point/aval",
+      "description": "A new open-source format for interactive video on the web, with a built-in state machine, frame-accurate transitions, and packed-alpha transparency.",
+      "url": "https://github.com/pixel-point/aval",
+      "stars": 1321,
+      "created_at": "2026-07-13T07:42:51+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "Subhan-code/Amicro--Micro-transitions-",
+      "description": "No description",
+      "url": "https://github.com/Subhan-code/Amicro--Micro-transitions-",
+      "stars": 1259,
+      "created_at": "2026-07-11T08:33:33+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "Jakubantalik/thinking-orbs",
+      "description": "Dotted thought-orb loading indicators for AI & agent UIs \u2014 six tuned states, two sizes, auto dark/light",
+      "url": "https://github.com/Jakubantalik/thinking-orbs",
+      "stars": 1231,
+      "created_at": "2026-07-21T07:01:53+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "andrewyng/openworker",
+      "description": "No description",
+      "url": "https://github.com/andrewyng/openworker",
+      "stars": 10275,
+      "created_at": "2026-07-20T01:52:32+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "img2threejs/img2threejs",
+      "description": "Rebuild the object in a reference image as a code-only, procedural, quality-gated, animation-ready Three.js model. Token-efficient image-to-3D.",
+      "url": "https://github.com/img2threejs/img2threejs",
+      "stars": 7865,
+      "created_at": "2026-07-15T02:58:39+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "x4gKing/X4G",
+      "description": "No description",
+      "url": "https://github.com/x4gKing/X4G",
+      "stars": 6969,
+      "created_at": "2026-07-04T06:43:51+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "MDX-Tom/gpt-5.6-instruct",
+      "description": "A Codex CLI jailbreak prompt and test pack for gpt-5.6-sol. \u9488\u5bf9 gpt-5.6 \u7cfb\u5217\u7684 Codex CLI \u7834\u7532\u63d0\u793a\u8bcd\u4e0e\u6d4b\u8bd5\u5305\u3002",
+      "url": "https://github.com/MDX-Tom/gpt-5.6-instruct",
+      "stars": 3627,
+      "created_at": "2026-07-11T09:44:24+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "petergyang/no-ai-slop",
+      "description": "Removes 20+ patterns of AI slop from any piece of writing.",
+      "url": "https://github.com/petergyang/no-ai-slop",
+      "stars": 3331,
+      "created_at": "2026-07-07T05:05:58+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "lopopolo/harness-engineering",
+      "description": "\ud83d\udc0e Ryan Lopopolo\u2019s anthology, field guide, and agent context bundle for harness engineering",
+      "url": "https://github.com/lopopolo/harness-engineering",
+      "stars": 2397,
+      "created_at": "2026-07-18T21:42:28+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "slvDev/esp32-ai",
+      "description": "No description",
+      "url": "https://github.com/slvDev/esp32-ai",
+      "stars": 2142,
+      "created_at": "2026-07-23T14:53:51+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "Sahir619/fable-method",
+      "description": "The Fable Workflow: how Claude Fable 5 worked, distilled into skills any model can run, with the eval that keeps it honest. Think / act / prove.",
+      "url": "https://github.com/Sahir619/fable-method",
+      "stars": 1962,
+      "created_at": "2026-07-06T22:35:18+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "HUANGCHIHHUNGLeo/claude-real-video",
+      "description": "Let Claude (or any LLM) actually watch a video \u2014 scene-aware, deduplicated frames + transcript, from a URL or local file. Runs locally, MIT.",
+      "url": "https://github.com/HUANGCHIHHUNGLeo/claude-real-video",
+      "stars": 1894,
+      "created_at": "2026-06-30T10:55:02+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "anthropics/jacobian-lens",
+      "description": " Companion code for the global workspace interpretability paper",
+      "url": "https://github.com/anthropics/jacobian-lens",
+      "stars": 1605,
+      "created_at": "2026-07-02T20:30:04+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "andikaputradev/wedding-invitation",
+      "description": "Elegant digital wedding invitation website for Arga & Nimas using Next.js 15, Framer Motion, Tailwind CSS, Google Apps Script, and Google Spreadsheet.",
+      "url": "https://github.com/andikaputradev/wedding-invitation",
+      "stars": 7,
+      "created_at": "2026-07-13T14:19:44+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "tusharmali/murmur",
+      "description": "A private, local-first, Slack-like notes & messages vault \u2014 client-side PBKDF2+AES-GCM encryption, autosaved to your own Google Sheet. Zero server secrets.",
+      "url": "https://github.com/tusharmali/murmur",
+      "stars": 2,
+      "created_at": "2026-07-04T12:14:08+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "genius-harry/auto-email-sender",
+      "description": "Email-sending capability for AI agents (ships as a Claude Code skill) and humans. Gmail sending runs server-side via Apps Script: idempotent submits, validation that catches agent mistakes, attachments, recontact guard.",
+      "url": "https://github.com/genius-harry/auto-email-sender",
+      "stars": 2,
+      "created_at": "2026-07-02T05:08:23+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Relff/t-invest-portfolio-tracker",
+      "description": "\u0423\u043c\u043d\u044b\u0439 \u043f\u043e\u0440\u0442\u0444\u0435\u043b\u044c\u043d\u044b\u0439 \u0442\u0440\u0435\u043a\u0435\u0440 \u0434\u043b\u044f \u0422-\u0418\u043d\u0432\u0435\u0441\u0442\u0438\u0446\u0438\u0439 \u0432 Google Sheets \u0441 \u0430\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0447\u0435\u0441\u043a\u043e\u0439 \u0440\u0435\u0431\u0430\u043b\u0430\u043d\u0441\u0438\u0440\u043e\u0432\u043a\u043e\u0439 \u0438 \u0443\u0447\u0451\u0442\u043e\u043c \u043f\u0430\u0441\u0441\u0438\u0432\u043d\u043e\u0433\u043e \u0434\u043e\u0445\u043e\u0434\u0430",
+      "url": "https://github.com/Relff/t-invest-portfolio-tracker",
+      "stars": 2,
+      "created_at": "2026-07-04T18:31:30+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "googlesheets-ru/json-to-linked-sheets",
+      "description": "JSON \u2192 \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u0435 \u0442\u0430\u0431\u043b\u0438\u0446\u044b: \u0441\u043a\u0440\u0438\u043f\u0442 Apps Script, \u0440\u0430\u0441\u043a\u043b\u0430\u0434\u044b\u0432\u0430\u0435\u0442 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u043b\u044c\u043d\u044b\u0439 JSON \u043f\u043e \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u043c \u043b\u0438\u0441\u0442\u0430\u043c Google \u0422\u0430\u0431\u043b\u0438\u0446",
+      "url": "https://github.com/googlesheets-ru/json-to-linked-sheets",
+      "stars": 2,
+      "created_at": "2026-07-23T16:42:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Atik-Shahriar007/deepseek-to-docs-extension",
+      "description": "Chrome extension that saves AI chat replies from DeepSeek and ChatGPT straight to your personal Google Doc, one click at a time.",
+      "url": "https://github.com/Atik-Shahriar007/deepseek-to-docs-extension",
+      "stars": 1,
+      "created_at": "2026-07-14T04:10:20+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Joel-Fah/le-canevas-de-meditation-2.0",
+      "description": "A zero-infrastructure automated reading schedule engine and analytics platform using Google Apps Script, Gemini AI, Tailwind CSS, Chart.js, and Google Workspace APIs.",
+      "url": "https://github.com/Joel-Fah/le-canevas-de-meditation-2.0",
+      "stars": 1,
+      "created_at": "2026-07-27T12:23:32+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "mihozip/gas-school-lunch-management-system",
+      "description": "Google Apps Script school lunch meal suspension, meal statistics, subsidy allocation, reconciliation, and reporting system.",
+      "url": "https://github.com/mihozip/gas-school-lunch-management-system",
+      "stars": 1,
+      "created_at": "2026-07-18T07:46:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "marktaal00/MOSDEO-ICT-Inventory-System",
+      "description": "DPWH Misamis Oriental 2nd DEO ICT Inventory Management System",
+      "url": "https://github.com/marktaal00/MOSDEO-ICT-Inventory-System",
+      "stars": 1,
+      "created_at": "2026-07-15T01:41:17+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "bazhinapolly/ai-gmail-classifier-apps-script",
+      "description": "Google Apps Script Gmail automation that classifies emails with OpenAI and applies Gmail labels.",
+      "url": "https://github.com/bazhinapolly/ai-gmail-classifier-apps-script",
+      "stars": 1,
+      "created_at": "2026-07-05T11:07:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "zeus-panel/ZEUS-PANEL",
+      "description": "A high-performance, serverless VLESS network proxy management panel deployed natively on Cloudflare Workers & D1 SQL Database.",
+      "url": "https://github.com/zeus-panel/ZEUS-PANEL",
+      "stars": 709,
+      "created_at": "2026-07-20T11:37:49+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "xsser/cliproxyapi-cloudflare-stack",
+      "description": "\u611f\u8c22\u9a6c\u65af\u514b \u8ba9\u6211grok\u81ea\u7531\uff0c\u514d\u8d39\u6ce8\u518cgrok \u65e0\u6570\u4e2a\u53f7\u3002\u7136\u540ecpa\u81ea\u7531\u4f7f\u7528",
+      "url": "https://github.com/xsser/cliproxyapi-cloudflare-stack",
+      "stars": 119,
+      "created_at": "2026-07-12T00:46:03+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "ddyy/minshop",
+      "description": "Full-stack ecommerce on Cloudflare Workers, D1, and R2 - with admin, Stripe, OpenNode, Lightning payments, and agent-ready APIs.",
+      "url": "https://github.com/ddyy/minshop",
+      "stars": 95,
+      "created_at": "2026-07-20T23:58:28+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "yaoleifly/ai-stock-pool",
+      "description": "AI industry-chain stock pool with US/A-share mapping, active discovery, policy pressure, and one-click deployment.",
+      "url": "https://github.com/yaoleifly/ai-stock-pool",
+      "stars": 81,
+      "created_at": "2026-07-26T02:42:29+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "rimzzlabs/lanjut",
+      "description": "Lanjut is a local-first r\u00e9sum\u00e9 builder that stays entirely in your browser. No account, nothing uploaded.",
+      "url": "https://github.com/rimzzlabs/lanjut",
+      "stars": 53,
+      "created_at": "2026-06-30T14:41:55+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "fordes123/easytier-edge",
+      "description": "A secure EasyTier WebSocket relay running at the Cloudflare edge. | \u8fd0\u884c\u5728 Cloudflare \u8fb9\u7f18\u7f51\u7edc\u4e0a\u7684\u5b89\u5168 EasyTier WebSocket \u4e2d\u7ee7\u3002",
+      "url": "https://github.com/fordes123/easytier-edge",
+      "stars": 45,
+      "created_at": "2026-07-21T08:36:42+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "pinebasedev/svelteflare",
+      "description": "A SvelteKit, Hono and Cloudflare SaaS boilerplate to launch your next MVP.",
+      "url": "https://github.com/pinebasedev/svelteflare",
+      "stars": 43,
+      "created_at": "2026-07-07T14:16:04+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "midudev/isbetter.ai",
+      "description": "\u2694\ufe0f Compare AI models side by side \u2014 same prompt, streamed answers, live code previews, speed, tokens and cost. Keys never leave your browser.",
+      "url": "https://github.com/midudev/isbetter.ai",
+      "stars": 41,
+      "created_at": "2026-07-02T15:02:55+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "Trade-Offf/typhoon-bavi-tracker",
+      "description": "\u5b9e\u65f6\u53f0\u98ce\u8def\u5f84\u8ffd\u8e2a\uff08\u5df4\u5a01\uff09 + \u57ce\u5e02\u6ce2\u53ca\u5012\u8ba1\u65f6 + \u5e94\u6025\u6307\u5357 \u00b7 Cloudflare Workers \u8fb9\u7f18\u67b6\u6784",
+      "url": "https://github.com/Trade-Offf/typhoon-bavi-tracker",
+      "stars": 35,
+      "created_at": "2026-07-06T16:32:30+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "hg3386628/xrw-album",
+      "description": "High-performance waterfall photo gallery with virtualized rendering, Cloudflare Workers, and D1.",
+      "url": "https://github.com/hg3386628/xrw-album",
+      "stars": 31,
+      "created_at": "2026-07-02T15:41:01+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cloudflare/community",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/community",
+      "stars": 1,
+      "created_at": "2026-07-17T11:44:00+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/nimbus",
+      "description": "Docs for humans and agents, built on Astro",
+      "url": "https://github.com/cloudflare/nimbus",
+      "stars": 831,
+      "created_at": "2026-07-09T09:10:53+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/redcard",
+      "description": "Eject yourself from work with a little help from Codex.",
+      "url": "https://github.com/openai/redcard",
+      "stars": 38,
+      "created_at": "2026-07-14T17:43:34+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/git",
+      "description": "\"the information manager from hell\" - linus torvalds [e83c516, 7 Apr 2005]",
+      "url": "https://github.com/openai/git",
+      "stars": 157,
+      "created_at": "2026-07-10T00:55:53+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "google-gemini/glanceboard",
+      "description": "No description",
+      "url": "https://github.com/google-gemini/glanceboard",
+      "stars": 3,
+      "created_at": "2026-07-23T08:24:31+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/lca-engine",
+      "description": "LangChain Academy Course on LangSmith Engine",
+      "url": "https://github.com/langchain-ai/lca-engine",
+      "stars": 0,
+      "created_at": "2026-07-23T17:24:30+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/juicefs",
+      "description": "JuiceFS is a distributed POSIX file system built on top of Redis and S3.",
+      "url": "https://github.com/langchain-ai/juicefs",
+      "stars": 0,
+      "created_at": "2026-07-21T13:43:22+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/langchain-plugins",
+      "description": "Cross-tool plugin marketplace for deepagents-code (dcode), Claude Code, and OpenAI Codex \u2014 LangChain & LangSmith skills and MCP servers",
+      "url": "https://github.com/langchain-ai/langchain-plugins",
+      "stars": 4,
+      "created_at": "2026-07-19T18:53:51+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/google-adk-realtime-deepagents-example",
+      "description": "Example realtime voice agent built with Google ADK and deepagents",
+      "url": "https://github.com/langchain-ai/google-adk-realtime-deepagents-example",
+      "stars": 25,
+      "created_at": "2026-06-29T16:21:37+00:00",
+      "category": "org_watch"
+    }
+  ]
+}
