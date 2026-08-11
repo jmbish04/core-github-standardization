@@ -1,0 +1,398 @@
+{
+  "date": "2026-08-11T08:19:54.479625+00:00",
+  "count": 49,
+  "repos": [
+    {
+      "name": "yc-software/qm",
+      "description": "Multiplayer agent harness for work",
+      "url": "https://github.com/yc-software/qm",
+      "stars": 13003,
+      "created_at": "2026-07-29T20:03:08+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "openai/codex-security",
+      "description": "OpenAI's Codex Security CLI and TypeScript SDK for finding, validating, and fixing security vulnerabilities. npm: https://www.npmjs.com/package/@openai/codex-security",
+      "url": "https://github.com/openai/codex-security",
+      "stars": 9548,
+      "created_at": "2026-07-13T22:00:13+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "trycompai/crm",
+      "description": "Comp AI CRM is an open source, CRM designed for AI agents. Agentic-first CRM.",
+      "url": "https://github.com/trycompai/crm",
+      "stars": 8145,
+      "created_at": "2026-07-31T21:38:51+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "bashalarmistalt/decimen-optical-transfer",
+      "description": "No description",
+      "url": "https://github.com/bashalarmistalt/decimen-optical-transfer",
+      "stars": 5744,
+      "created_at": "2026-07-30T18:17:54+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "Vincentwei1021/video-shotcraft",
+      "description": "AI video skill for Claude Code & Codex \u2014 cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "stars": 4571,
+      "created_at": "2026-07-19T11:44:41+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "nyblnet/bento",
+      "description": "Bento, the office suite that fits in a file",
+      "url": "https://github.com/nyblnet/bento",
+      "stars": 3907,
+      "created_at": "2026-07-17T16:55:09+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "DavidHDev/canvas-ui",
+      "description": "A library of creative canvas components. Real HTML with WebGL effects running over it. React, Vue, Svelte, vanilla.",
+      "url": "https://github.com/DavidHDev/canvas-ui",
+      "stars": 3734,
+      "created_at": "2026-07-16T13:38:20+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "vercel-labs/scriptc",
+      "description": "TypeScript-to-Native Compiler",
+      "url": "https://github.com/vercel-labs/scriptc",
+      "stars": 3251,
+      "created_at": "2026-07-22T23:04:54+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "microsoft/skill-recorder",
+      "description": "Desktop app that records your on-screen work session and uses the GitHub Copilot CLI to reconstruct it as an intent + ordered steps, then builds a reusable Skill or Automation for Microsoft Scout, Microsoft Copilot Cowork, or Copilot Studio.",
+      "url": "https://github.com/microsoft/skill-recorder",
+      "stars": 2868,
+      "created_at": "2026-07-29T18:16:14+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "genspark-ai/genoffice",
+      "description": "Free, open-source AI office suite for macOS, Windows & Linux \u2014 Word (.docx), Excel (.xlsx), PowerPoint (.pptx), PDF and Markdown editing with built-in AI agents.",
+      "url": "https://github.com/genspark-ai/genoffice",
+      "stars": 2518,
+      "created_at": "2026-07-31T09:40:58+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "img2threejs/img2threejs",
+      "description": "Rebuild the object in a reference image as a code-only, procedural, quality-gated, animation-ready Three.js model. Token-efficient image-to-3D.",
+      "url": "https://github.com/img2threejs/img2threejs",
+      "stars": 10763,
+      "created_at": "2026-07-15T02:58:39+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "MiniMax-AI/MiniMax-H3",
+      "description": "No description",
+      "url": "https://github.com/MiniMax-AI/MiniMax-H3",
+      "stars": 4873,
+      "created_at": "2026-07-30T08:41:09+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "slvDev/esp32-ai",
+      "description": "No description",
+      "url": "https://github.com/slvDev/esp32-ai",
+      "stars": 3922,
+      "created_at": "2026-07-23T14:53:51+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "kirodotdev/KiroCrew",
+      "description": "A persistent workspace for development work that self-improves and continues beyond one session.",
+      "url": "https://github.com/kirodotdev/KiroCrew",
+      "stars": 2646,
+      "created_at": "2026-07-16T21:21:54+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "lopopolo/harness-engineering",
+      "description": "\ud83d\udc0e Ryan Lopopolo\u2019s anthology, field guide, and agent context bundle for harness engineering",
+      "url": "https://github.com/lopopolo/harness-engineering",
+      "stars": 2481,
+      "created_at": "2026-07-18T21:42:28+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "KKKKhazix/human-writing",
+      "description": "\u8ba9 AI \u5199\u7684\u4e2d\u6587\u8bfb\u8d77\u6765\u50cf\u4e00\u4e2a\u5177\u4f53\u7684\u4eba\u5728\u8bf4\u8bdd\u3002\u901a\u7528\u521b\u4f5c\u4e0e\u6539\u7a3f Skill\uff0c\u5f00\u7bb1\u5373\u7528\u3002",
+      "url": "https://github.com/KKKKhazix/human-writing",
+      "stars": 2351,
+      "created_at": "2026-08-05T01:19:41+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "AminBlg/SimpleEnglish",
+      "description": "Agent skill: make LLMs write docs in ASD-STE100 Simplified Technical",
+      "url": "https://github.com/AminBlg/SimpleEnglish",
+      "stars": 2124,
+      "created_at": "2026-07-21T10:20:31+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "powerycy/goutoujunshi",
+      "description": "\u4e00\u4e2a\u5148\u63a5\u4f4f\u60c5\u7eea\u3001\u518d\u5206\u6790\u5173\u7cfb\u5e76\u7ed9\u51fa\u53ef\u6267\u884c\u7b56\u7565\u7684 Codex \u604b\u7231\u519b\u5e08\uff0c\u5185\u7f6e\u5fc3\u7406\u3001\u6cd5\u5f8b\u3001\u793e\u4f1a\u3001\u4eba\u6587\u3001\u54f2\u5b66\u3001\u5a5a\u59fb\u5bb6\u5ead\u4e0e\u6027\u5b66\u77e5\u8bc6\u5e93\uff0c\u652f\u6301\u591a\u5143\u5173\u7cfb\u3002",
+      "url": "https://github.com/powerycy/goutoujunshi",
+      "stars": 1948,
+      "created_at": "2026-07-20T14:58:48+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "QwenLM/Qwen-MM-Plugins",
+      "description": "Make any agent harness multimodal-native.",
+      "url": "https://github.com/QwenLM/Qwen-MM-Plugins",
+      "stars": 1614,
+      "created_at": "2026-07-29T09:14:34+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "oil-oil/beautify-github-readme",
+      "description": "Design clear, theme-specific GitHub README homepages with SVG titles, real proof, and maintainable Markdown",
+      "url": "https://github.com/oil-oil/beautify-github-readme",
+      "stars": 1565,
+      "created_at": "2026-07-13T07:31:56+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "andikaputradev/wedding-invitation",
+      "description": "Elegant digital wedding invitation website for Arga & Nimas using Next.js 15, Framer Motion, Tailwind CSS, Google Apps Script, and Google Spreadsheet.",
+      "url": "https://github.com/andikaputradev/wedding-invitation",
+      "stars": 7,
+      "created_at": "2026-07-13T14:19:44+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "mihozip/DeskPet",
+      "description": "A local-first macOS desktop work agent for capture, human-confirmed actions, GAS task workflows and a daily work diary.",
+      "url": "https://github.com/mihozip/DeskPet",
+      "stars": 3,
+      "created_at": "2026-08-09T05:54:42+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "googlesheets-ru/json-to-linked-sheets",
+      "description": "JSON \u2192 \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u0435 \u0442\u0430\u0431\u043b\u0438\u0446\u044b: \u0441\u043a\u0440\u0438\u043f\u0442 Apps Script, \u0440\u0430\u0441\u043a\u043b\u0430\u0434\u044b\u0432\u0430\u0435\u0442 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u043b\u044c\u043d\u044b\u0439 JSON \u043f\u043e \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u043c \u043b\u0438\u0441\u0442\u0430\u043c Google \u0422\u0430\u0431\u043b\u0438\u0446",
+      "url": "https://github.com/googlesheets-ru/json-to-linked-sheets",
+      "stars": 3,
+      "created_at": "2026-07-23T16:42:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "TerryFrench/amazon-order-monitor",
+      "description": "Chrome extension that monitors your Amazon orders page and emails you order changes via your own Apps Script relay \u2014 the details Amazon's emails no longer include.",
+      "url": "https://github.com/TerryFrench/amazon-order-monitor",
+      "stars": 2,
+      "created_at": "2026-07-26T05:21:02+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Atik-Shahriar007/deepseek-to-docs-extension",
+      "description": "Chrome extension that saves AI chat replies from DeepSeek and ChatGPT straight to your personal Google Doc, one click at a time.",
+      "url": "https://github.com/Atik-Shahriar007/deepseek-to-docs-extension",
+      "stars": 1,
+      "created_at": "2026-07-14T04:10:20+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Joel-Fah/le-canevas-de-meditation-2.0",
+      "description": "A zero-infrastructure automated reading schedule engine and analytics platform using Google Apps Script, Gemini AI, Tailwind CSS, Chart.js, and Google Workspace APIs.",
+      "url": "https://github.com/Joel-Fah/le-canevas-de-meditation-2.0",
+      "stars": 1,
+      "created_at": "2026-07-27T12:23:32+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "mihozip/gas-school-lunch-management-system",
+      "description": "Google Apps Script school lunch meal suspension, meal statistics, subsidy allocation, reconciliation, and reporting system.",
+      "url": "https://github.com/mihozip/gas-school-lunch-management-system",
+      "stars": 1,
+      "created_at": "2026-07-18T07:46:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "marktaal00/MOSDEO-ICT-Inventory-System",
+      "description": "DPWH Misamis Oriental 2nd DEO ICT Inventory Management System",
+      "url": "https://github.com/marktaal00/MOSDEO-ICT-Inventory-System",
+      "stars": 1,
+      "created_at": "2026-07-15T01:41:17+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "mgesteban/pistahan",
+      "description": " Open-source, offline-first QR check-in that moves 300+ event volunteers through the door in a 30-minute window \u2014 PWA scanner + Google Sheets backend, zero budget.",
+      "url": "https://github.com/mgesteban/pistahan",
+      "stars": 1,
+      "created_at": "2026-07-26T16:56:54+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Yc-Chen/flashcards",
+      "description": "Lightweight, ad-free flashcards you self-host \u2014 no notifications, no gamification. Leitner spaced repetition in your browser, cards in an editable Google Sheet.",
+      "url": "https://github.com/Yc-Chen/flashcards",
+      "stars": 1,
+      "created_at": "2026-07-13T09:22:24+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "shuaiplus/inkstone",
+      "description": "A self-hosted Markdown notebook that runs entirely on Cloudflare Workers.",
+      "url": "https://github.com/shuaiplus/inkstone",
+      "stars": 285,
+      "created_at": "2026-07-30T13:27:48+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "ddyy/minshop",
+      "description": "Full-stack ecommerce on Cloudflare Workers, D1, and R2 - with admin, Stripe, OpenNode, Lightning payments, and agent-ready APIs.",
+      "url": "https://github.com/ddyy/minshop",
+      "stars": 110,
+      "created_at": "2026-07-20T23:58:28+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "yaoleifly/ai-stock-pool",
+      "description": "AI industry-chain stock pool with US/A-share mapping, active discovery, policy pressure, and one-click deployment.",
+      "url": "https://github.com/yaoleifly/ai-stock-pool",
+      "stars": 95,
+      "created_at": "2026-07-26T02:42:29+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "fordes123/easytier-edge",
+      "description": "A secure EasyTier WebSocket relay running at the Cloudflare edge. | \u8fd0\u884c\u5728 Cloudflare \u8fb9\u7f18\u7f51\u7edc\u4e0a\u7684\u5b89\u5168 EasyTier WebSocket \u4e2d\u7ee7\u3002",
+      "url": "https://github.com/fordes123/easytier-edge",
+      "stars": 50,
+      "created_at": "2026-07-21T08:36:42+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "MkThingsHQ/mkdocs",
+      "description": "A fast documentation template powered by FumaPress and deployed on Cloudflare Workers.",
+      "url": "https://github.com/MkThingsHQ/mkdocs",
+      "stars": 47,
+      "created_at": "2026-07-26T06:12:13+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "mibgb65-cloud/OmniMail",
+      "description": "Self-hosted multi-domain webmail on Cloudflare Workers, D1, R2, Queues, Email Routing, and Resend.",
+      "url": "https://github.com/mibgb65-cloud/OmniMail",
+      "stars": 41,
+      "created_at": "2026-07-27T14:58:13+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "hg3386628/qiying-media-vault",
+      "description": "Local-first media vault with static indexing, HLS playback, Cloudflare Workers, and GitHub Pages deployment.",
+      "url": "https://github.com/hg3386628/qiying-media-vault",
+      "stars": 38,
+      "created_at": "2026-07-15T08:44:38+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "baronunread/rdyrct",
+      "description": "Open-source URL shortener for teams: branded short links, QR codes, and custom domains on Cloudflare Workers.",
+      "url": "https://github.com/baronunread/rdyrct",
+      "stars": 34,
+      "created_at": "2026-07-20T13:51:42+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "Teylersf/freeremotedesk",
+      "description": "Browser-first, self-hosted remote desktop. WebRTC P2P. Runs on your own free-tier Cloudflare + Vercel accounts. Zero monthly cost. Includes AI-agent setup guide.",
+      "url": "https://github.com/Teylersf/freeremotedesk",
+      "stars": 31,
+      "created_at": "2026-07-14T20:08:07+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "HQBase/hqbase",
+      "description": "Your team\u2019s email workspace. On your infrastructure.",
+      "url": "https://github.com/HQBase/hqbase",
+      "stars": 26,
+      "created_at": "2026-08-08T21:32:28+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cloudflare/cloudflare-os-starter",
+      "description": "A guide for customizing your Cloudflare OS deployment",
+      "url": "https://github.com/cloudflare/cloudflare-os-starter",
+      "stars": 192,
+      "created_at": "2026-08-03T21:36:32+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/ci",
+      "description": "Cloudflare-native continuous integration powered by Workflows and Sandbox",
+      "url": "https://github.com/cloudflare/ci",
+      "stars": 74,
+      "created_at": "2026-07-30T16:59:35+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/community",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/community",
+      "stars": 1,
+      "created_at": "2026-07-17T11:44:00+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/ten-proofs",
+      "description": "Lean certificates accompanying ten proofs in mathematics and theoretical computer science",
+      "url": "https://github.com/openai/ten-proofs",
+      "stars": 44,
+      "created_at": "2026-08-05T21:07:49+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/redcard",
+      "description": "Eject yourself from work with a little help from Codex.",
+      "url": "https://github.com/openai/redcard",
+      "stars": 41,
+      "created_at": "2026-07-14T17:43:34+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "google-gemini/glanceboard",
+      "description": "No description",
+      "url": "https://github.com/google-gemini/glanceboard",
+      "stars": 201,
+      "created_at": "2026-07-23T08:24:31+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/lca-engine",
+      "description": "LangChain Academy Course on LangSmith Engine",
+      "url": "https://github.com/langchain-ai/lca-engine",
+      "stars": 11,
+      "created_at": "2026-07-23T17:24:30+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/juicefs",
+      "description": "JuiceFS is a distributed POSIX file system built on top of Redis and S3.",
+      "url": "https://github.com/langchain-ai/juicefs",
+      "stars": 0,
+      "created_at": "2026-07-21T13:43:22+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/langchain-plugins",
+      "description": "Cross-tool plugin marketplace for deepagents-code (dcode), Claude Code, and OpenAI Codex \u2014 LangChain & LangSmith skills and MCP servers",
+      "url": "https://github.com/langchain-ai/langchain-plugins",
+      "stars": 5,
+      "created_at": "2026-07-19T18:53:51+00:00",
+      "category": "org_watch"
+    }
+  ]
+}
