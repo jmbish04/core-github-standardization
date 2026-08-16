@@ -1,0 +1,406 @@
+{
+  "date": "2026-08-16T08:06:01.455505+00:00",
+  "count": 50,
+  "repos": [
+    {
+      "name": "deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "stars": 121674,
+      "created_at": "2026-08-13T11:56:32+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "yc-software/qm",
+      "description": "Multiplayer agent harness for work.",
+      "url": "https://github.com/yc-software/qm",
+      "stars": 13656,
+      "created_at": "2026-07-29T20:03:08+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "trycompai/crm",
+      "description": "Comp AI CRM is an open source, CRM designed for AI agents. Agentic-first CRM.",
+      "url": "https://github.com/trycompai/crm",
+      "stars": 8489,
+      "created_at": "2026-07-31T21:38:51+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "anywhere-labs/deepseek-harness-desktop",
+      "description": "\u4e3a DeepSeek Harness (DSH) \u63d2\u4ef6\u751f\u6001\u6253\u9020\u7684\u73b0\u4ee3\u5316\u684c\u9762\u7aef\u89e3\u51b3\u65b9\u6848",
+      "url": "https://github.com/anywhere-labs/deepseek-harness-desktop",
+      "stars": 7266,
+      "created_at": "2026-08-13T16:30:50+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "bashalarmistalt/decimen-optical-transfer",
+      "description": "No description",
+      "url": "https://github.com/bashalarmistalt/decimen-optical-transfer",
+      "stars": 6063,
+      "created_at": "2026-07-30T18:17:54+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "Vincentwei1021/video-shotcraft",
+      "description": "AI video skill for Claude Code & Codex \u2014 cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template",
+      "url": "https://github.com/Vincentwei1021/video-shotcraft",
+      "stars": 5176,
+      "created_at": "2026-07-19T11:44:41+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "vercel-labs/scriptc",
+      "description": "TypeScript-to-Native Compiler",
+      "url": "https://github.com/vercel-labs/scriptc",
+      "stars": 3544,
+      "created_at": "2026-07-22T23:04:54+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "microsoft/skill-recorder",
+      "description": "Desktop app that records your on-screen work session and uses the GitHub Copilot CLI to reconstruct it as an intent + ordered steps, then builds a reusable Skill or Automation for Microsoft Scout, Microsoft Copilot Cowork, or Copilot Studio.",
+      "url": "https://github.com/microsoft/skill-recorder",
+      "stars": 3154,
+      "created_at": "2026-07-29T18:16:14+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "genspark-ai/genoffice",
+      "description": "Free, open-source AI office suite for macOS, Windows & Linux \u2014 Word (.docx), Excel (.xlsx), PowerPoint (.pptx), PDF and Markdown editing with built-in AI agents.",
+      "url": "https://github.com/genspark-ai/genoffice",
+      "stars": 3126,
+      "created_at": "2026-07-31T09:40:58+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "zhu1090093659/dsh-web-ui",
+      "description": "Plugin and skin collection for DeepSeek Harness (DSH) Web UI - task board, git graph, right-side panel, remote mobile UI, pet, live token stats, and skin center.",
+      "url": "https://github.com/zhu1090093659/dsh-web-ui",
+      "stars": 2978,
+      "created_at": "2026-08-12T05:15:20+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "guillaumemeyer/watermarks-remover",
+      "description": "Strip multi-vendor AI provenance marks: Unicode text hygiene, statistical rewrite hooks, and C2PA/metadata from PNG/JPEG/SVG/PDF/DOCX/HTML/MD",
+      "url": "https://github.com/guillaumemeyer/watermarks-remover",
+      "stars": 10148,
+      "created_at": "2026-08-11T16:32:38+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "MiniMax-AI/MiniMax-H3",
+      "description": "No description",
+      "url": "https://github.com/MiniMax-AI/MiniMax-H3",
+      "stars": 6150,
+      "created_at": "2026-07-30T08:41:09+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "slvDev/esp32-ai",
+      "description": "No description",
+      "url": "https://github.com/slvDev/esp32-ai",
+      "stars": 4016,
+      "created_at": "2026-07-23T14:53:51+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "awesome-dsh-plugin/awesome-dsh-plugin",
+      "description": "A curated list of plugins for DeepSeek Harness (dsh) \u00b7 DeepSeek Harness \u63d2\u4ef6\u7cbe\u9009\u5217\u8868",
+      "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
+      "stars": 3603,
+      "created_at": "2026-08-13T13:55:31+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "KKKKhazix/human-writing",
+      "description": "\u8ba9 AI \u5199\u7684\u4e2d\u6587\u8bfb\u8d77\u6765\u50cf\u4e00\u4e2a\u5177\u4f53\u7684\u4eba\u5728\u8bf4\u8bdd\u3002\u901a\u7528\u521b\u4f5c\u4e0e\u6539\u7a3f Skill\uff0c\u5f00\u7bb1\u5373\u7528\u3002",
+      "url": "https://github.com/KKKKhazix/human-writing",
+      "stars": 2751,
+      "created_at": "2026-08-05T01:19:41+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "pathwaycom/arc-task-gen",
+      "description": "Generates original ARC-AGI-1-style tasks distribution-matched to the public eval set.",
+      "url": "https://github.com/pathwaycom/arc-task-gen",
+      "stars": 2598,
+      "created_at": "2026-08-04T12:59:02+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "lopopolo/harness-engineering",
+      "description": "\ud83d\udc0e Ryan Lopopolo\u2019s anthology, field guide, and agent context bundle for harness engineering",
+      "url": "https://github.com/lopopolo/harness-engineering",
+      "stars": 2526,
+      "created_at": "2026-07-18T21:42:28+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "AminBlg/SimpleEnglish",
+      "description": "Agent skill: make LLMs write docs in ASD-STE100 Simplified Technical",
+      "url": "https://github.com/AminBlg/SimpleEnglish",
+      "stars": 2411,
+      "created_at": "2026-07-21T10:20:31+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "powerycy/goutoujunshi",
+      "description": "\u4e00\u4e2a\u5148\u63a5\u4f4f\u60c5\u7eea\u3001\u518d\u5206\u6790\u5173\u7cfb\u5e76\u7ed9\u51fa\u53ef\u6267\u884c\u7b56\u7565\u7684 Codex \u604b\u7231\u519b\u5e08\uff0c\u5185\u7f6e\u5fc3\u7406\u3001\u6cd5\u5f8b\u3001\u793e\u4f1a\u3001\u4eba\u6587\u3001\u54f2\u5b66\u3001\u5a5a\u59fb\u5bb6\u5ead\u4e0e\u6027\u5b66\u77e5\u8bc6\u5e93\uff0c\u652f\u6301\u591a\u5143\u5173\u7cfb\u3002",
+      "url": "https://github.com/powerycy/goutoujunshi",
+      "stars": 2238,
+      "created_at": "2026-07-20T14:58:48+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "ShawnPana/phone-harness",
+      "description": "let your agent control your phone",
+      "url": "https://github.com/ShawnPana/phone-harness",
+      "stars": 1831,
+      "created_at": "2026-08-07T22:28:53+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "mihozip/DeskPet",
+      "description": "A local-first macOS desktop work agent for capture, human-confirmed actions, GAS task workflows and a daily work diary.",
+      "url": "https://github.com/mihozip/DeskPet",
+      "stars": 4,
+      "created_at": "2026-08-09T05:54:42+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "googlesheets-ru/json-to-linked-sheets",
+      "description": "JSON \u2192 \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u0435 \u0442\u0430\u0431\u043b\u0438\u0446\u044b: \u0441\u043a\u0440\u0438\u043f\u0442 Apps Script, \u0440\u0430\u0441\u043a\u043b\u0430\u0434\u044b\u0432\u0430\u0435\u0442 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u043b\u044c\u043d\u044b\u0439 JSON \u043f\u043e \u0441\u0432\u044f\u0437\u0430\u043d\u043d\u044b\u043c \u043b\u0438\u0441\u0442\u0430\u043c Google \u0422\u0430\u0431\u043b\u0438\u0446",
+      "url": "https://github.com/googlesheets-ru/json-to-linked-sheets",
+      "stars": 3,
+      "created_at": "2026-07-23T16:42:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Empower-Automation-UK/empower-publishing-engine",
+      "description": "A client-owned publishing platform that transforms Google Workspace into a modern headless content management system.",
+      "url": "https://github.com/Empower-Automation-UK/empower-publishing-engine",
+      "stars": 2,
+      "created_at": "2026-08-12T10:02:29+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "TerryFrench/amazon-order-monitor",
+      "description": "Chrome extension that monitors your Amazon orders page and emails you order changes via your own Apps Script relay \u2014 the details Amazon's emails no longer include.",
+      "url": "https://github.com/TerryFrench/amazon-order-monitor",
+      "stars": 2,
+      "created_at": "2026-07-26T05:21:02+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Joel-Fah/le-canevas-de-meditation-2.0",
+      "description": "A zero-infrastructure automated reading schedule engine and analytics platform using Google Apps Script, Gemini AI, Tailwind CSS, Chart.js, and Google Workspace APIs.",
+      "url": "https://github.com/Joel-Fah/le-canevas-de-meditation-2.0",
+      "stars": 1,
+      "created_at": "2026-07-27T12:23:32+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "mihozip/gas-school-lunch-management-system",
+      "description": "Google Apps Script school lunch meal suspension, meal statistics, subsidy allocation, reconciliation, and reporting system.",
+      "url": "https://github.com/mihozip/gas-school-lunch-management-system",
+      "stars": 1,
+      "created_at": "2026-07-18T07:46:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Tatsukiz/steam-leaderboard-manager-gas",
+      "description": "Manage Steam leaderboard entries from a Google Spreadsheet \u2014 no CLI required (Google Apps Script)",
+      "url": "https://github.com/Tatsukiz/steam-leaderboard-manager-gas",
+      "stars": 1,
+      "created_at": "2026-08-15T00:58:27+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "risewithvj/zoho-salesiq-report-automation",
+      "description": "Free Zoho SalesIQ report automation for Website & WhatsApp chatbots - auto-reads your exports from Google Drive, classifies leads by source, and emails branded Weekly/Monthly reports via Google Sheets + Apps Script. No servers, no cost.",
+      "url": "https://github.com/risewithvj/zoho-salesiq-report-automation",
+      "stars": 1,
+      "created_at": "2026-07-18T20:31:08+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "mgesteban/pistahan",
+      "description": " Open-source, offline-first QR check-in that moves 300+ event volunteers through the door in a 30-minute window \u2014 PWA scanner + Google Sheets backend, zero budget.",
+      "url": "https://github.com/mgesteban/pistahan",
+      "stars": 1,
+      "created_at": "2026-07-26T16:56:54+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Imtiaz-laskar/global-risk-intelligence-engine-showcase",
+      "description": "Public case study for the Global Risk & Intelligence Engine \u2014 a full-stack OSINT risk monitoring platform.",
+      "url": "https://github.com/Imtiaz-laskar/global-risk-intelligence-engine-showcase",
+      "stars": 1,
+      "created_at": "2026-08-02T04:19:55+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "shuaiplus/inkstone",
+      "description": "A self-hosted Markdown notebook that runs entirely on Cloudflare Workers.",
+      "url": "https://github.com/shuaiplus/inkstone",
+      "stars": 313,
+      "created_at": "2026-07-30T13:27:48+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "HQBase/hqbase",
+      "description": "Your team's email workspace. On your infrastructure.",
+      "url": "https://github.com/HQBase/hqbase",
+      "stars": 185,
+      "created_at": "2026-08-08T21:32:28+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "ddyy/minshop",
+      "description": "Full-stack ecommerce on Cloudflare Workers, D1, and R2 - with admin, Stripe, OpenNode, Lightning payments, and agent-ready APIs.",
+      "url": "https://github.com/ddyy/minshop",
+      "stars": 111,
+      "created_at": "2026-07-20T23:58:28+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "yaoleifly/ai-stock-pool",
+      "description": "AI industry-chain stock pool with US/A-share mapping, active discovery, policy pressure, and one-click deployment.",
+      "url": "https://github.com/yaoleifly/ai-stock-pool",
+      "stars": 99,
+      "created_at": "2026-07-26T02:42:29+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "saiday/kukuroo",
+      "description": "Self-hosted Web Push on a Cloudflare Worker: iOS and macOS notifications with no server to keep alive, no vendor, and no native app. Safari only, via Declarative Web Push.",
+      "url": "https://github.com/saiday/kukuroo",
+      "stars": 92,
+      "created_at": "2026-08-01T09:19:13+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "MkThingsHQ/mkdocs",
+      "description": "A fast documentation template powered by FumaPress and deployed on Cloudflare Workers.",
+      "url": "https://github.com/MkThingsHQ/mkdocs",
+      "stars": 53,
+      "created_at": "2026-07-26T06:12:13+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "fordes123/easytier-edge",
+      "description": "A secure EasyTier WebSocket relay running at the Cloudflare edge. | \u8fd0\u884c\u5728 Cloudflare \u8fb9\u7f18\u7f51\u7edc\u4e0a\u7684\u5b89\u5168 EasyTier WebSocket \u4e2d\u7ee7\u3002",
+      "url": "https://github.com/fordes123/easytier-edge",
+      "stars": 50,
+      "created_at": "2026-07-21T08:36:42+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "mibgb65-cloud/OmniMail",
+      "description": "Self-hosted multi-domain webmail on Cloudflare Workers, D1, R2, Queues, Email Routing, and Resend.",
+      "url": "https://github.com/mibgb65-cloud/OmniMail",
+      "stars": 47,
+      "created_at": "2026-07-27T14:58:13+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "joycecurcirt539-dot/Mirrly-TG-Proxy",
+      "description": "\u041d\u0430\u0442\u0438\u0432\u043d\u044b\u0439 \u0432\u044b\u0441\u043e\u043a\u043e\u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u0439 MTProto & Cloudflare WebSocket \u043f\u0440\u043e\u043a\u0441\u0438-\u0441\u0435\u0440\u0432\u0435\u0440 \u0434\u043b\u044f \u043b\u043e\u043a\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u043f\u0440\u043e\u043a\u0441\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0440\u0430\u0444\u0438\u043a\u0430 Telegram \u0447\u0435\u0440\u0435\u0437 CloudFlare",
+      "url": "https://github.com/joycecurcirt539-dot/Mirrly-TG-Proxy",
+      "stars": 40,
+      "created_at": "2026-07-27T01:14:34+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "netrair/netra-panel",
+      "description": "No description",
+      "url": "https://github.com/netrair/netra-panel",
+      "stars": 35,
+      "created_at": "2026-08-08T12:49:09+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cloudflare/cloudflare-os-starter",
+      "description": "A guide for customizing your Cloudflare OS deployment",
+      "url": "https://github.com/cloudflare/cloudflare-os-starter",
+      "stars": 223,
+      "created_at": "2026-08-03T21:36:32+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/ci",
+      "description": "Cloudflare-native continuous integration powered by Workflows and Sandbox",
+      "url": "https://github.com/cloudflare/ci",
+      "stars": 117,
+      "created_at": "2026-07-30T16:59:35+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/community",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/community",
+      "stars": 1,
+      "created_at": "2026-07-17T11:44:00+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/ten-proofs",
+      "description": "Lean certificates accompanying ten proofs in mathematics and theoretical computer science",
+      "url": "https://github.com/openai/ten-proofs",
+      "stars": 65,
+      "created_at": "2026-08-05T21:07:49+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "google-gemini/glanceboard",
+      "description": "No description",
+      "url": "https://github.com/google-gemini/glanceboard",
+      "stars": 205,
+      "created_at": "2026-07-23T08:24:31+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/hyperloglog.rs",
+      "description": "HyperLogLog implementations.",
+      "url": "https://github.com/langchain-ai/hyperloglog.rs",
+      "stars": 0,
+      "created_at": "2026-08-12T23:10:16+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/rust-sketches-ddsketch",
+      "description": "Rust port of the Go implementation of DDSketch",
+      "url": "https://github.com/langchain-ai/rust-sketches-ddsketch",
+      "stars": 0,
+      "created_at": "2026-08-12T23:09:57+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/lca-engine",
+      "description": "LangChain Academy Course on LangSmith Engine",
+      "url": "https://github.com/langchain-ai/lca-engine",
+      "stars": 11,
+      "created_at": "2026-07-23T17:24:30+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/juicefs",
+      "description": "JuiceFS is a distributed POSIX file system built on top of Redis and S3.",
+      "url": "https://github.com/langchain-ai/juicefs",
+      "stars": 0,
+      "created_at": "2026-07-21T13:43:22+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/langchain-plugins",
+      "description": "Cross-tool plugin marketplace for deepagents-code (dcode), Claude Code, and OpenAI Codex \u2014 LangChain & LangSmith skills and MCP servers",
+      "url": "https://github.com/langchain-ai/langchain-plugins",
+      "stars": 6,
+      "created_at": "2026-07-19T18:53:51+00:00",
+      "category": "org_watch"
+    }
+  ]
+}
