@@ -1,0 +1,390 @@
+{
+  "date": "2026-08-26T08:14:34.398802+00:00",
+  "count": 48,
+  "repos": [
+    {
+      "name": "deepseek-ai/deepseek-harness",
+      "description": "DeepSeek Harness: Everything is a Plugin.",
+      "url": "https://github.com/deepseek-ai/deepseek-harness",
+      "stars": 196399,
+      "created_at": "2026-08-13T11:56:32+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "anywhere-labs/dsh-desktop",
+      "description": "\u4e3a DeepSeek Harness (DSH) \u63d2\u4ef6\u751f\u6001\u6253\u9020\u7684\u73b0\u4ee3\u5316\u684c\u9762\u7aef\u89e3\u51b3\u65b9\u6848\u3002\u4e07\u7269\u7686\u300c\u63d2\u4ef6\u300d\uff0c\u684c\u9762\u672c\u8eab\u4e5f\u662f\u300c\u63d2\u4ef6\u300d\u3002",
+      "url": "https://github.com/anywhere-labs/dsh-desktop",
+      "stars": 20435,
+      "created_at": "2026-08-13T16:30:50+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "yc-software/qm",
+      "description": "Multiplayer agent harness for work.",
+      "url": "https://github.com/yc-software/qm",
+      "stars": 14206,
+      "created_at": "2026-07-29T20:03:08+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "trycompai/crm",
+      "description": "Comp AI CRM is an open source, CRM designed for AI agents. Agentic-first CRM.",
+      "url": "https://github.com/trycompai/crm",
+      "stars": 8944,
+      "created_at": "2026-07-31T21:38:51+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "bashalarmistalt/decimen-optical-transfer",
+      "description": "No description",
+      "url": "https://github.com/bashalarmistalt/decimen-optical-transfer",
+      "stars": 6441,
+      "created_at": "2026-07-30T18:17:54+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "zhu1090093659/dsh-web",
+      "description": "DeepSeek Harness\uff08DSH\uff09Web \u63d2\u4ef6\u805a\u5408\u751f\u6001\u5305 \u00b7 \u4e00\u5207\u7686\u63d2\u4ef6\uff0c\u521b\u610f\u5de5\u574a\u5206\u53d1",
+      "url": "https://github.com/zhu1090093659/dsh-web",
+      "stars": 6118,
+      "created_at": "2026-08-12T05:15:20+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "genspark-ai/genoffice",
+      "description": "Free, open-source AI office suite for macOS, Windows & Linux \u2014 Word (.docx), Excel (.xlsx), PowerPoint (.pptx), PDF and Markdown editing with built-in AI agents.",
+      "url": "https://github.com/genspark-ai/genoffice",
+      "stars": 3731,
+      "created_at": "2026-07-31T09:40:58+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "dmmulroy/anti-slop",
+      "description": "Opinionated Oxlint rules for rejecting low-evidence TypeScript and JavaScript patterns",
+      "url": "https://github.com/dmmulroy/anti-slop",
+      "stars": 3711,
+      "created_at": "2026-08-12T13:48:50+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "microsoft/skill-recorder",
+      "description": "Desktop app that records your on-screen work session and uses the GitHub Copilot CLI to reconstruct it as an intent + ordered steps, then builds a reusable Skill or Automation for Microsoft Scout, Microsoft Copilot Cowork, or Copilot Studio.",
+      "url": "https://github.com/microsoft/skill-recorder",
+      "stars": 3409,
+      "created_at": "2026-07-29T18:16:14+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "yetone/cumora",
+      "description": "Where agent teams gather. Cross-platform team chat where AI agents are first-class teammates \u2014 with cloud or bring-your-own (Claude Code / Codex) brains.",
+      "url": "https://github.com/yetone/cumora",
+      "stars": 3132,
+      "created_at": "2026-08-17T09:13:52+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "guillaumemeyer/watermarks-remover",
+      "description": "Strip multi-vendor AI provenance marks: Unicode text hygiene, statistical rewrite hooks, and C2PA/metadata from PNG/JPEG/SVG/PDF/DOCX/HTML/MD",
+      "url": "https://github.com/guillaumemeyer/watermarks-remover",
+      "stars": 18362,
+      "created_at": "2026-08-11T16:32:38+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "awesome-dsh-plugin/awesome-dsh-plugin",
+      "description": "A curated list of plugins for DeepSeek Harness (dsh) \u00b7 DeepSeek Harness \u63d2\u4ef6\u7cbe\u9009\u5217\u8868",
+      "url": "https://github.com/awesome-dsh-plugin/awesome-dsh-plugin",
+      "stars": 12782,
+      "created_at": "2026-08-13T13:55:31+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "MiniMax-AI/MiniMax-H3",
+      "description": "No description",
+      "url": "https://github.com/MiniMax-AI/MiniMax-H3",
+      "stars": 7117,
+      "created_at": "2026-07-30T08:41:09+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "pathwaycom/arc-task-gen",
+      "description": "Generates original ARC-AGI-1-style tasks distribution-matched to the public eval set.",
+      "url": "https://github.com/pathwaycom/arc-task-gen",
+      "stars": 6170,
+      "created_at": "2026-08-04T12:59:02+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "KKKKhazix/human-writing",
+      "description": "\u8ba9 AI \u5199\u7684\u4e2d\u6587\u8bfb\u8d77\u6765\u50cf\u4e00\u4e2a\u5177\u4f53\u7684\u4eba\u5728\u8bf4\u8bdd\u3002\u901a\u7528\u521b\u4f5c\u4e0e\u6539\u7a3f Skill\uff0c\u5f00\u7bb1\u5373\u7528\u3002",
+      "url": "https://github.com/KKKKhazix/human-writing",
+      "stars": 3072,
+      "created_at": "2026-08-05T01:19:41+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "wang2122/sprix-sage-router",
+      "description": "Sprix AI at \u5c7f\u667a\u540c\u884c \u2014 state-aware SELF/COLLABORATE/HANDOFF routing for A2A agent networks.",
+      "url": "https://github.com/wang2122/sprix-sage-router",
+      "stars": 2218,
+      "created_at": "2026-08-18T04:08:11+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "fuxicodex/Fuxi",
+      "description": "FuXi is a fast, self-contained AI coding agent that lives in your terminal \u2014 edit code, run commands, and drive tools, with cost-aware routing across LLM providers.",
+      "url": "https://github.com/fuxicodex/Fuxi",
+      "stars": 2079,
+      "created_at": "2026-08-04T07:32:11+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "ShawnPana/phone-harness",
+      "description": "let your agent control your phone",
+      "url": "https://github.com/ShawnPana/phone-harness",
+      "stars": 2055,
+      "created_at": "2026-08-07T22:28:53+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "oil-oil/oil-motion",
+      "description": "Create smooth, responsive interactive web animations.",
+      "url": "https://github.com/oil-oil/oil-motion",
+      "stars": 2038,
+      "created_at": "2026-08-07T12:36:33+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "jd-opensource/JoyAI-Video-Edit",
+      "description": "[Official Repo] JoyAI-Video-Edit: Real-Time Open-Ended Video Editing with Autoregressive Diffusion",
+      "url": "https://github.com/jd-opensource/JoyAI-Video-Edit",
+      "stars": 1665,
+      "created_at": "2026-08-04T08:22:24+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "Unicornfluseize/g-apps-scripts",
+      "description": "google-apps-script",
+      "url": "https://github.com/Unicornfluseize/g-apps-scripts",
+      "stars": 9,
+      "created_at": "2026-08-06T00:22:19+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "mihozip/DeskPet",
+      "description": "A local-first macOS desktop work agent for capture, human-confirmed actions, GAS task workflows and a daily work diary.",
+      "url": "https://github.com/mihozip/DeskPet",
+      "stars": 5,
+      "created_at": "2026-08-09T05:54:42+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Empower-Automation-UK/empower-publishing-engine",
+      "description": "A client-owned publishing platform that transforms Google Workspace into a modern headless content management system.",
+      "url": "https://github.com/Empower-Automation-UK/empower-publishing-engine",
+      "stars": 2,
+      "created_at": "2026-08-12T10:02:29+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "erayakbayy/barcode-automation-portfolio",
+      "description": "Warehouse barcode matching & ops automation \u2014 portfolio docs only.",
+      "url": "https://github.com/erayakbayy/barcode-automation-portfolio",
+      "stars": 2,
+      "created_at": "2026-08-08T14:20:11+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Tatsukiz/steam-leaderboard-manager-gas",
+      "description": "Manage Steam leaderboard entries from a Google Spreadsheet \u2014 no CLI required (Google Apps Script)",
+      "url": "https://github.com/Tatsukiz/steam-leaderboard-manager-gas",
+      "stars": 1,
+      "created_at": "2026-08-15T00:58:27+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Imtiaz-laskar/global-risk-intelligence-engine-showcase",
+      "description": "Public case study for the Global Risk & Intelligence Engine \u2014 a full-stack OSINT risk monitoring platform.",
+      "url": "https://github.com/Imtiaz-laskar/global-risk-intelligence-engine-showcase",
+      "stars": 1,
+      "created_at": "2026-08-02T04:19:55+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "ambezrukov/family-budget",
+      "description": "\u0422\u0435\u043b\u0435\u0433\u0440\u0430\u043c-\u0431\u043e\u0442 \u0443\u0447\u0451\u0442\u0430 \u0441\u0435\u043c\u0435\u0439\u043d\u044b\u0445 \u0440\u0430\u0441\u0445\u043e\u0434\u043e\u0432 \u043d\u0430 Google Apps Script: \u0442\u0435\u043a\u0441\u0442, \u0433\u043e\u043b\u043e\u0441, \u0444\u043e\u0442\u043e \u0447\u0435\u043a\u043e\u0432 \u0438 \u0441\u0441\u044b\u043b\u043a\u0438 \u043d\u0430 \u0446\u0438\u0444\u0440\u043e\u0432\u044b\u0435 \u0447\u0435\u043a\u0438 \u0438\u0437 SMS. \u0418\u0432\u0440\u0438\u0442 \u0438 \u0440\u0443\u0441\u0441\u043a\u0438\u0439, Gemini, Google Sheets. \u0411\u0435\u0437 \u0441\u0432\u043e\u0435\u0433\u043e \u0441\u0435\u0440\u0432\u0435\u0440\u0430, \u0432 \u0431\u0435\u0441\u043f\u043b\u0430\u0442\u043d\u044b\u0445 \u043b\u0438\u043c\u0438\u0442\u0430\u0445.",
+      "url": "https://github.com/ambezrukov/family-budget",
+      "stars": 1,
+      "created_at": "2026-08-16T11:27:01+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "clouluo/private-order-page",
+      "description": "\u5feb\u9583\u79c1\u4eba\u8a02\u8cfc\u9801\u7522\u751f\u5668\uff1a\u52d5\u614b\u5bc6\u78bc\u9598\u9580\u3001\u540d\u7247\u9a57\u8eab\u4efd\u81ea\u52d5\u5207\u6298\u6263\u50f9\u3001\u8a02\u91d1\u5c3e\u6b3e\u5206\u968e\u6bb5\uff0c\u8dd1\u5728 Cloudflare + Google \u4e0a\uff0c\u7dad\u8b77\u6210\u672c 0 \u5143\u3002\uff5cFlash private order page generator \u2014 rotating passcode gate, business-card ID check with auto trade pricing, staged payments. $0/month on Cloudflare + Google.",
+      "url": "https://github.com/clouluo/private-order-page",
+      "stars": 1,
+      "created_at": "2026-08-19T04:54:29+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "fujishusuke1215-alt/todoist-garbage-duty-automation",
+      "description": "Google Apps Script and Todoist automation for garbage collection schedules and two-person duty management.",
+      "url": "https://github.com/fujishusuke1215-alt/todoist-garbage-duty-automation",
+      "stars": 1,
+      "created_at": "2026-08-20T10:19:23+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "SrishtiSingh8/workflow-decision-assistant-google-workspace",
+      "description": "Operational workflow classification, quality monitoring, and dashboard automation using Google Workspace.",
+      "url": "https://github.com/SrishtiSingh8/workflow-decision-assistant-google-workspace",
+      "stars": 1,
+      "created_at": "2026-07-29T15:11:01+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "shuaiplus/inkstone",
+      "description": "A self-hosted Markdown notebook that runs entirely on Cloudflare Workers.",
+      "url": "https://github.com/shuaiplus/inkstone",
+      "stars": 355,
+      "created_at": "2026-07-30T13:27:48+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "HQBase/hqbase",
+      "description": "Your team's email workspace. In your Cloudflare account.",
+      "url": "https://github.com/HQBase/hqbase",
+      "stars": 300,
+      "created_at": "2026-08-08T21:32:28+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "murerkinn/bookshelf",
+      "description": "Self-hosted ebook library that runs on object storage - a Cloudflare Worker over R2, or a Node server over a directory. No database.",
+      "url": "https://github.com/murerkinn/bookshelf",
+      "stars": 291,
+      "created_at": "2026-08-17T11:51:04+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "netrair/netra-panel",
+      "description": "No description",
+      "url": "https://github.com/netrair/netra-panel",
+      "stars": 279,
+      "created_at": "2026-08-08T12:49:09+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "saiday/kukuroo",
+      "description": "Self-hosted Web Push on a Cloudflare Worker: iOS and macOS notifications with no server to keep alive, no vendor, and no native app. Safari only, via Declarative Web Push.",
+      "url": "https://github.com/saiday/kukuroo",
+      "stars": 122,
+      "created_at": "2026-08-01T09:19:13+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "CCCrafts/punctual",
+      "description": "Scheduling that shows up on time \u2014 an open, edge-native Calendly alternative on Cloudflare Workers. MIT, no seat limits, ever.",
+      "url": "https://github.com/CCCrafts/punctual",
+      "stars": 62,
+      "created_at": "2026-08-13T23:06:37+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "ryanlaiyanip-ctrl/chatmany",
+      "description": "Self-hosted Instagram comment-to-DM automation on the official Meta API. Deploy your own on Cloudflare's free tier \u2014 no scraping, no subscription, no App Review.",
+      "url": "https://github.com/ryanlaiyanip-ctrl/chatmany",
+      "stars": 35,
+      "created_at": "2026-08-07T16:31:31+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "productdevbook/nabiz",
+      "description": "A status page that keeps beating when your server does not \u2014 one Cloudflare Worker, or one container you own. Astro, a probe a minute, D1 or SQLite.",
+      "url": "https://github.com/productdevbook/nabiz",
+      "stars": 28,
+      "created_at": "2026-08-10T13:24:21+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "flukelaster/SIAHRA",
+      "description": "3D geospatial hazard-intelligence platform for Thailand \u2014 real-time flood, rainfall, dam and earthquake monitoring on an interactive provincial digital terrain.",
+      "url": "https://github.com/flukelaster/SIAHRA",
+      "stars": 28,
+      "created_at": "2026-08-16T14:51:36+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "rizkirmdhnnn/mailriz",
+      "description": "Persistent email aliases on your own domain \u2014 one inbox for every address, yours forever. 100% on Cloudflare (Worker + D1 + R2 + Email Routing).",
+      "url": "https://github.com/rizkirmdhnnn/mailriz",
+      "stars": 26,
+      "created_at": "2026-08-14T21:12:19+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cloudflare/fedramp",
+      "description": "Cloudflare's authoritative FedRAMP Marketplace Certification Package Overview (Cloudflare for Government, Class C + Class D).",
+      "url": "https://github.com/cloudflare/fedramp",
+      "stars": 0,
+      "created_at": "2026-08-21T20:32:49+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/developer-platform",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/developer-platform",
+      "stars": 0,
+      "created_at": "2026-08-06T18:45:43+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/cloudflare-os-starter",
+      "description": "A guide for customizing your Cloudflare OS deployment",
+      "url": "https://github.com/cloudflare/cloudflare-os-starter",
+      "stars": 263,
+      "created_at": "2026-08-03T21:36:32+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/ci",
+      "description": "Cloudflare-native continuous integration powered by Workflows and Sandbox",
+      "url": "https://github.com/cloudflare/ci",
+      "stars": 137,
+      "created_at": "2026-07-30T16:59:35+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/ten-proofs",
+      "description": "Lean certificates accompanying ten proofs in mathematics and theoretical computer science",
+      "url": "https://github.com/openai/ten-proofs",
+      "stars": 141,
+      "created_at": "2026-08-05T21:07:49+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/vortex",
+      "description": "An extensible, state-of-the-art framework for columnar compression, and the fastest FOSS columnar file format. Formerly at @spiraldb, now an Incubation Stage project at LFAI&Data, part of the Linux Foundation.",
+      "url": "https://github.com/langchain-ai/vortex",
+      "stars": 0,
+      "created_at": "2026-08-25T23:47:24+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/hyperloglog.rs",
+      "description": "HyperLogLog implementations.",
+      "url": "https://github.com/langchain-ai/hyperloglog.rs",
+      "stars": 1,
+      "created_at": "2026-08-12T23:10:16+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/rust-sketches-ddsketch",
+      "description": "Rust port of the Go implementation of DDSketch",
+      "url": "https://github.com/langchain-ai/rust-sketches-ddsketch",
+      "stars": 0,
+      "created_at": "2026-08-12T23:09:57+00:00",
+      "category": "org_watch"
+    }
+  ]
+}
