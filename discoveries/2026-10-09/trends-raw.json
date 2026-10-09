@@ -1,0 +1,430 @@
+{
+  "date": "2026-10-09T08:06:56.177102+00:00",
+  "count": 53,
+  "repos": [
+    {
+      "name": "zai-org/ZCode",
+      "description": "Z.ai's coding agent harness. Powerful, intelligent, extensible.",
+      "url": "https://github.com/zai-org/ZCode",
+      "stars": 7575,
+      "created_at": "2026-09-20T12:01:16+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "tamaratran/fast-jev-compaction",
+      "description": "Claude Code plugin that replaces the compaction summary with Jev decisions: every tool call and result is scored in one fast request, stale ones are dropped or truncated, everything kept stays verbatim.",
+      "url": "https://github.com/tamaratran/fast-jev-compaction",
+      "stars": 7537,
+      "created_at": "2026-09-17T05:57:20+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "KKKKhazix/AIHOT",
+      "description": "\u4e00\u4e2a\u81ea\u5df1\u627e\u70ed\u70b9\u3001\u81ea\u5df1\u5199\u65e5\u62a5\u7684\u7f51\u7ad9\u6846\u67b6\u3002\u628a\u4fe1\u6e90\u548c\u7cbe\u9009\u6807\u51c6\u6362\u6210\u4f60\u7684\uff0c\u5b83\u5c31\u662f\u4f60\u7684\u884c\u4e1a\u70ed\u70b9\u7ad9\u3002",
+      "url": "https://github.com/KKKKhazix/AIHOT",
+      "stars": 6831,
+      "created_at": "2026-09-28T23:40:05+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "CopilotKit/OpenDots",
+      "description": "Your always-on AI coworkers that move between text, calls, and Slack.",
+      "url": "https://github.com/CopilotKit/OpenDots",
+      "stars": 4553,
+      "created_at": "2026-09-29T17:13:58+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "CopilotKit/openmuse",
+      "description": "A personal agent with a browser, terminal, files, and work that keeps going built with CopilotKit and AG-UI.",
+      "url": "https://github.com/CopilotKit/openmuse",
+      "stars": 4383,
+      "created_at": "2026-09-15T16:05:44+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "shader-effects-inc/shaders",
+      "description": "WebGPU components for React, Vue, Svelte, Solid, JS & Framer",
+      "url": "https://github.com/shader-effects-inc/shaders",
+      "stars": 3593,
+      "created_at": "2026-09-29T16:36:26+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "jarrodwatts/jev-trader",
+      "description": "One AI trade decision every Monad block. Jev on Kuru MON-USDC.",
+      "url": "https://github.com/jarrodwatts/jev-trader",
+      "stars": 2909,
+      "created_at": "2026-09-16T21:36:20+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "omnirush-ai/omnirush-gui",
+      "description": "A desktop coding agent with free access to frontier models.",
+      "url": "https://github.com/omnirush-ai/omnirush-gui",
+      "stars": 2891,
+      "created_at": "2026-09-21T05:26:26+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "mexicat/pdoom-video",
+      "description": "Code-rendered music video for \"I'm Upping My P(doom)\"",
+      "url": "https://github.com/mexicat/pdoom-video",
+      "stars": 2520,
+      "created_at": "2026-09-24T21:33:53+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "dzhng/jevgrep",
+      "description": "Find code by asking what it does. A CLI for coding agents that uses Jev to discover relevant files and source context.",
+      "url": "https://github.com/dzhng/jevgrep",
+      "stars": 2485,
+      "created_at": "2026-09-26T04:06:56+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "NandhaKishorM/laya",
+      "description": "Non-autoregressive System 1 decision engine. Typed choice, score and yes/no decisions over any text in a single forward pass, in 100+ languages, with a router that picks the right checkpoint per request.",
+      "url": "https://github.com/NandhaKishorM/laya",
+      "stars": 31824,
+      "created_at": "2026-09-18T04:46:33+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "browser-use/jev-ultrafast",
+      "description": "Fastest and cheapest web agent",
+      "url": "https://github.com/browser-use/jev-ultrafast",
+      "stars": 22435,
+      "created_at": "2026-09-16T21:30:12+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "jaredpalmer/kev",
+      "description": "Jev-like family of decision models built on top of Qwen3.5/3.8 you can train and run on your own",
+      "url": "https://github.com/jaredpalmer/kev",
+      "stars": 8770,
+      "created_at": "2026-09-17T20:49:39+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "mizorewww/laya-mlx",
+      "description": "Native MLX runtime for Laya typed decision models \u2014 7\u201314 ms short decisions on M3 Max. No text generation, PyTorch, or cloud API.",
+      "url": "https://github.com/mizorewww/laya-mlx",
+      "stars": 6845,
+      "created_at": "2026-09-19T13:50:26+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "rehan-remade/universal-modder",
+      "description": "Point Claude at any game. Skills, tools and the fal MCP that let Claude Code mod almost any PC game you own: recon, reverse engineering, fal-generated art/3D/audio, in-game testing, showcase videos.",
+      "url": "https://github.com/rehan-remade/universal-modder",
+      "stars": 5769,
+      "created_at": "2026-09-30T05:00:35+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "yi1108/printfilm",
+      "description": "PRINTFILM: AI short-video marketing and AI short-drama creation platform",
+      "url": "https://github.com/yi1108/printfilm",
+      "stars": 5051,
+      "created_at": "2026-09-10T02:08:47+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "TheoLeeCJ/SemIf-OpenJev",
+      "description": "Semantic ifs from open models, on a 3090 at home. Independent; not affiliated with Jev or TypeSafe.",
+      "url": "https://github.com/TheoLeeCJ/SemIf-OpenJev",
+      "stars": 4755,
+      "created_at": "2026-09-16T03:51:21+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "newliver666/apk-reverse",
+      "description": "Suitable for Android APK reverse engineering analysis",
+      "url": "https://github.com/newliver666/apk-reverse",
+      "stars": 3320,
+      "created_at": "2026-09-19T13:12:54+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "nykooi1/vibe-wise",
+      "description": "A Claude Code plugin that helps you learn how to build while AI writes the code.",
+      "url": "https://github.com/nykooi1/vibe-wise",
+      "stars": 3218,
+      "created_at": "2026-09-29T01:29:57+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "mcncarl/jianying-headless",
+      "description": "Private source preview: native Jianying drafts, isolated editing/export, and standalone Agent Skill.",
+      "url": "https://github.com/mcncarl/jianying-headless",
+      "stars": 3011,
+      "created_at": "2026-09-15T11:51:15+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "YIAN6557/universal-content-intake",
+      "description": "One-link downloader for the Mac (videos, documents, images, articles, web pages), with optional automatic YouTube monitoring that translates and subtitles new videos.",
+      "url": "https://github.com/YIAN6557/universal-content-intake",
+      "stars": 34,
+      "created_at": "2026-10-05T07:45:07+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "christianmat/cold-email-killer",
+      "description": "Give cold emails the cold shoulder. Auto-archives cold sales emails in Gmail. Runs securely in your own Google account for free.",
+      "url": "https://github.com/christianmat/cold-email-killer",
+      "stars": 10,
+      "created_at": "2026-10-02T22:16:45+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "iliyahastamseven77-prog/zpoint",
+      "description": "End-to-end encrypted transport that rides on Google Apps Script / Firebase \u2014 self-hosted SOCKS5 proxy with AES-256-GCM, zero dependencies, Python + Kotlin apps",
+      "url": "https://github.com/iliyahastamseven77-prog/zpoint",
+      "stars": 7,
+      "created_at": "2026-09-17T11:04:27+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "bootgs/skills",
+      "description": "Agent Skills for the boot.gs Google Apps Script framework and plain Google Apps Script \u2013 Claude Code, Gemini CLI, Cursor, and npx skills compatible.",
+      "url": "https://github.com/bootgs/skills",
+      "stars": 5,
+      "created_at": "2026-09-13T09:32:23+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "StijnRis/auto-schedule-travel-time",
+      "description": "Google Apps Script that adds 'when to leave' travel blocks to Google Calendar (Google Maps + NS)",
+      "url": "https://github.com/StijnRis/auto-schedule-travel-time",
+      "stars": 2,
+      "created_at": "2026-09-25T08:00:10+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "crosenblum/Gmail-Housekeeper",
+      "description": "Automated Gmail housekeeping and spam management using Google Apps Script, with rule-based filtering, safe cleanup, and detailed execution logging.",
+      "url": "https://github.com/crosenblum/Gmail-Housekeeper",
+      "stars": 2,
+      "created_at": "2026-09-12T07:55:17+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "dfa-primarytech/workspace-migration-toolkit",
+      "description": "Tools for migrating Microsoft Office documents to Google Workspace without the formatting falling apart. Repairs .docx so Google Docs stops mangling floating text boxes and images.",
+      "url": "https://github.com/dfa-primarytech/workspace-migration-toolkit",
+      "stars": 2,
+      "created_at": "2026-09-15T08:30:41+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "monmeeth-env/sheetspend",
+      "description": "Log expenses from iPhone/Android in 5 seconds into Google Sheets via an Apps Script API",
+      "url": "https://github.com/monmeeth-env/sheetspend",
+      "stars": 1,
+      "created_at": "2026-09-23T18:21:38+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "gabazureus/gasclaw",
+      "description": "The first agent framework that runs entirely inside Google Apps Script. Each agent is a Google Drive folder of markdown \u2014 no server, no container, no bill.",
+      "url": "https://github.com/gabazureus/gasclaw",
+      "stars": 1,
+      "created_at": "2026-09-18T17:51:38+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Neddadarkling2308/claude-artifact-business-runway",
+      "description": "Track business runway, burn rate, and break-even with automated receipt tracking in a free Claude-powered cash flow tool.",
+      "url": "https://github.com/Neddadarkling2308/claude-artifact-business-runway",
+      "stars": 1,
+      "created_at": "2026-09-25T04:10:31+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Inkloom-art/inkloom",
+      "description": "Specialised AI models for logo design \u2014 a brand-analysis model turns a business into constraints, typography and symbol models construct the mark, and a composition engine produces real lockups and clear-space rules. Early access open.",
+      "url": "https://github.com/Inkloom-art/inkloom",
+      "stars": 1476,
+      "created_at": "2026-09-20T07:54:30+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "Doulor/DoulorCloud",
+      "description": "Doulor Cloud \u2014\u2014 \u4e00\u7ad9\u5f0f\u4e91\u7aef\u8d44\u6e90\u5206\u53d1\u5e73\u53f0\uff1a\u4e8c\u7ea7\u57df\u540d / \u57df\u540d\u90ae\u7bb1 / R2 \u76f4\u94fe\u7f51\u76d8 / \u4e2a\u4eba\u540d\u7247 / AI API \u4e2d\u8f6c\u7ad9\u3002\u7eaf\u9759\u6001\u524d\u7aef + Cloudflare Workers + D1 + R2\u3002",
+      "url": "https://github.com/Doulor/DoulorCloud",
+      "stars": 224,
+      "created_at": "2026-09-22T00:49:11+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "developerAmira/telegram-bot",
+      "description": "Bilingual (FA/EN) Telegram bot admin panel \u2014 Cloudflare Workers + KV + Hono + Tailwind",
+      "url": "https://github.com/developerAmira/telegram-bot",
+      "stars": 209,
+      "created_at": "2026-09-11T13:38:49+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cogsend/cogsend",
+      "description": "Self-hosted social media scheduler. Write once, publish to any connected platform. Runs on your own Cloudflare account.",
+      "url": "https://github.com/cogsend/cogsend",
+      "stars": 207,
+      "created_at": "2026-09-22T01:41:32+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "aozorae/EdgeSSH",
+      "description": "A lightweight WebSSH workspace on Cloudflare Workers with host management, encrypted storage, SFTP, process monitoring and globe visualization. | \u57fa\u4e8e Cloudflare Workers \u7684\u8f7b\u91cf WebSSH \u5de5\u4f5c\u53f0\uff0c\u652f\u6301\u4e3b\u673a\u7ba1\u7406\u3001\u52a0\u5bc6\u5b58\u50a8\u3001SFTP\u3001\u8fdb\u7a0b\u76d1\u63a7\u4e0e\u5730\u7403\u53ef\u89c6\u5316\u3002",
+      "url": "https://github.com/aozorae/EdgeSSH",
+      "stars": 147,
+      "created_at": "2026-09-18T15:52:00+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "mmdju/digikala-mcp",
+      "description": "MCP server for Digikala: search, compare and price-check products on Iran's largest marketplace. Read-only, no API key. 19 tools, hosted on Cloudflare Workers.",
+      "url": "https://github.com/mmdju/digikala-mcp",
+      "stars": 138,
+      "created_at": "2026-09-15T04:54:56+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "heymi/aldus-palace",
+      "description": "A trustworthy context layer for AI that remembers, plans and acts \u2014 free text into typed commitments, decisions and memories, each with its evidence, in a SQLite file you own. MCP, HTTP, library and typed client.",
+      "url": "https://github.com/heymi/aldus-palace",
+      "stars": 102,
+      "created_at": "2026-09-18T17:10:56+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "CassiopeiaCode/CosyRedactGateway",
+      "description": "Lightweight, stateless privacy gateway for LLM APIs \u2014 redact secrets before OpenAI/Anthropic upstreams and restore them transparently in SSE and tool calls.",
+      "url": "https://github.com/CassiopeiaCode/CosyRedactGateway",
+      "stars": 99,
+      "created_at": "2026-09-11T07:43:28+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "mmdju/divar-mcp",
+      "description": "MCP server for Divar \u2014 search, compare and analyze classified ads. Read-only, no API key.",
+      "url": "https://github.com/mmdju/divar-mcp",
+      "stars": 92,
+      "created_at": "2026-09-18T02:14:13+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "pallakh9905/ghost-driver-codex",
+      "description": "Ghost Driver Codes, Cars & Tier List 2026: Ultimate Roblox Companion Hub",
+      "url": "https://github.com/pallakh9905/ghost-driver-codex",
+      "stars": 68,
+      "created_at": "2026-09-22T19:54:48+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cloudflare/streamline-demo",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/streamline-demo",
+      "stars": 6,
+      "created_at": "2026-10-01T23:11:07+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/streamline",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/streamline",
+      "stars": 16,
+      "created_at": "2026-10-01T23:09:14+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/crypto-discovery-prompts",
+      "description": "Prompts for AI-assisted discovery of cryptography in source code and post-quantum migration analysis",
+      "url": "https://github.com/cloudflare/crypto-discovery-prompts",
+      "stars": 4,
+      "created_at": "2026-09-23T12:53:46+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/forge",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/forge",
+      "stars": 1087,
+      "created_at": "2026-09-21T15:17:42+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/cf",
+      "description": "The agentic CLI for the entire Cloudflare API",
+      "url": "https://github.com/cloudflare/cf",
+      "stars": 819,
+      "created_at": "2026-09-21T15:16:36+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/math",
+      "description": "No description",
+      "url": "https://github.com/openai/math",
+      "stars": 12515,
+      "created_at": "2026-10-06T21:47:02+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/sign-in-with-chatgpt-devkit",
+      "description": "Sign-in with ChatGPT DevKit \u2014 local SDK, reusable React components, design assets, and the Paste Perfect desktop example.",
+      "url": "https://github.com/openai/sign-in-with-chatgpt-devkit",
+      "stars": 35,
+      "created_at": "2026-09-29T01:43:11+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/mcp-extensions",
+      "description": "Build plugins that feel like native, first-class features of ChatGPT.",
+      "url": "https://github.com/openai/mcp-extensions",
+      "stars": 935,
+      "created_at": "2026-09-29T00:45:42+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/openai-live-console",
+      "description": "Local voice console with read-only tools and backend delegation.",
+      "url": "https://github.com/openai/openai-live-console",
+      "stars": 13,
+      "created_at": "2026-09-10T08:33:45+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/NavierStokesAndEuler",
+      "description": "Lean certificates accompanying Navier-Stokes and Euler results",
+      "url": "https://github.com/openai/NavierStokesAndEuler",
+      "stars": 2069,
+      "created_at": "2026-09-08T10:53:38+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/langsmith-plugin-binary",
+      "description": "Shared build, sign, notarize and publish pipeline for the LangSmith plugin repos",
+      "url": "https://github.com/langchain-ai/langsmith-plugin-binary",
+      "stars": 0,
+      "created_at": "2026-09-22T14:31:23+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/paid-media-agent",
+      "description": "Open-source paid media agent for Google Ads, Meta Ads, Reddit, LinkedIn, X, and OpenAI Ads: analysis, reports, and reviewed changes, built on Deep Agents.",
+      "url": "https://github.com/langchain-ai/paid-media-agent",
+      "stars": 101,
+      "created_at": "2026-09-11T22:22:37+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/smithtune",
+      "description": "LangSmith Post-Training CLI",
+      "url": "https://github.com/langchain-ai/smithtune",
+      "stars": 25,
+      "created_at": "2026-09-10T19:11:19+00:00",
+      "category": "org_watch"
+    }
+  ]
+}
