@@ -1,0 +1,406 @@
+{
+  "date": "2026-10-31T08:03:38.198947+00:00",
+  "count": 50,
+  "repos": [
+    {
+      "name": "amosblomqvist/learnharness",
+      "description": "Agent harness for learning difficult things.",
+      "url": "https://github.com/amosblomqvist/learnharness",
+      "stars": 4352,
+      "created_at": "2026-10-16T19:35:33+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "anhao/ai-pose-gallery-zh",
+      "description": "\u4e2d\u6587\u7248 AI \u59ff\u52bf\u53c2\u8003\u56fe\u5e93 \u00b7 1439 \u7ec4 / 2878 \u5f20\u56fe\u7247 / \u5b8c\u6574\u6c49\u5316 \u00b7 \u96f6\u4f9d\u8d56\u9759\u6001\u753b\u5eca",
+      "url": "https://github.com/anhao/ai-pose-gallery-zh",
+      "stars": 4218,
+      "created_at": "2026-10-27T12:24:37+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "obsidianmd/pele",
+      "description": "Renders Mermaid diagrams faster than you'd run from a volcano! \ud83c\udf0b ",
+      "url": "https://github.com/obsidianmd/pele",
+      "stars": 3956,
+      "created_at": "2026-10-05T23:32:40+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "openfilm/openfilm",
+      "description": "The open source AI video agent: turns any coding agent into a video agent, with an editor to change anything it makes.",
+      "url": "https://github.com/openfilm/openfilm",
+      "stars": 3811,
+      "created_at": "2026-10-04T09:29:07+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "AienTech/dossier",
+      "description": "A self-hosted job search app that writes tailored resumes and cover letters from your profile.",
+      "url": "https://github.com/AienTech/dossier",
+      "stars": 3440,
+      "created_at": "2026-10-03T21:26:15+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "designfuchen/word-atlas",
+      "description": "\u8bcd\u5149 \u00b7 Word Atlas \u2014 Illustrated IELTS vocabulary with 7,298 words, UK/US audio and FSRS review. Open-source app + CC BY 4.0 dataset.",
+      "url": "https://github.com/designfuchen/word-atlas",
+      "stars": 3439,
+      "created_at": "2026-10-25T08:27:22+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "chenglou/handwired",
+      "description": "Turn your regular JavaScript code into a neural net.",
+      "url": "https://github.com/chenglou/handwired",
+      "stars": 2079,
+      "created_at": "2026-10-15T02:15:09+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "deeplethe/solid-glass",
+      "description": "A design system for AI applications. Material, physical, tactile, technical.",
+      "url": "https://github.com/deeplethe/solid-glass",
+      "stars": 2013,
+      "created_at": "2026-10-12T09:19:02+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "shaongitbd/doory",
+      "description": "Open source canva alternative",
+      "url": "https://github.com/shaongitbd/doory",
+      "stars": 1930,
+      "created_at": "2026-10-10T00:03:25+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "darrenprx/lolPing",
+      "description": "League of Legends ping wheel for your Windows desktop. Hold Alt, drag, and ping anywhere, with the original animations and sounds.",
+      "url": "https://github.com/darrenprx/lolPing",
+      "stars": 1845,
+      "created_at": "2026-10-02T19:57:41+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "Gathin23/cleanyourtv",
+      "description": "Debloat any Android or Google TV over Wi-Fi and get an Apple TV-style home.",
+      "url": "https://github.com/Gathin23/cleanyourtv",
+      "stars": 47101,
+      "created_at": "2026-10-17T08:12:35+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "deepseek-ai/DeepInfer",
+      "description": "DeepInfer: High-performance, large-scale inference framework for DeepSeek models",
+      "url": "https://github.com/deepseek-ai/DeepInfer",
+      "stars": 24550,
+      "created_at": "2026-10-16T07:47:23+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "seedds/nxnative",
+      "description": "Switch games running natively on iPhone, iPad and Mac: an NSP folder becomes an unsigned IPA (NSO rewriter, Horizon HLE host, NVN\u2192Metal)",
+      "url": "https://github.com/seedds/nxnative",
+      "stars": 10353,
+      "created_at": "2026-10-13T05:20:14+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "Jakeschincariol/replica-skill",
+      "description": "Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, test it for bugs, then fix what its users hate. Free, MIT.",
+      "url": "https://github.com/Jakeschincariol/replica-skill",
+      "stars": 6702,
+      "created_at": "2026-10-03T12:07:49+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "xiaoyang111222/cn-math-taxonomy",
+      "description": "\u6570\u5b66\uff08\u5c0f\u5b66\u5230\u9ad8\u4e2d\uff09\u3001\u82f1\u8bed\uff08\u4e09\u5e74\u7ea7\u5230\u9ad8\u4e2d\uff09\u3001\u521d\u4e2d\u7269\u7406\u7684\u77e5\u8bc6\u56fe\u8c31\uff1a1644 \u4e2a\u77e5\u8bc6\u70b9\u30012403 \u6761\u5148\u4fee\u8fb9\u30016723 \u9053\u9898\uff0c\u5bf9\u9f50\u8bfe\u6807\uff0c\u9644\u81ea\u9002\u5e94\u524d\u7f6e\u8bca\u65ad\u3002",
+      "url": "https://github.com/xiaoyang111222/cn-math-taxonomy",
+      "stars": 5543,
+      "created_at": "2026-10-18T09:04:43+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "rddmwmddr/android-ad-cleaner",
+      "description": "\u5173\u6389\u56fd\u4ea7\u5b89\u5353\u624b\u673a\u7cfb\u7edf\u91cc\u7684\u5e7f\u544a\u3001\u70ed\u641c\u3001\u8d44\u8baf\u63a8\u8350\u548c\u8425\u9500\u63a8\u9001\u3002\u4e0d root\uff0c\u53ef\u8fd8\u539f\uff0c\u652f\u6301 AI \u667a\u80fd\u4f53\u4e00\u952e\u6267\u884c\u3002",
+      "url": "https://github.com/rddmwmddr/android-ad-cleaner",
+      "stars": 5197,
+      "created_at": "2026-10-24T05:35:47+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "zhongerxin/iPhone-use",
+      "description": "\u8ba9 Codex \u901a\u8fc7 USB \u64cd\u4f5c\u771f\u5b9e iPhone\uff1a\u5f15\u5bfc\u5b89\u88c5\u3001App \u81ea\u52a8\u5316\u3001\u5b9e\u65f6\u5c4f\u5e55\u4e0e\u622a\u56fe\u56de\u9000\u3002",
+      "url": "https://github.com/zhongerxin/iPhone-use",
+      "stars": 4797,
+      "created_at": "2026-10-06T15:09:33+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "interplains/Zero-Breach-Toolkit",
+      "description": "Free, open-source, offline checks for traces of known mercenary spyware. Works on Windows, macOS and Linux, Android phones and iPhone backups.",
+      "url": "https://github.com/interplains/Zero-Breach-Toolkit",
+      "stars": 3912,
+      "created_at": "2026-10-25T14:41:34+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "Arekejoker/qwen21-nsfw-pose-skill",
+      "description": "Qwen-Image 2.1 NSFW/\u59ff\u52bf\u51fa\u56fe skill\uff1a\u4f5c\u8005\u7ea7\u63d0\u793a\u8bcd\u914d\u65b9 + NSFW LoRA + 136 \u59ff\u52bf VNCCS \u4eba\u5076\u63a7\u5236\uff1b\u9002\u7528 Claude Code / Codex / Cursor / OpenClaw",
+      "url": "https://github.com/Arekejoker/qwen21-nsfw-pose-skill",
+      "stars": 3856,
+      "created_at": "2026-10-13T03:09:42+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "aicodeking/leanrea",
+      "description": "One 8 KB skill that replaces REA (Reverse Engineer Anything): plain CLI tools, no MCP. Benchmarked: 38% faster, 35% cheaper.",
+      "url": "https://github.com/aicodeking/leanrea",
+      "stars": 3762,
+      "created_at": "2026-10-17T02:53:24+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "YIAN6557/universal-content-intake",
+      "description": "One-link downloader for the Mac (videos, documents, images, articles, web pages), with optional automatic YouTube monitoring that translates and subtitles new videos.",
+      "url": "https://github.com/YIAN6557/universal-content-intake",
+      "stars": 244,
+      "created_at": "2026-10-05T07:45:07+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "christianmat/cold-email-killer",
+      "description": "Give cold emails the cold shoulder. Auto-archives cold sales emails in Gmail. Runs securely in your own Google account for free.",
+      "url": "https://github.com/christianmat/cold-email-killer",
+      "stars": 11,
+      "created_at": "2026-10-02T22:16:45+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "techsters-ai/finance-os-public",
+      "description": "Personal finance PWA on your own Google Sheet: offline iPhone app + Apps Script API. Set it up with an AI agent (AGENTS.md).",
+      "url": "https://github.com/techsters-ai/finance-os-public",
+      "stars": 3,
+      "created_at": "2026-10-20T11:18:02+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "ahmed-ayman-kamel/wfm-operations-app",
+      "description": "Shift handover, ticketing, report automation and KPI dashboards for a contact-center WFM team. Google Apps Script + Sheets, with a Chrome extension.",
+      "url": "https://github.com/ahmed-ayman-kamel/wfm-operations-app",
+      "stars": 2,
+      "created_at": "2026-10-20T19:27:48+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "gabrielbcaracini-hub/automacao-planilhas-javascript",
+      "description": "Sistema de gerenciamento de planilhas automatizadas desenvolvido com JavaScript para otimizar fluxos administrativos, organizar dados e melhorar a efici\u00eancia operacional na administra\u00e7\u00e3o p\u00fablica.",
+      "url": "https://github.com/gabrielbcaracini-hub/automacao-planilhas-javascript",
+      "stars": 1,
+      "created_at": "2026-10-15T22:07:37+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "elyesf/automation-toolkit",
+      "description": "Google Sheets CRM automation in Apps Script (lead intake, duplicate check, follow-up reminders) plus Python tools for contact cleanup and weekly lead reports. Tested in CI.",
+      "url": "https://github.com/elyesf/automation-toolkit",
+      "stars": 1,
+      "created_at": "2026-10-15T21:47:00+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "inquiredu/a-mn-hackathon",
+      "description": "Hands On: A Friday Hackathon (MNGAIA \u00b7 AI4MN, Oct 9, 2026)",
+      "url": "https://github.com/inquiredu/a-mn-hackathon",
+      "stars": 1,
+      "created_at": "2026-10-06T16:03:39+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "monikdiwani/Daily-Tech-Digest",
+      "description": "AI-powered daily tech digest using Google Apps Script, Google News RSS, and Gemini. Curates technology news and delivers a personalized email briefing automatically.",
+      "url": "https://github.com/monikdiwani/Daily-Tech-Digest",
+      "stars": 1,
+      "created_at": "2026-10-22T17:46:23+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "miao010625/notion-weather-email",
+      "description": "Daily Notion agenda and weather email for Apps Script, with preview mode, private configuration, and duplicate-send protection.",
+      "url": "https://github.com/miao010625/notion-weather-email",
+      "stars": 1,
+      "created_at": "2026-10-22T12:08:06+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "msyamsularif/Tapt3",
+      "description": "Tap the back of your iPhone 3x and a payment screenshot becomes a row in Google Sheets. Back Tap + iOS Shortcut (OCR) + Apps Script Web App, no server of your own.",
+      "url": "https://github.com/msyamsularif/Tapt3",
+      "stars": 1,
+      "created_at": "2026-10-13T08:48:40+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "rociiu/talorys",
+      "description": "Your personal AI agent in your own Cloudflare account. Chat, memory, tasks, notes and scheduled reminders, deployed with one command: npx create-talorys@latest. Free-tier friendly, single-user, no telemetry.",
+      "url": "https://github.com/rociiu/talorys",
+      "stars": 1427,
+      "created_at": "2026-10-10T09:46:56+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "aboard-io/tinylittleoffice",
+      "description": "A free office suite where your document is inside the link and easy to share. There's no account and nothing saved unless you choose.",
+      "url": "https://github.com/aboard-io/tinylittleoffice",
+      "stars": 561,
+      "created_at": "2026-10-05T11:20:50+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "qianshuixia/shrimpreel",
+      "description": "Open-source template for \"one photo \u2192 AI video that follows a viral template\" SaaS sites, one site per trending keyword. Cloudflare Workers + D1/R2/KV/Queues, TanStack Start + Hono, Google sign-in, credit packs (Waffo/Dodo), fal.ai video generation, admin console.",
+      "url": "https://github.com/qianshuixia/shrimpreel",
+      "stars": 330,
+      "created_at": "2026-10-20T18:08:00+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "shipwords-dev/shipwords",
+      "description": "Ship a money-making AI site for every new keyword. Cloudflare-native starter with auth, credits, payments and AI generation. | \u65b0\u8bcd\u7ad9\u7fa4\u6846\u67b6\uff1a\u4e00\u4e2a\u65b0\u8bcd\u4e00\u4e2a\u7ad9\uff0c\u4e00\u4e2a\u4e0b\u5348\u4e0a\u7ebf\u3002\u8d77\u91cf\u7684\u7ee7\u7eed\u8fed\u4ee3\uff0c\u6ca1\u8d77\u6765\u7684\u653e\u7740\u4e0d\u7ba1\u3002\u4e0d\u53d8\u7684\u5171\u4eab\uff0c\u53d8\u7684\u72ec\u7acb\u3002",
+      "url": "https://github.com/shipwords-dev/shipwords",
+      "stars": 307,
+      "created_at": "2026-10-28T06:35:51+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "mrzh7/scam-with-your-friends-web",
+      "description": "Scam With Your Friends Web: unofficial open-source browser remake. Co-op AI call center game with a 3D office, voice chat and daily quotas. React + Three.js; self-host on Cloudflare. \u0420\u0443\u0441\u0441\u043a\u0438\u0439 \u044f\u0437\u044b\u043a: \u043a\u043e\u043e\u043f\u0435\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u043d\u0430\u044f \u0438\u0433\u0440\u0430 \u043f\u0440\u043e \u043a\u043e\u043b\u043b-\u0446\u0435\u043d\u0442\u0440 \u0441 \u0418\u0418.",
+      "url": "https://github.com/mrzh7/scam-with-your-friends-web",
+      "stars": 247,
+      "created_at": "2026-10-09T05:27:48+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "scarletkc/Hatoba",
+      "description": "Open-source desktop SSH client with an AI assistant and end-to-end encrypted sync through your own Cloudflare account",
+      "url": "https://github.com/scarletkc/Hatoba",
+      "stars": 224,
+      "created_at": "2026-10-07T23:43:36+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "AgenticsWorks/AgentPeerChat",
+      "description": "Private messaging for your AI agents. Free to self-host on Cloudflare. Direct chats, groups and a durable inbox.",
+      "url": "https://github.com/AgenticsWorks/AgentPeerChat",
+      "stars": 158,
+      "created_at": "2026-10-02T03:45:57+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "xinyitang3/cftgwebproxy",
+      "description": "\u57fa\u4e8e Cloudflare Pages + Worker + DNS \u81ea\u52a8\u89e3\u6790 \u7684 Telegram Web Proxy \u4ee3\u7406\u65b9\u6848\u3002\u4e3b\u7a0b\u5e8f\u8fd0\u884c\u4e8e Pages \u89c4\u907f Worker \u76f4\u63a5\u4ee3\u7406\u6613\u89e6\u53d1\u7684 1101/522 \u9519\u8bef\uff0cWorker \u4ec5\u4f5c\u8f6c\u53d1\u5c42\u5e76\u627f\u63a5 Pages \u65e0\u6cd5\u8def\u7531\u7684\u4f18\u9009\u57df\u540d\uff0c\u914d\u5408\u81ea\u52a8 DNS \u89e3\u6790\uff0c\u5b9e\u73b0\u9ad8\u53ef\u7528\u3001\u7a33\u5b9a\u7684\u63a5\u5165\u3002",
+      "url": "https://github.com/xinyitang3/cftgwebproxy",
+      "stars": 93,
+      "created_at": "2026-10-22T11:10:56+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "hyphy-void/Parcel",
+      "description": "End-to-end encrypted, self-hosted file sharing powered by Cloudflare.",
+      "url": "https://github.com/hyphy-void/Parcel",
+      "stars": 89,
+      "created_at": "2026-10-06T19:58:37+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "arcmira/mcp",
+      "description": "YouTube transcript search for your AI. Find who said what with timestamps, mentions, sponsors, and recommendations. Remote MCP and agent skills.",
+      "url": "https://github.com/arcmira/mcp",
+      "stars": 78,
+      "created_at": "2026-10-12T20:51:36+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cloudflare/cloudflare-os-workshop",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/cloudflare-os-workshop",
+      "stars": 5,
+      "created_at": "2026-10-07T12:12:19+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/streamline-demo",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/streamline-demo",
+      "stars": 7,
+      "created_at": "2026-10-01T23:11:07+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "cloudflare/streamline",
+      "description": "No description",
+      "url": "https://github.com/cloudflare/streamline",
+      "stars": 18,
+      "created_at": "2026-10-01T23:09:14+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/php2shell-checker",
+      "description": "No description",
+      "url": "https://github.com/openai/php2shell-checker",
+      "stars": 1454,
+      "created_at": "2026-10-21T00:29:12+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/MultiLangBench",
+      "description": "An eval based on SQLite that benchmarks language models in multiple languages.",
+      "url": "https://github.com/openai/MultiLangBench",
+      "stars": 42,
+      "created_at": "2026-10-19T20:58:00+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/math",
+      "description": "No description",
+      "url": "https://github.com/openai/math",
+      "stars": 17149,
+      "created_at": "2026-10-06T21:47:02+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "google-gemini/gemini-4-demo-vanilla-3D",
+      "description": "No description",
+      "url": "https://github.com/google-gemini/gemini-4-demo-vanilla-3D",
+      "stars": 24,
+      "created_at": "2026-10-12T13:50:33+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "google-gemini/hermes-gemini-api-plugin",
+      "description": "No description",
+      "url": "https://github.com/google-gemini/hermes-gemini-api-plugin",
+      "stars": 0,
+      "created_at": "2026-10-02T16:15:11+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/langchain-browserbase",
+      "description": "LangChain integration for Browserbase.",
+      "url": "https://github.com/langchain-ai/langchain-browserbase",
+      "stars": 0,
+      "created_at": "2026-10-28T00:10:40+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/design-agent",
+      "description": "Open-source design agent: on-brand stills, decks, diagrams, charts and motion graphics from a chat thread, built on Deep Agents.",
+      "url": "https://github.com/langchain-ai/design-agent",
+      "stars": 519,
+      "created_at": "2026-10-18T04:44:58+00:00",
+      "category": "org_watch"
+    }
+  ]
+}
