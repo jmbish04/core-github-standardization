@@ -1,0 +1,374 @@
+{
+  "date": "2026-11-27T08:03:53.219674+00:00",
+  "count": 46,
+  "repos": [
+    {
+      "name": "KKKKhazix/agent-autoloop",
+      "description": "\u8ba9\u4f60\u7684\u547d\u4ee4\u884c Agent \u5728\u540e\u53f0\u81ea\u5df1\u63a5\u6d3b\u3001\u81ea\u5df1\u8ddf\u8fdb\u5230\u5e95\uff1b\u5e73\u65f6\u4e0d\u70e6\u4f60\uff0c\u9047\u5230\u62ff\u4e0d\u51c6\u7684\u4e8b\u624d\u53d1\u5361\u7247\u627e\u4f60\u62cd\u677f\u3002",
+      "url": "https://github.com/KKKKhazix/agent-autoloop",
+      "stars": 6684,
+      "created_at": "2026-11-03T08:02:11+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "deepseek-ai/chat-demo",
+      "description": "Chat Demo",
+      "url": "https://github.com/deepseek-ai/chat-demo",
+      "stars": 5496,
+      "created_at": "2026-11-12T08:08:19+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "simplexai-labs/linger",
+      "description": "Linger is An Open-Source Personal Agent That Runs Fully on Your PC.  We aim to break Big Tech\u2019s grip on AI by bringing powerful local AI to everyday computers through efficient model\u2013harness co-design, so everyone can run their own.",
+      "url": "https://github.com/simplexai-labs/linger",
+      "stars": 4976,
+      "created_at": "2026-11-10T03:50:38+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "XinaTian/MROffice",
+      "description": "MR Office \u2014 the open-source editors of the AI office suite closest to Microsoft Office: documents, spreadsheets, presentations, PDF and code in the browser. Copilot in every editor edits real Word, Excel and PowerPoint files with you; an MCP server lets Claude, ChatGPT, Cursor and Codex create and edit them; embed it in your app with one line.",
+      "url": "https://github.com/XinaTian/MROffice",
+      "stars": 4797,
+      "created_at": "2026-11-10T17:54:07+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "FrigadeHQ/yogurt",
+      "description": "Private AI meeting notes that stay on your computer. No meeting bot. Free and open source for Mac, Windows and Linux. An alternative to Granola, Otter and Fireflies.",
+      "url": "https://github.com/FrigadeHQ/yogurt",
+      "stars": 3704,
+      "created_at": "2026-11-10T20:01:01+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "caru-ini/stack-diagram",
+      "description": "Agent skill: describe your stack in a sentence, get an architecture diagram with official logos",
+      "url": "https://github.com/caru-ini/stack-diagram",
+      "stars": 2963,
+      "created_at": "2026-11-01T05:35:12+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "ZiChuanLan/freebie-radar",
+      "description": "\u767d\u5ad6\u4e0e\u8d44\u8baf\u8d44\u6e90\u805a\u5408\u96f7\u8fbe\uff1a100+\u4e2a\u6e90\u5b9a\u65f6\u91c7\u96c6 + AI \u4e8c\u5ba1\u8fc7\u6ee4\u5047\u798f\u5229 + \u83b7\u53d6\u65b9\u5f0f\u5206\u7ea7\u9694\u79bb\u62bd\u5956/\u8bd5\u7528/\u63a8\u5e7f + Telegram \u5373\u65f6\u63a8\u9001",
+      "url": "https://github.com/ZiChuanLan/freebie-radar",
+      "stars": 2953,
+      "created_at": "2026-11-12T09:08:11+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "agentes-chat/agentes-chat",
+      "description": "Open-source, self-hosted Slack alternative where your team and AI agents work together in channels and DMs. Agents run on Claude, ChatGPT/Codex, Gemini or Grok, with MCP tools, their own computer and browser, routines, memory and approvals. Web, desktop and phone apps. Docker Compose + Postgres. AGPL-3.0.",
+      "url": "https://github.com/agentes-chat/agentes-chat",
+      "stars": 2073,
+      "created_at": "2026-11-09T00:50:28+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "pithings/unkernel",
+      "description": "A real Linux kernel, compiled to WebAssembly. It boots to a shell in less than a second.",
+      "url": "https://github.com/pithings/unkernel",
+      "stars": 1983,
+      "created_at": "2026-11-12T22:06:00+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "INK-Q/agy-fast",
+      "description": "Non-invasive MCP accelerator plugin for Google Antigravity (CLI/Desktop/IDE): cuts LLM turns (-34%), token quota (-31%), and upload traffic (-40%) without affecting native UI or diffs.",
+      "url": "https://github.com/INK-Q/agy-fast",
+      "stars": 1804,
+      "created_at": "2026-11-19T04:58:46+00:00",
+      "category": "language:typescript"
+    },
+    {
+      "name": "JuneYaooo/rea-video",
+      "description": "Reverse-engineer any video, shot by shot: filmed, AI-generated or coded, and how to remake it. Breakdowns in the open VIDEO.md format. \u9006\u5411\u4e00\u5207\u89c6\u9891\uff0c\u9010\u4e2a\u955c\u5934\u770b\u662f\u62cd\u7684\u3001AI \u751f\u6210\u7684\u8fd8\u662f\u4ee3\u7801\u505a\u7684\uff0c\u518d\u544a\u8bc9\u4f60\u600e\u4e48\u590d\u523b\uff1b\u62c6\u89e3\u7ed3\u679c\u6309 VIDEO.md \u683c\u5f0f\u8f93\u51fa\u3002",
+      "url": "https://github.com/JuneYaooo/rea-video",
+      "stars": 13786,
+      "created_at": "2026-10-29T16:15:01+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "Hut-hzf/ung220z-tool",
+      "description": "ung220z-tool \u662f\u4e00\u4e2a\u9488\u5bf9 UNG220Z\uff0c\u53e6\u542b\u4e2d\u5174/\u70fd\u706b/\u534e\u4e3a/\u4e5d\u8054\u591a\u5382\u5546\u9002\u914d\u3001\u56fa\u4ef6\u6307\u7eb9\u8bc6\u522b\u4e0e\u5206\u5bb6\u65cf\u6392\u969c\u5efa\u8bae\u7684\u4e00\u952e\u51ed\u636e\u63d0\u53d6\u5de5\u5177\uff0c\u4ec5\u9650\u5728\u4f60\u81ea\u5df1\u7684\u8bbe\u5907\u4e0a\u7528\u4e8e\u627e\u56de\u5fd8\u8bb0\u7684\u7ba1\u7406\u5bc6\u7801\u3001\u8fc1\u79fb\u5bbd\u5e26\u914d\u7f6e\u6216\u5b89\u5168\u81ea\u67e5\u3002",
+      "url": "https://github.com/Hut-hzf/ung220z-tool",
+      "stars": 5708,
+      "created_at": "2026-11-15T11:16:46+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "BryceYuuu/RUN",
+      "description": "RUN \u00b7 \u6da6\uff1a\u4e2d\u56fd\u62a4\u7167\u6301\u6709\u4eba\u7684\u6d77\u5916\u79fb\u5c45\u624b\u518c\u3002\u6b27\u6d32 36 \u56fd 110 \u6761\u79fb\u6c11\u8def\u7ebf + 13 \u4e2a\u4e3b\u8981\u79fb\u6c11\u5730\u533a\uff1a\u6570\u5b57\u6e38\u6c11\u7b7e\u8bc1\u3001\u6b27\u76df\u84dd\u5361\u3001\u6280\u672f\u79fb\u6c11\u3001\u7559\u5b66\u8f6c\u5de5\u4f5c\u3001\u521b\u4e1a\u81ea\u96c7\u3001\u6295\u8d44\u5c45\u7559\uff0c\u6bcf\u6761\u9644\u5b98\u65b9\u6765\u6e90\uff0c\u6301\u7eed\u66f4\u65b0\u3002",
+      "url": "https://github.com/BryceYuuu/RUN",
+      "stars": 5083,
+      "created_at": "2026-10-29T11:28:43+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "shanselman/gputaskman",
+      "description": "A GPU task manager for Windows, Linux, and WSL: per-process VRAM, GPU activity, and LLM model/KV-cache insights for NVIDIA, AMD, and Intel GPUs (plus Huawei Ascend on Linux).",
+      "url": "https://github.com/shanselman/gputaskman",
+      "stars": 3873,
+      "created_at": "2026-11-03T00:49:34+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "Immortal-Protocols/lastbook",
+      "description": "Offline knowledge AI, maps and videos for survival and rebuilding",
+      "url": "https://github.com/Immortal-Protocols/lastbook",
+      "stars": 3095,
+      "created_at": "2026-11-12T23:49:03+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "sarpstar/cinecode",
+      "description": "Films made with code. Short films, long YouTube videos, ads, explainers and music videos: an AI coding agent writes the script, builds every frame in code, designs the sound and hands you an MP4.",
+      "url": "https://github.com/sarpstar/cinecode",
+      "stars": 3091,
+      "created_at": "2026-11-03T10:08:16+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "sybil-solutions/inference-optimisation-skill",
+      "description": "Agent skill for hill-climbing local LLM serving speed (decode, speculative decoding, prefill, KV, startup, TTFT) on any hardware and quantization",
+      "url": "https://github.com/sybil-solutions/inference-optimisation-skill",
+      "stars": 2841,
+      "created_at": "2026-11-16T18:40:04+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "iamajmeena/neonclipping",
+      "description": "Paste a link, get captioned 9:16 clips in ~2 min. Free, local, open-source clipping engine (audio-first, YouTube captions, local LLM).",
+      "url": "https://github.com/iamajmeena/neonclipping",
+      "stars": 2801,
+      "created_at": "2026-11-19T10:00:43+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "N1nEmAn/sapper-v2",
+      "description": "The first fruit of the N\u00fcwa tree \u2014 an autonomous AI pentest legion (634-team champion, 8h unattended, 1B tokens beat 4.5B). Not just a tool: evolvable by design. Grow your own fruit on the N\u00fcwa Foundation (Create/Language/History).",
+      "url": "https://github.com/N1nEmAn/sapper-v2",
+      "stars": 2672,
+      "created_at": "2026-10-30T15:12:35+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "ubiquitarianism/leonida",
+      "description": "A continuation of Leonida, the Xbox > PC port interface for GTA VI",
+      "url": "https://github.com/ubiquitarianism/leonida",
+      "stars": 2561,
+      "created_at": "2026-11-23T23:54:39+00:00",
+      "category": "language:python"
+    },
+    {
+      "name": "Triet2804Dev/Wuwa-Tappo-Auto-Claim",
+      "description": "Automated chest claimer for the Wuwa Tappo App with Desktop and 24/7 Google Apps Script (GAS) support.",
+      "url": "https://github.com/Triet2804Dev/Wuwa-Tappo-Auto-Claim",
+      "stars": 14,
+      "created_at": "2026-11-02T14:30:39+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "deon-george/be.techie-notes",
+      "description": "Google Drive-powered Study Portal  for B.Tech 2019 Scheme, Computer Science and Cyber Security. ",
+      "url": "https://github.com/deon-george/be.techie-notes",
+      "stars": 10,
+      "created_at": "2026-11-14T07:42:52+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "datasifaw/banking-fraud-analytics",
+      "description": "Banking fraud analytics project using Python, BigQuery Sandbox, SQL and Data Studio",
+      "url": "https://github.com/datasifaw/banking-fraud-analytics",
+      "stars": 3,
+      "created_at": "2026-11-18T07:59:36+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "uxvcharlie/uamvirtual-calendario",
+      "description": "Todo lo que publican tus profesores en UAM Virtual, en tu Google Calendar. Gratis y sin servidores.",
+      "url": "https://github.com/uxvcharlie/uamvirtual-calendario",
+      "stars": 2,
+      "created_at": "2026-11-02T21:58:01+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "chasebuilds/sheets-automations",
+      "description": "Google Apps Script automations for small businesses in TypeScript: form cleanup, summary emails, invoice PDFs, overdue reminders, low-stock alerts. Unit-tested logic.",
+      "url": "https://github.com/chasebuilds/sheets-automations",
+      "stars": 2,
+      "created_at": "2026-11-21T19:24:03+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "alyssaagard/offizin",
+      "description": "Desktop publishing for Microsoft Word and Google Docs: brochures, newsletters, flyers, cards, and more, from templates in your own colors, fonts, and business details. Free and open source.",
+      "url": "https://github.com/alyssaagard/offizin",
+      "stars": 1,
+      "created_at": "2026-11-12T04:17:01+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "hasan-automation/sheets-daily-summary",
+      "description": "Google Sheets + Apps Script: emails a clean HTML summary of yesterday's rows every morning. Settings tab, custom menu, no coding needed.",
+      "url": "https://github.com/hasan-automation/sheets-daily-summary",
+      "stars": 1,
+      "created_at": "2026-11-03T21:15:24+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "ia3466999-Ali/portfolio",
+      "description": "\u2728 Imran Ali (\u2018Ali\u2019) \u2013 Official Portfolio & Lafz-e-Ali Poetry Showcase. 1st Year B.Tech AI & Data Science, Presidency University. Live on GitHub Pages.",
+      "url": "https://github.com/ia3466999-Ali/portfolio",
+      "stars": 1,
+      "created_at": "2026-11-07T16:12:41+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "kivlst95/apps-script-automation-portfolio",
+      "description": "Production Google Apps Script automations for finance, HR, sales and ops: Xero, HubSpot, ClickUp, Notion, Manatal, PeopleForce. OAuth 2.0, webhooks, structured logging.",
+      "url": "https://github.com/kivlst95/apps-script-automation-portfolio",
+      "stars": 1,
+      "created_at": "2026-11-08T12:17:25+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "Gulshan-bot/pi-to-production-automation",
+      "description": "One-click Google Apps Script that splits a Proforma Invoice into a full PDF and a plant-safe production order (no name, GST, rates or terms), plus a read-only FMS mirror for the plant team.",
+      "url": "https://github.com/Gulshan-bot/pi-to-production-automation",
+      "stars": 1,
+      "created_at": "2026-11-16T12:18:09+00:00",
+      "category": "topic:google-apps-script"
+    },
+    {
+      "name": "rivet-dev/open-orange",
+      "description": "Run Cloudflare Workers and Durable Objects unchanged on AWS, GCP, Azure or your own servers.",
+      "url": "https://github.com/rivet-dev/open-orange",
+      "stars": 880,
+      "created_at": "2026-11-12T00:44:12+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "yt1988/who-are-you",
+      "description": "Who do websites think you are? A privacy self-check: every sniffer any site can run, the portrait they paint, and the contradictions that give away a VPN or proxy",
+      "url": "https://github.com/yt1988/who-are-you",
+      "stars": 811,
+      "created_at": "2026-11-01T03:15:18+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "zandy700/supply-chain-shock-map",
+      "description": "Predicts how news-driven supply-chain shocks ripple across S&P 500 stocks, with an event-study backtest and a hash-chained public prediction ledger. Built on MIT open-source SEC supply-graph code.",
+      "url": "https://github.com/zandy700/supply-chain-shock-map",
+      "stars": 520,
+      "created_at": "2026-11-05T04:59:49+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "sshkeda/minecraft-server-on-orange-cloud",
+      "description": "Run a Minecraft Java server entirely on Cloudflare. Sleeps when nobody's playing.",
+      "url": "https://github.com/sshkeda/minecraft-server-on-orange-cloud",
+      "stars": 446,
+      "created_at": "2026-11-21T02:36:03+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "gabrielbuzziv/emissor-nfse-nacional",
+      "description": "Emissor de NFS-e direto na API do Sistema Nacional NFS-e, sem custo por nota, rodando na sua conta da Cloudflare.",
+      "url": "https://github.com/gabrielbuzziv/emissor-nfse-nacional",
+      "stars": 292,
+      "created_at": "2026-11-12T23:02:35+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "viajatech/agente-isabella",
+      "description": "\ud83c\udf10 P\u00daBLICO \u00b7 Agente Isabella: convierte un Android en asistente de voz con IA que hace llamadas reales (Gemini Live + Magisk). Sin llaves: usa las tuyas. Por David Ruiz Duarte (viajatech)",
+      "url": "https://github.com/viajatech/agente-isabella",
+      "stars": 204,
+      "created_at": "2026-11-01T05:11:55+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "nanami-0713/relay-kit",
+      "description": "Out-of-the-box E2E relay server (relay-e2e/v1) for Cloudflare Workers \u2014 one-command deploy. Reference agent & client included. Distilled from Alma with permission.",
+      "url": "https://github.com/nanami-0713/relay-kit",
+      "stars": 202,
+      "created_at": "2026-10-30T05:14:10+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "joeseesun/xnews",
+      "description": "X News \u2014 overseas founder posts & AI videos, rewritten in Qiaomu Chinese",
+      "url": "https://github.com/joeseesun/xnews",
+      "stars": 144,
+      "created_at": "2026-11-05T16:42:40+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "homielab/noteflare",
+      "description": "Keep your notes on Cloudflare. Keep them to yourself. End-to-end encrypted notes on Cloudflare Workers + D1.",
+      "url": "https://github.com/homielab/noteflare",
+      "stars": 142,
+      "created_at": "2026-11-14T08:32:56+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cclank/lanshu-html-ppt-templates",
+      "description": "20 self-contained HTML presentation templates \u00b7 226 slides \u00b7 one reusable AI skill by Lanshu.",
+      "url": "https://github.com/cclank/lanshu-html-ppt-templates",
+      "stars": 113,
+      "created_at": "2026-11-04T23:19:05+00:00",
+      "category": "topic:cloudflare-workers"
+    },
+    {
+      "name": "cloudflare/oxlint-config",
+      "description": "Shared Oxlint rules for Cloudflare JavaScript and TypeScript projects",
+      "url": "https://github.com/cloudflare/oxlint-config",
+      "stars": 234,
+      "created_at": "2026-11-19T06:52:05+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "openai/auth-javascript",
+      "description": "Sign in with ChatGPT SDK for JavaScript, TypeScript, and React.",
+      "url": "https://github.com/openai/auth-javascript",
+      "stars": 2,
+      "created_at": "2026-11-03T23:35:04+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "google-gemini/gemini-managed-agents-workshop",
+      "description": "AIE Code Summit 40-min Hands-On Workshop: Build a GitHub PR Reviewer with Gemini Managed Agents, Skills, Credentials API, and Remote MCP",
+      "url": "https://github.com/google-gemini/gemini-managed-agents-workshop",
+      "stars": 4,
+      "created_at": "2026-11-09T19:04:57+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/lca-managed-agents",
+      "description": "LangChain Academy Course on Managed Agents",
+      "url": "https://github.com/langchain-ai/lca-managed-agents",
+      "stars": 0,
+      "created_at": "2026-11-10T03:03:24+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/cartography",
+      "description": "Fork of cartography-cncf/cartography",
+      "url": "https://github.com/langchain-ai/cartography",
+      "stars": 0,
+      "created_at": "2026-11-03T20:35:25+00:00",
+      "category": "org_watch"
+    },
+    {
+      "name": "langchain-ai/langchain-browserbase",
+      "description": "LangChain integration for Browserbase.",
+      "url": "https://github.com/langchain-ai/langchain-browserbase",
+      "stars": 2,
+      "created_at": "2026-10-28T00:10:40+00:00",
+      "category": "org_watch"
+    }
+  ]
+}
